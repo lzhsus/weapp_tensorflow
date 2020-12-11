@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/posenet/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "TensorFlow",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+  },
+  "plugins": {
+    "tfjsPlugin": {
+      "version": "0.1.0",
+      "provider": "wx6afed118d9e81df9"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}
