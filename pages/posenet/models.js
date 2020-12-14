@@ -1,7 +1,7 @@
 import * as tf from '@tensorflow/tfjs-core/index'
 import * as posenet from '@tensorflow-models/posenet/index'
 import { getFrameSliceOptions } from '../../utils/util'
-import { drawKeypoints, drawSkeleton } from './util'
+import { drawKeypoints, drawSkeleton,getSkeleton,drawHorizontalLine,drawBoundingBox } from './util'
 import { POSENET_URL } from '../../env'
 
 export class Classifier {
@@ -25,8 +25,9 @@ export class Classifier {
                 .load({
                     architecture: 'MobileNetV1',
                     outputStride: 16,
-                    inputResolution: 193,
-                    multiplier: 0.5,
+                    inputResolution: 225,
+                    maxDetections:1,//要检测的最大姿势数。默认为5。
+                    multiplier: 0.75,//
                     modelUrl: POSENET_URL
                 })
                 .then(model => {
@@ -64,19 +65,27 @@ export class Classifier {
 
     drawSinglePose(ctx, pose) {
         if (!ctx && !pose) {
-            return
+            return false
         }
 
         const minPoseConfidence = 0.3
         const minPartConfidence = 0.3
-
+        let result = false;
         if (pose.score >= minPoseConfidence) {
-            drawKeypoints(pose.keypoints, minPartConfidence, ctx)
+            // 脸部
+            // drawKeypoints(pose.keypoints, minPartConfidence, ctx)
+            // 身体点
+            getSkeleton(pose.keypoints, minPartConfidence, ctx)
+            // 身体
             drawSkeleton(pose.keypoints, minPartConfidence, ctx)
+            // 边框
+            // drawBoundingBox(pose.keypoints,ctx)
+            // 绘制角度
+            result = drawHorizontalLine(pose.keypoints)
         }
 
         ctx.draw()
-        return pose
+        return result
     }
 
     dispose() {

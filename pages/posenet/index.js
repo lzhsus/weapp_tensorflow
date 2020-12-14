@@ -4,10 +4,16 @@ Page({
     classifier: null,
     ctx: null,
     data: {
-        predicting: false
+        predicting: false,
+        devicePosition:"front",
+        list:[]
     },
     onLoad: function (options) {
 
+    },
+    handleSwitchCamera() {
+      let devicePosition = this.data.devicePosition === 'front' ? 'back' : 'front';
+      this.setData({ devicePosition });
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
@@ -56,8 +62,18 @@ Page({
             }, () => {
                 this.classifier.detectSinglePose(frame).then((pose) => {
                     const nosePosition = pose.keypoints[0].position;
-                    this.classifier.drawSinglePose(this.ctx, pose);
+                    // 检查坐标是否全部显示出来
+                    let result = this.classifier.drawSinglePose(this.ctx, pose);
+                    // console.log('result>>>>>>',result)
+                    let arr = this.data.list
+                    if(result){
+                        arr.unshift({
+                            index:result.indexOf("完成任务"),
+                            name:result
+                        })
+                    }
                     this.setData({
+                        list:arr,
                         predicting: false,
                         nosePosition: Math.round(nosePosition.x) + ', ' + Math.round(nosePosition.y)
                     })
