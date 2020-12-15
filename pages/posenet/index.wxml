@@ -7,8 +7,8 @@
 <view class="cover-mian2">
     <block wx:for="{{list}}" wx:key="index">
         <view class="item">
-            <view style="display:block;width:100%;" wx:if="{{item.index==-1}}">end:{{item.name}}</view>
-            <view style="display:block;width:100%;color:red;" wx:else>end:{{item.name}}</view>
+            <view style="display:block;width:100%;" wx:if="{{item.index==-1}}">{{index}}.end:{{item.name}}</view>
+            <view style="display:block;width:100%;color:red;" wx:else>{{index}}.end:{{item.name}}</view>
 
         </view>
     </block>

@@ -24,10 +24,13 @@ export class Classifier {
             posenet
                 .load({
                     architecture: 'MobileNetV1',
-                    outputStride: 16,
+                    outputStride: 16,//必须是32、16、8。数字越高，速度越快，准确度越低，反之亦然。
+                    imageScaleFactor:1,//数值范围 0.2 到 1.0，默认 0.50。这个值设置得越小将会缩小图像，增加速度，但是会牺牲准确性。
                     inputResolution: 225,
                     maxDetections:1,//要检测的最大姿势数。默认为5。
-                    multiplier: 0.75,//
+                    multiplier: 0.5,//1.01 1.0 0.75 0.5
+                    scoreThreshold:0.9,//大于或等于这个值的检测实例。默认为 0.5。
+                    nmsRadius:200,//Non-maximum 抑制部位距离。它必须为正。
                     modelUrl: POSENET_URL
                 })
                 .then(model => {
