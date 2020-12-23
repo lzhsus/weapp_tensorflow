@@ -8,10 +8,16 @@ Page({
     classifier: null,
     ctx: null,
     data: {
-        predicting: false
+        predicting: false,
+        devicePosition:"front",
+        list:[]
     },
     onLoad: function (options) {
         this.loadCanvas()
+    },
+    handleSwitchCamera() {
+      let devicePosition = this.data.devicePosition === 'front' ? 'back' : 'front';
+      this.setData({ devicePosition });
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
@@ -70,6 +76,7 @@ Page({
 
                     this.classifier.drawSinglePose(this.ctx, pose);
                     this.setData({
+                        list:arr,
                         predicting: false,
                         nosePosition: Math.round(nosePosition.x) + ', ' + Math.round(nosePosition.y)
                     })

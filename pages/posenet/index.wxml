@@ -1,3 +1,8 @@
+<camera class="camera-main" device-position="{{devicePosition}}" frame-size="medium" flash="off" binderror="onCameraError">
+    <canvas class="pose-canvas" canvas-id="pose">
+        <cover-view class="cover-btn" bindtap="handleSwitchCamera">切换摄像头</cover-view>
+    </canvas>
+</camera>
 
 <camera class="camera-main" device-position="front" frame-size="medium" flash="off" binderror="onCameraError">
   <canvas class="pose-canvas" canvas-id="pose"></canvas>
@@ -8,3 +13,12 @@
     <canvas style="width:1px; height: 1px;position: fixed;top: 0;left: -999rpx;" id="cacheCanvas" canvas-id="cacheCanvas" type="2d"></canvas>
     <canvas disable-scroll="true" id="canvas" type="2d" style="width: {{canvasW}}px; height: {{canvasH}}px;" canvas-id="canvas" bindtouchstart="canvasEvent" bindtouchmove="canvasEvent" bindtouchend="canvasEvent"  bindtouchcancel="canvasEvent" bindlongtap="canvasEvent"></canvas>                
 </div>
+<view class="cover-mian2">
+    <block wx:for="{{list}}" wx:key="index">
+        <view class="item">
+            <view style="display:block;width:100%;" wx:if="{{item.index==-1}}">{{index}}.end:{{item.name}}</view>
+            <view style="display:block;width:100%;color:red;" wx:else>{{index}}.end:{{item.name}}</view>
+
+        </view>
+    </block>
+</view>
