@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/posenet/index"
+    "pages/posenet/index",
+    "pages/demo/demo"
   ],
   "window": {
     "backgroundTextStyle": "light",

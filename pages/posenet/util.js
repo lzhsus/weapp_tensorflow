@@ -29,6 +29,7 @@ export function drawSegment([ay, ax], [by, bx], color, scale, ctx) {
 
 /**
  * Draws a pose skeleton by looking up all adjacent keypoints/joints
+ * 通过查找所有相邻的关键点/关节绘制姿态骨架
  */
 // tslint:disable-next-line:no-any
 export function drawSkeleton(keypoints, minConfidence, ctx, scale = 1) {
@@ -45,6 +46,7 @@ export function drawSkeleton(keypoints, minConfidence, ctx, scale = 1) {
 
 /**
  * Draw pose keypoints onto a canvas
+//  * 在画布上绘制姿态关键点
  */
 // tslint:disable-next-line:no-any
 export function drawKeypoints(keypoints, minConfidence, ctx, scale = 1) {

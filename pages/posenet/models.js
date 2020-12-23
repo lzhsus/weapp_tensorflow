@@ -52,6 +52,7 @@ export class Classifier {
                 return temp.slice(sliceOptions.start, sliceOptions.size).resizeBilinear([this.displaySize.height, this.displaySize.width])
             })
             // since images are being fed from a webcam
+            // 因为图像是由网络摄像头提供的 反转图像
             const flipHorizontal = false
             this.poseNet.estimateSinglePose(video, { flipHorizontal }).then(pose => {
                 video.dispose()
@@ -69,7 +70,7 @@ export class Classifier {
 
         const minPoseConfidence = 0.3
         const minPartConfidence = 0.3
-
+        
         if (pose.score >= minPoseConfidence) {
             drawKeypoints(pose.keypoints, minPartConfidence, ctx)
             drawSkeleton(pose.keypoints, minPartConfidence, ctx)

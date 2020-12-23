@@ -10,6 +10,11 @@ Page({
             logo: '/static/img/posenet.png',
             title: '姿势估计',
             desc: '实时估计人体姿势 (PoseNet)。'
+        },{
+            url: '/pages/demo/demo',
+            logo: '/static/img/posenet.png',
+            title: 'demo',
+            desc: '机器学习'
         }]
     },
 

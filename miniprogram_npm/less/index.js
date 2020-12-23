@@ -4,11 +4,11 @@ var __DEFINE__ = function(modId, func, req) { var m = { exports: {}, _tempexport
 var __REQUIRE__ = function(modId, source) { if(!__MODS__[modId]) return require(source); if(!__MODS__[modId].status) { var m = __MODS__[modId].m; m._exports = m._tempexports; var desp = Object.getOwnPropertyDescriptor(m, "exports"); if (desp && desp.configurable) Object.defineProperty(m, "exports", { set: function (val) { if(typeof val === "object" && val !== m._exports) { m._exports.__proto__ = val.__proto__; Object.keys(val).forEach(function (k) { m._exports[k] = val[k]; }); } m._tempexports = val }, get: function () { return m._tempexports; } }); __MODS__[modId].status = 1; __MODS__[modId].func(__MODS__[modId].req, m, m.exports); } return __MODS__[modId].m.exports; };
 var __REQUIRE_WILDCARD__ = function(obj) { if(obj && obj.__esModule) { return obj; } else { var newObj = {}; if(obj != null) { for(var k in obj) { if (Object.prototype.hasOwnProperty.call(obj, k)) newObj[k] = obj[k]; } } newObj.default = obj; return newObj; } };
 var __REQUIRE_DEFAULT__ = function(obj) { return obj && obj.__esModule ? obj.default : obj; };
-__DEFINE__(1607654390923, function(require, module, exports) {
+__DEFINE__(1607851992210, function(require, module, exports) {
 module.exports = require('./lib/less-node').default;
 
-}, function(modId) {var map = {"./lib/less-node":1607654390924}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390924, function(require, module, exports) {
+}, function(modId) {var map = {"./lib/less-node":1607851992211}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992211, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -37,8 +37,8 @@ less.options = default_options_1.default();
 image_size_1.default(less.environment);
 exports.default = less;
 //# sourceMappingURL=index.js.map
-}, function(modId) { var map = {"./environment":1607654390925,"./file-manager":1607654390926,"./url-file-manager":1607654390929,"../less":1607654390931,"./lessc-helper":1607654391014,"./plugin-loader":1607654391015,"./fs":1607654390927,"../less/default-options":1607654391016,"./image-size":1607654391017}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390925, function(require, module, exports) {
+}, function(modId) { var map = {"./environment":1607851992212,"./file-manager":1607851992213,"./url-file-manager":1607851992216,"../less":1607851992218,"./lessc-helper":1607851992301,"./plugin-loader":1607851992302,"./fs":1607851992214,"../less/default-options":1607851992303,"./image-size":1607851992304}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992212, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -59,7 +59,7 @@ exports.default = {
 };
 //# sourceMappingURL=environment.js.map
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390926, function(require, module, exports) {
+__DEFINE__(1607851992213, function(require, module, exports) {
 
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -218,8 +218,8 @@ var FileManager = /** @class */ (function (_super) {
 }(abstract_file_manager_js_1.default));
 exports.default = FileManager;
 //# sourceMappingURL=file-manager.js.map
-}, function(modId) { var map = {"./fs":1607654390927,"../less/environment/abstract-file-manager.js":1607654390928}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390927, function(require, module, exports) {
+}, function(modId) { var map = {"./fs":1607851992214,"../less/environment/abstract-file-manager.js":1607851992215}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992214, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var fs;
@@ -231,8 +231,8 @@ catch (e) {
 }
 exports.default = fs;
 //# sourceMappingURL=fs.js.map
-}, function(modId) { var map = {"fs":1607654390927}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390928, function(require, module, exports) {
+}, function(modId) { var map = {"fs":1607851992214}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992215, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var AbstractFileManager = /** @class */ (function () {
@@ -356,7 +356,7 @@ var AbstractFileManager = /** @class */ (function () {
 exports.default = AbstractFileManager;
 //# sourceMappingURL=abstract-file-manager.js.map
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390929, function(require, module, exports) {
+__DEFINE__(1607851992216, function(require, module, exports) {
 
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -425,8 +425,8 @@ var UrlFileManager = /** @class */ (function (_super) {
 }(abstract_file_manager_js_1.default));
 exports.default = UrlFileManager;
 //# sourceMappingURL=url-file-manager.js.map
-}, function(modId) { var map = {"../less/environment/abstract-file-manager.js":1607654390928,"../less/logger":1607654390930}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390930, function(require, module, exports) {
+}, function(modId) { var map = {"../less/environment/abstract-file-manager.js":1607851992215,"../less/logger":1607851992217}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992217, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -465,7 +465,7 @@ exports.default = {
 };
 //# sourceMappingURL=logger.js.map
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390931, function(require, module, exports) {
+__DEFINE__(1607851992218, function(require, module, exports) {
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -538,7 +538,7 @@ exports.default = (function (environment, fileManagers) {
      * It's not clear what should / must be public and why.
      */
     var initial = {
-        version: [3, 12, 2],
+        version: [3, 13, 0],
         data: data_1.default,
         tree: tree_1.default,
         Environment: environment_1.default,
@@ -596,8 +596,8 @@ exports.default = (function (environment, fileManagers) {
     return api;
 });
 //# sourceMappingURL=index.js.map
-}, function(modId) { var map = {"./data":1607654390932,"./tree":1607654390935,"./environment/environment":1607654390981,"./environment/abstract-file-manager":1607654390928,"./environment/abstract-plugin-loader":1607654390982,"./visitors":1607654390983,"./parser/parser":1607654390991,"./functions":1607654390994,"./contexts":1607654390953,"./source-map-output":1607654391006,"./source-map-builder":1607654391007,"./parse-tree":1607654391008,"./import-manager":1607654391010,"./render":1607654391011,"./parse":1607654391012,"./less-error":1607654390943,"./transform-tree":1607654391009,"./utils":1607654390944,"./plugin-manager":1607654391013,"./logger":1607654390930}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390932, function(require, module, exports) {
+}, function(modId) { var map = {"./data":1607851992219,"./tree":1607851992222,"./environment/environment":1607851992268,"./environment/abstract-file-manager":1607851992215,"./environment/abstract-plugin-loader":1607851992269,"./visitors":1607851992270,"./parser/parser":1607851992278,"./functions":1607851992281,"./contexts":1607851992240,"./source-map-output":1607851992293,"./source-map-builder":1607851992294,"./parse-tree":1607851992295,"./import-manager":1607851992297,"./render":1607851992298,"./parse":1607851992299,"./less-error":1607851992230,"./transform-tree":1607851992296,"./utils":1607851992231,"./plugin-manager":1607851992300,"./logger":1607851992217}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992219, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -607,8 +607,8 @@ var colors_1 = __importDefault(require("./colors"));
 var unit_conversions_1 = __importDefault(require("./unit-conversions"));
 exports.default = { colors: colors_1.default, unitConversions: unit_conversions_1.default };
 //# sourceMappingURL=index.js.map
-}, function(modId) { var map = {"./colors":1607654390933,"./unit-conversions":1607654390934}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390933, function(require, module, exports) {
+}, function(modId) { var map = {"./colors":1607851992220,"./unit-conversions":1607851992221}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992220, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -763,7 +763,7 @@ exports.default = {
 };
 //# sourceMappingURL=colors.js.map
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390934, function(require, module, exports) {
+__DEFINE__(1607851992221, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -789,13 +789,12 @@ exports.default = {
 };
 //# sourceMappingURL=unit-conversions.js.map
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390935, function(require, module, exports) {
+__DEFINE__(1607851992222, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var tree = Object.create(null);
 var node_1 = __importDefault(require("./node"));
 var color_1 = __importDefault(require("./color"));
 var atrule_1 = __importDefault(require("./atrule"));
@@ -847,10 +846,16 @@ exports.default = {
     }
 };
 //# sourceMappingURL=index.js.map
-}, function(modId) { var map = {"./node":1607654390936,"./color":1607654390937,"./atrule":1607654390938,"./detached-ruleset":1607654390956,"./operation":1607654390957,"./dimension":1607654390958,"./unit":1607654390959,"./keyword":1607654390949,"./variable":1607654390960,"./property":1607654390964,"./ruleset":1607654390946,"./element":1607654390940,"./attribute":1607654390965,"./combinator":1607654390942,"./selector":1607654390939,"./quoted":1607654390966,"./expression":1607654390963,"./declaration":1607654390947,"./call":1607654390961,"./url":1607654390967,"./import":1607654390968,"./comment":1607654390951,"./anonymous":1607654390950,"./value":1607654390948,"./javascript":1607654390970,"./assignment":1607654390972,"./condition":1607654390973,"./paren":1607654390941,"./media":1607654390969,"./unicode-descriptor":1607654390974,"./negative":1607654390975,"./extend":1607654390976,"./variable-call":1607654390977,"./namespace-value":1607654390978,"./mixin-call":1607654390979,"./mixin-definition":1607654390980}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390936, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223,"./color":1607851992224,"./atrule":1607851992225,"./detached-ruleset":1607851992243,"./operation":1607851992244,"./dimension":1607851992245,"./unit":1607851992246,"./keyword":1607851992236,"./variable":1607851992247,"./property":1607851992251,"./ruleset":1607851992233,"./element":1607851992227,"./attribute":1607851992252,"./combinator":1607851992229,"./selector":1607851992226,"./quoted":1607851992253,"./expression":1607851992250,"./declaration":1607851992234,"./call":1607851992248,"./url":1607851992254,"./import":1607851992255,"./comment":1607851992238,"./anonymous":1607851992237,"./value":1607851992235,"./javascript":1607851992257,"./assignment":1607851992259,"./condition":1607851992260,"./paren":1607851992228,"./media":1607851992256,"./unicode-descriptor":1607851992261,"./negative":1607851992262,"./extend":1607851992263,"./variable-call":1607851992264,"./namespace-value":1607851992265,"./mixin-call":1607851992266,"./mixin-definition":1607851992267}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992223, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * The reason why Node is a class and other nodes simply do not extend
+ * from Node (since we're transpiling) is due to this issue:
+ *
+ * https://github.com/less/less.js/issues/3434
+ */
 var Node = /** @class */ (function () {
     function Node() {
         this.parent = null;
@@ -1010,21 +1015,8 @@ Node.numericCompare = function (a, b) { return a < b ? -1
 exports.default = Node;
 //# sourceMappingURL=node.js.map
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390937, function(require, module, exports) {
+__DEFINE__(1607851992224, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -1034,218 +1026,213 @@ var colors_1 = __importDefault(require("../data/colors"));
 //
 // RGB Colors - #ff0014, #eee
 //
-var Color = /** @class */ (function (_super) {
-    __extends(Color, _super);
-    function Color(rgb, a, originalForm) {
-        var _this = _super.call(this) || this;
-        var self = _this;
-        //
-        // The end goal here, is to parse the arguments
-        // into an integer triplet, such as `128, 255, 0`
-        //
-        // This facilitates operations and conversions.
-        //
-        if (Array.isArray(rgb)) {
-            _this.rgb = rgb;
-        }
-        else if (rgb.length >= 6) {
-            _this.rgb = [];
-            rgb.match(/.{2}/g).map(function (c, i) {
-                if (i < 3) {
-                    self.rgb.push(parseInt(c, 16));
-                }
-                else {
-                    self.alpha = (parseInt(c, 16)) / 255;
-                }
-            });
-        }
-        else {
-            _this.rgb = [];
-            rgb.split('').map(function (c, i) {
-                if (i < 3) {
-                    self.rgb.push(parseInt(c + c, 16));
-                }
-                else {
-                    self.alpha = (parseInt(c + c, 16)) / 255;
-                }
-            });
-        }
-        _this.alpha = _this.alpha || (typeof a === 'number' ? a : 1);
-        if (typeof originalForm !== 'undefined') {
-            _this.value = originalForm;
-        }
-        return _this;
+var Color = function (rgb, a, originalForm) {
+    var self = this;
+    //
+    // The end goal here, is to parse the arguments
+    // into an integer triplet, such as `128, 255, 0`
+    //
+    // This facilitates operations and conversions.
+    //
+    if (Array.isArray(rgb)) {
+        this.rgb = rgb;
     }
-    Color.prototype.luma = function () {
-        var r = this.rgb[0] / 255;
-        var g = this.rgb[1] / 255;
-        var b = this.rgb[2] / 255;
-        r = (r <= 0.03928) ? r / 12.92 : Math.pow(((r + 0.055) / 1.055), 2.4);
-        g = (g <= 0.03928) ? g / 12.92 : Math.pow(((g + 0.055) / 1.055), 2.4);
-        b = (b <= 0.03928) ? b / 12.92 : Math.pow(((b + 0.055) / 1.055), 2.4);
-        return 0.2126 * r + 0.7152 * g + 0.0722 * b;
-    };
-    Color.prototype.genCSS = function (context, output) {
-        output.add(this.toCSS(context));
-    };
-    Color.prototype.toCSS = function (context, doNotCompress) {
-        var compress = context && context.compress && !doNotCompress;
-        var color;
-        var alpha;
-        var colorFunction;
-        var args = [];
-        // `value` is set if this color was originally
-        // converted from a named color string so we need
-        // to respect this and try to output named color too.
-        alpha = this.fround(context, this.alpha);
-        if (this.value) {
-            if (this.value.indexOf('rgb') === 0) {
-                if (alpha < 1) {
-                    colorFunction = 'rgba';
-                }
-            }
-            else if (this.value.indexOf('hsl') === 0) {
-                if (alpha < 1) {
-                    colorFunction = 'hsla';
-                }
-                else {
-                    colorFunction = 'hsl';
-                }
+    else if (rgb.length >= 6) {
+        this.rgb = [];
+        rgb.match(/.{2}/g).map(function (c, i) {
+            if (i < 3) {
+                self.rgb.push(parseInt(c, 16));
             }
             else {
-                return this.value;
+                self.alpha = (parseInt(c, 16)) / 255;
             }
-        }
-        else {
+        });
+    }
+    else {
+        this.rgb = [];
+        rgb.split('').map(function (c, i) {
+            if (i < 3) {
+                self.rgb.push(parseInt(c + c, 16));
+            }
+            else {
+                self.alpha = (parseInt(c + c, 16)) / 255;
+            }
+        });
+    }
+    this.alpha = this.alpha || (typeof a === 'number' ? a : 1);
+    if (typeof originalForm !== 'undefined') {
+        this.value = originalForm;
+    }
+};
+Color.prototype = new node_1.default();
+Color.prototype.luma = function () {
+    var r = this.rgb[0] / 255;
+    var g = this.rgb[1] / 255;
+    var b = this.rgb[2] / 255;
+    r = (r <= 0.03928) ? r / 12.92 : Math.pow(((r + 0.055) / 1.055), 2.4);
+    g = (g <= 0.03928) ? g / 12.92 : Math.pow(((g + 0.055) / 1.055), 2.4);
+    b = (b <= 0.03928) ? b / 12.92 : Math.pow(((b + 0.055) / 1.055), 2.4);
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+};
+Color.prototype.genCSS = function (context, output) {
+    output.add(this.toCSS(context));
+};
+Color.prototype.toCSS = function (context, doNotCompress) {
+    var compress = context && context.compress && !doNotCompress;
+    var color;
+    var alpha;
+    var colorFunction;
+    var args = [];
+    // `value` is set if this color was originally
+    // converted from a named color string so we need
+    // to respect this and try to output named color too.
+    alpha = this.fround(context, this.alpha);
+    if (this.value) {
+        if (this.value.indexOf('rgb') === 0) {
             if (alpha < 1) {
                 colorFunction = 'rgba';
             }
         }
-        switch (colorFunction) {
-            case 'rgba':
-                args = this.rgb.map(function (c) { return clamp(Math.round(c), 255); }).concat(clamp(alpha, 1));
+        else if (this.value.indexOf('hsl') === 0) {
+            if (alpha < 1) {
+                colorFunction = 'hsla';
+            }
+            else {
+                colorFunction = 'hsl';
+            }
+        }
+        else {
+            return this.value;
+        }
+    }
+    else {
+        if (alpha < 1) {
+            colorFunction = 'rgba';
+        }
+    }
+    switch (colorFunction) {
+        case 'rgba':
+            args = this.rgb.map(function (c) { return clamp(Math.round(c), 255); }).concat(clamp(alpha, 1));
+            break;
+        case 'hsla':
+            args.push(clamp(alpha, 1));
+        case 'hsl':
+            color = this.toHSL();
+            args = [
+                this.fround(context, color.h),
+                this.fround(context, color.s * 100) + "%",
+                this.fround(context, color.l * 100) + "%"
+            ].concat(args);
+    }
+    if (colorFunction) {
+        // Values are capped between `0` and `255`, rounded and zero-padded.
+        return colorFunction + "(" + args.join("," + (compress ? '' : ' ')) + ")";
+    }
+    color = this.toRGB();
+    if (compress) {
+        var splitcolor = color.split('');
+        // Convert color to short format
+        if (splitcolor[1] === splitcolor[2] && splitcolor[3] === splitcolor[4] && splitcolor[5] === splitcolor[6]) {
+            color = "#" + splitcolor[1] + splitcolor[3] + splitcolor[5];
+        }
+    }
+    return color;
+};
+//
+// Operations have to be done per-channel, if not,
+// channels will spill onto each other. Once we have
+// our result, in the form of an integer triplet,
+// we create a new Color node to hold the result.
+//
+Color.prototype.operate = function (context, op, other) {
+    var rgb = new Array(3);
+    var alpha = this.alpha * (1 - other.alpha) + other.alpha;
+    for (var c = 0; c < 3; c++) {
+        rgb[c] = this._operate(context, op, this.rgb[c], other.rgb[c]);
+    }
+    return new Color(rgb, alpha);
+};
+Color.prototype.toRGB = function () {
+    return toHex(this.rgb);
+};
+Color.prototype.toHSL = function () {
+    var r = this.rgb[0] / 255;
+    var g = this.rgb[1] / 255;
+    var b = this.rgb[2] / 255;
+    var a = this.alpha;
+    var max = Math.max(r, g, b);
+    var min = Math.min(r, g, b);
+    var h;
+    var s;
+    var l = (max + min) / 2;
+    var d = max - min;
+    if (max === min) {
+        h = s = 0;
+    }
+    else {
+        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+        switch (max) {
+            case r:
+                h = (g - b) / d + (g < b ? 6 : 0);
                 break;
-            case 'hsla':
-                args.push(clamp(alpha, 1));
-            case 'hsl':
-                color = this.toHSL();
-                args = [
-                    this.fround(context, color.h),
-                    this.fround(context, color.s * 100) + "%",
-                    this.fround(context, color.l * 100) + "%"
-                ].concat(args);
+            case g:
+                h = (b - r) / d + 2;
+                break;
+            case b:
+                h = (r - g) / d + 4;
+                break;
         }
-        if (colorFunction) {
-            // Values are capped between `0` and `255`, rounded and zero-padded.
-            return colorFunction + "(" + args.join("," + (compress ? '' : ' ')) + ")";
+        h /= 6;
+    }
+    return { h: h * 360, s: s, l: l, a: a };
+};
+// Adapted from http://mjijackson.com/2008/02/rgb-to-hsl-and-rgb-to-hsv-color-model-conversion-algorithms-in-javascript
+Color.prototype.toHSV = function () {
+    var r = this.rgb[0] / 255;
+    var g = this.rgb[1] / 255;
+    var b = this.rgb[2] / 255;
+    var a = this.alpha;
+    var max = Math.max(r, g, b);
+    var min = Math.min(r, g, b);
+    var h;
+    var s;
+    var v = max;
+    var d = max - min;
+    if (max === 0) {
+        s = 0;
+    }
+    else {
+        s = d / max;
+    }
+    if (max === min) {
+        h = 0;
+    }
+    else {
+        switch (max) {
+            case r:
+                h = (g - b) / d + (g < b ? 6 : 0);
+                break;
+            case g:
+                h = (b - r) / d + 2;
+                break;
+            case b:
+                h = (r - g) / d + 4;
+                break;
         }
-        color = this.toRGB();
-        if (compress) {
-            var splitcolor = color.split('');
-            // Convert color to short format
-            if (splitcolor[1] === splitcolor[2] && splitcolor[3] === splitcolor[4] && splitcolor[5] === splitcolor[6]) {
-                color = "#" + splitcolor[1] + splitcolor[3] + splitcolor[5];
-            }
-        }
-        return color;
-    };
-    //
-    // Operations have to be done per-channel, if not,
-    // channels will spill onto each other. Once we have
-    // our result, in the form of an integer triplet,
-    // we create a new Color node to hold the result.
-    //
-    Color.prototype.operate = function (context, op, other) {
-        var rgb = new Array(3);
-        var alpha = this.alpha * (1 - other.alpha) + other.alpha;
-        for (var c = 0; c < 3; c++) {
-            rgb[c] = this._operate(context, op, this.rgb[c], other.rgb[c]);
-        }
-        return new Color(rgb, alpha);
-    };
-    Color.prototype.toRGB = function () {
-        return toHex(this.rgb);
-    };
-    Color.prototype.toHSL = function () {
-        var r = this.rgb[0] / 255;
-        var g = this.rgb[1] / 255;
-        var b = this.rgb[2] / 255;
-        var a = this.alpha;
-        var max = Math.max(r, g, b);
-        var min = Math.min(r, g, b);
-        var h;
-        var s;
-        var l = (max + min) / 2;
-        var d = max - min;
-        if (max === min) {
-            h = s = 0;
-        }
-        else {
-            s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
-            switch (max) {
-                case r:
-                    h = (g - b) / d + (g < b ? 6 : 0);
-                    break;
-                case g:
-                    h = (b - r) / d + 2;
-                    break;
-                case b:
-                    h = (r - g) / d + 4;
-                    break;
-            }
-            h /= 6;
-        }
-        return { h: h * 360, s: s, l: l, a: a };
-    };
-    // Adapted from http://mjijackson.com/2008/02/rgb-to-hsl-and-rgb-to-hsv-color-model-conversion-algorithms-in-javascript
-    Color.prototype.toHSV = function () {
-        var r = this.rgb[0] / 255;
-        var g = this.rgb[1] / 255;
-        var b = this.rgb[2] / 255;
-        var a = this.alpha;
-        var max = Math.max(r, g, b);
-        var min = Math.min(r, g, b);
-        var h;
-        var s;
-        var v = max;
-        var d = max - min;
-        if (max === 0) {
-            s = 0;
-        }
-        else {
-            s = d / max;
-        }
-        if (max === min) {
-            h = 0;
-        }
-        else {
-            switch (max) {
-                case r:
-                    h = (g - b) / d + (g < b ? 6 : 0);
-                    break;
-                case g:
-                    h = (b - r) / d + 2;
-                    break;
-                case b:
-                    h = (r - g) / d + 4;
-                    break;
-            }
-            h /= 6;
-        }
-        return { h: h * 360, s: s, v: v, a: a };
-    };
-    Color.prototype.toARGB = function () {
-        return toHex([this.alpha * 255].concat(this.rgb));
-    };
-    Color.prototype.compare = function (x) {
-        return (x.rgb &&
-            x.rgb[0] === this.rgb[0] &&
-            x.rgb[1] === this.rgb[1] &&
-            x.rgb[2] === this.rgb[2] &&
-            x.alpha === this.alpha) ? 0 : undefined;
-    };
-    return Color;
-}(node_1.default));
+        h /= 6;
+    }
+    return { h: h * 360, s: s, v: v, a: a };
+};
+Color.prototype.toARGB = function () {
+    return toHex([this.alpha * 255].concat(this.rgb));
+};
+Color.prototype.compare = function (x) {
+    return (x.rgb &&
+        x.rgb[0] === this.rgb[0] &&
+        x.rgb[1] === this.rgb[1] &&
+        x.rgb[2] === this.rgb[2] &&
+        x.alpha === this.alpha) ? 0 : undefined;
+};
 Color.prototype.type = 'Color';
 function clamp(v, max) {
     return Math.min(Math.max(v, 0), max);
@@ -1272,22 +1259,9 @@ Color.fromKeyword = function (keyword) {
 };
 exports.default = Color;
 //# sourceMappingURL=color.js.map
-}, function(modId) { var map = {"./node":1607654390936,"../data/colors":1607654390933}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390938, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223,"../data/colors":1607851992220}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992225, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -1296,164 +1270,146 @@ var node_1 = __importDefault(require("./node"));
 var selector_1 = __importDefault(require("./selector"));
 var ruleset_1 = __importDefault(require("./ruleset"));
 var anonymous_1 = __importDefault(require("./anonymous"));
-var AtRule = /** @class */ (function (_super) {
-    __extends(AtRule, _super);
-    function AtRule(name, value, rules, index, currentFileInfo, debugInfo, isRooted, visibilityInfo) {
-        var _this = _super.call(this) || this;
-        var i;
-        _this.name = name;
-        _this.value = (value instanceof node_1.default) ? value : (value ? new anonymous_1.default(value) : value);
-        if (rules) {
-            if (Array.isArray(rules)) {
-                _this.rules = rules;
-            }
-            else {
-                _this.rules = [rules];
-                _this.rules[0].selectors = (new selector_1.default([], null, null, index, currentFileInfo)).createEmptySelectors();
-            }
-            for (i = 0; i < _this.rules.length; i++) {
-                _this.rules[i].allowImports = true;
-            }
-            _this.setParent(_this.rules, _this);
+var AtRule = function (name, value, rules, index, currentFileInfo, debugInfo, isRooted, visibilityInfo) {
+    var i;
+    this.name = name;
+    this.value = (value instanceof node_1.default) ? value : (value ? new anonymous_1.default(value) : value);
+    if (rules) {
+        if (Array.isArray(rules)) {
+            this.rules = rules;
         }
-        _this._index = index;
-        _this._fileInfo = currentFileInfo;
-        _this.debugInfo = debugInfo;
-        _this.isRooted = isRooted || false;
-        _this.copyVisibilityInfo(visibilityInfo);
-        _this.allowRoot = true;
-        return _this;
+        else {
+            this.rules = [rules];
+            this.rules[0].selectors = (new selector_1.default([], null, null, index, currentFileInfo)).createEmptySelectors();
+        }
+        for (i = 0; i < this.rules.length; i++) {
+            this.rules[i].allowImports = true;
+        }
+        this.setParent(this.rules, this);
     }
-    AtRule.prototype.accept = function (visitor) {
-        var value = this.value;
-        var rules = this.rules;
-        if (rules) {
-            this.rules = visitor.visitArray(rules);
+    this._index = index;
+    this._fileInfo = currentFileInfo;
+    this.debugInfo = debugInfo;
+    this.isRooted = isRooted || false;
+    this.copyVisibilityInfo(visibilityInfo);
+    this.allowRoot = true;
+};
+AtRule.prototype = new node_1.default();
+AtRule.prototype.accept = function (visitor) {
+    var value = this.value;
+    var rules = this.rules;
+    if (rules) {
+        this.rules = visitor.visitArray(rules);
+    }
+    if (value) {
+        this.value = visitor.visit(value);
+    }
+};
+AtRule.prototype.isRulesetLike = function () {
+    return this.rules || !this.isCharset();
+};
+AtRule.prototype.isCharset = function () {
+    return '@charset' === this.name;
+};
+AtRule.prototype.genCSS = function (context, output) {
+    var value = this.value;
+    var rules = this.rules;
+    output.add(this.name, this.fileInfo(), this.getIndex());
+    if (value) {
+        output.add(' ');
+        value.genCSS(context, output);
+    }
+    if (rules) {
+        this.outputRuleset(context, output, rules);
+    }
+    else {
+        output.add(';');
+    }
+};
+AtRule.prototype.eval = function (context) {
+    var mediaPathBackup;
+    var mediaBlocksBackup;
+    var value = this.value;
+    var rules = this.rules;
+    // media stored inside other atrule should not bubble over it
+    // backpup media bubbling information
+    mediaPathBackup = context.mediaPath;
+    mediaBlocksBackup = context.mediaBlocks;
+    // deleted media bubbling information
+    context.mediaPath = [];
+    context.mediaBlocks = [];
+    if (value) {
+        value = value.eval(context);
+    }
+    if (rules) {
+        // assuming that there is only one rule at this point - that is how parser constructs the rule
+        rules = [rules[0].eval(context)];
+        rules[0].root = true;
+    }
+    // restore media bubbling information
+    context.mediaPath = mediaPathBackup;
+    context.mediaBlocks = mediaBlocksBackup;
+    return new AtRule(this.name, value, rules, this.getIndex(), this.fileInfo(), this.debugInfo, this.isRooted, this.visibilityInfo());
+};
+AtRule.prototype.variable = function (name) {
+    if (this.rules) {
+        // assuming that there is only one rule at this point - that is how parser constructs the rule
+        return ruleset_1.default.prototype.variable.call(this.rules[0], name);
+    }
+};
+AtRule.prototype.find = function () {
+    var args = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        args[_i] = arguments[_i];
+    }
+    if (this.rules) {
+        // assuming that there is only one rule at this point - that is how parser constructs the rule
+        return ruleset_1.default.prototype.find.apply(this.rules[0], args);
+    }
+};
+AtRule.prototype.rulesets = function () {
+    if (this.rules) {
+        // assuming that there is only one rule at this point - that is how parser constructs the rule
+        return ruleset_1.default.prototype.rulesets.apply(this.rules[0]);
+    }
+};
+AtRule.prototype.outputRuleset = function (context, output, rules) {
+    var ruleCnt = rules.length;
+    var i;
+    context.tabLevel = (context.tabLevel | 0) + 1;
+    // Compressed
+    if (context.compress) {
+        output.add('{');
+        for (i = 0; i < ruleCnt; i++) {
+            rules[i].genCSS(context, output);
         }
-        if (value) {
-            this.value = visitor.visit(value);
-        }
-    };
-    AtRule.prototype.isRulesetLike = function () {
-        return this.rules || !this.isCharset();
-    };
-    AtRule.prototype.isCharset = function () {
-        return '@charset' === this.name;
-    };
-    AtRule.prototype.genCSS = function (context, output) {
-        var value = this.value;
-        var rules = this.rules;
-        output.add(this.name, this.fileInfo(), this.getIndex());
-        if (value) {
-            output.add(' ');
-            value.genCSS(context, output);
-        }
-        if (rules) {
-            this.outputRuleset(context, output, rules);
-        }
-        else {
-            output.add(';');
-        }
-    };
-    AtRule.prototype.eval = function (context) {
-        var mediaPathBackup;
-        var mediaBlocksBackup;
-        var value = this.value;
-        var rules = this.rules;
-        // media stored inside other atrule should not bubble over it
-        // backpup media bubbling information
-        mediaPathBackup = context.mediaPath;
-        mediaBlocksBackup = context.mediaBlocks;
-        // deleted media bubbling information
-        context.mediaPath = [];
-        context.mediaBlocks = [];
-        if (value) {
-            value = value.eval(context);
-        }
-        if (rules) {
-            // assuming that there is only one rule at this point - that is how parser constructs the rule
-            rules = [rules[0].eval(context)];
-            rules[0].root = true;
-        }
-        // restore media bubbling information
-        context.mediaPath = mediaPathBackup;
-        context.mediaBlocks = mediaBlocksBackup;
-        return new AtRule(this.name, value, rules, this.getIndex(), this.fileInfo(), this.debugInfo, this.isRooted, this.visibilityInfo());
-    };
-    AtRule.prototype.variable = function (name) {
-        if (this.rules) {
-            // assuming that there is only one rule at this point - that is how parser constructs the rule
-            return ruleset_1.default.prototype.variable.call(this.rules[0], name);
-        }
-    };
-    AtRule.prototype.find = function () {
-        var args = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            args[_i] = arguments[_i];
-        }
-        if (this.rules) {
-            // assuming that there is only one rule at this point - that is how parser constructs the rule
-            return ruleset_1.default.prototype.find.apply(this.rules[0], args);
-        }
-    };
-    AtRule.prototype.rulesets = function () {
-        if (this.rules) {
-            // assuming that there is only one rule at this point - that is how parser constructs the rule
-            return ruleset_1.default.prototype.rulesets.apply(this.rules[0]);
-        }
-    };
-    AtRule.prototype.outputRuleset = function (context, output, rules) {
-        var ruleCnt = rules.length;
-        var i;
-        context.tabLevel = (context.tabLevel | 0) + 1;
-        // Compressed
-        if (context.compress) {
-            output.add('{');
-            for (i = 0; i < ruleCnt; i++) {
-                rules[i].genCSS(context, output);
-            }
-            output.add('}');
-            context.tabLevel--;
-            return;
-        }
-        // Non-compressed
-        var tabSetStr = "\n" + Array(context.tabLevel).join('  ');
-        var tabRuleStr = tabSetStr + "  ";
-        if (!ruleCnt) {
-            output.add(" {" + tabSetStr + "}");
-        }
-        else {
-            output.add(" {" + tabRuleStr);
-            rules[0].genCSS(context, output);
-            for (i = 1; i < ruleCnt; i++) {
-                output.add(tabRuleStr);
-                rules[i].genCSS(context, output);
-            }
-            output.add(tabSetStr + "}");
-        }
+        output.add('}');
         context.tabLevel--;
-    };
-    return AtRule;
-}(node_1.default));
+        return;
+    }
+    // Non-compressed
+    var tabSetStr = "\n" + Array(context.tabLevel).join('  ');
+    var tabRuleStr = tabSetStr + "  ";
+    if (!ruleCnt) {
+        output.add(" {" + tabSetStr + "}");
+    }
+    else {
+        output.add(" {" + tabRuleStr);
+        rules[0].genCSS(context, output);
+        for (i = 1; i < ruleCnt; i++) {
+            output.add(tabRuleStr);
+            rules[i].genCSS(context, output);
+        }
+        output.add(tabSetStr + "}");
+    }
+    context.tabLevel--;
+};
 AtRule.prototype.type = 'AtRule';
 exports.default = AtRule;
 //# sourceMappingURL=atrule.js.map
-}, function(modId) { var map = {"./node":1607654390936,"./selector":1607654390939,"./ruleset":1607654390946,"./anonymous":1607654390950}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390939, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223,"./selector":1607851992226,"./ruleset":1607851992233,"./anonymous":1607851992237}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992226, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -1461,145 +1417,127 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var node_1 = __importDefault(require("./node"));
 var element_1 = __importDefault(require("./element"));
 var less_error_1 = __importDefault(require("../less-error"));
-var Selector = /** @class */ (function (_super) {
-    __extends(Selector, _super);
-    function Selector(elements, extendList, condition, index, currentFileInfo, visibilityInfo) {
-        var _this = _super.call(this) || this;
-        _this.extendList = extendList;
-        _this.condition = condition;
-        _this.evaldCondition = !condition;
-        _this._index = index;
-        _this._fileInfo = currentFileInfo;
-        _this.elements = _this.getElements(elements);
-        _this.mixinElements_ = undefined;
-        _this.copyVisibilityInfo(visibilityInfo);
-        _this.setParent(_this.elements, _this);
-        return _this;
+var Selector = function (elements, extendList, condition, index, currentFileInfo, visibilityInfo) {
+    this.extendList = extendList;
+    this.condition = condition;
+    this.evaldCondition = !condition;
+    this._index = index;
+    this._fileInfo = currentFileInfo;
+    this.elements = this.getElements(elements);
+    this.mixinElements_ = undefined;
+    this.copyVisibilityInfo(visibilityInfo);
+    this.setParent(this.elements, this);
+};
+Selector.prototype = new node_1.default();
+Selector.prototype.accept = function (visitor) {
+    if (this.elements) {
+        this.elements = visitor.visitArray(this.elements);
     }
-    Selector.prototype.accept = function (visitor) {
-        if (this.elements) {
-            this.elements = visitor.visitArray(this.elements);
-        }
-        if (this.extendList) {
-            this.extendList = visitor.visitArray(this.extendList);
-        }
-        if (this.condition) {
-            this.condition = visitor.visit(this.condition);
-        }
-    };
-    Selector.prototype.createDerived = function (elements, extendList, evaldCondition) {
-        elements = this.getElements(elements);
-        var newSelector = new Selector(elements, extendList || this.extendList, null, this.getIndex(), this.fileInfo(), this.visibilityInfo());
-        newSelector.evaldCondition = (evaldCondition != null) ? evaldCondition : this.evaldCondition;
-        newSelector.mediaEmpty = this.mediaEmpty;
-        return newSelector;
-    };
-    Selector.prototype.getElements = function (els) {
-        if (!els) {
-            return [new element_1.default('', '&', false, this._index, this._fileInfo)];
-        }
-        if (typeof els === 'string') {
-            this.parse.parseNode(els, ['selector'], this._index, this._fileInfo, function (err, result) {
-                if (err) {
-                    throw new less_error_1.default({
-                        index: err.index,
-                        message: err.message
-                    }, this.parse.imports, this._fileInfo.filename);
-                }
-                els = result[0].elements;
-            });
-        }
-        return els;
-    };
-    Selector.prototype.createEmptySelectors = function () {
-        var el = new element_1.default('', '&', false, this._index, this._fileInfo);
-        var sels = [new Selector([el], null, null, this._index, this._fileInfo)];
-        sels[0].mediaEmpty = true;
-        return sels;
-    };
-    Selector.prototype.match = function (other) {
-        var elements = this.elements;
-        var len = elements.length;
-        var olen;
-        var i;
-        other = other.mixinElements();
-        olen = other.length;
-        if (olen === 0 || len < olen) {
-            return 0;
-        }
-        else {
-            for (i = 0; i < olen; i++) {
-                if (elements[i].value !== other[i]) {
-                    return 0;
-                }
+    if (this.extendList) {
+        this.extendList = visitor.visitArray(this.extendList);
+    }
+    if (this.condition) {
+        this.condition = visitor.visit(this.condition);
+    }
+};
+Selector.prototype.createDerived = function (elements, extendList, evaldCondition) {
+    elements = this.getElements(elements);
+    var newSelector = new Selector(elements, extendList || this.extendList, null, this.getIndex(), this.fileInfo(), this.visibilityInfo());
+    newSelector.evaldCondition = (evaldCondition != null) ? evaldCondition : this.evaldCondition;
+    newSelector.mediaEmpty = this.mediaEmpty;
+    return newSelector;
+};
+Selector.prototype.getElements = function (els) {
+    if (!els) {
+        return [new element_1.default('', '&', false, this._index, this._fileInfo)];
+    }
+    if (typeof els === 'string') {
+        this.parse.parseNode(els, ['selector'], this._index, this._fileInfo, function (err, result) {
+            if (err) {
+                throw new less_error_1.default({
+                    index: err.index,
+                    message: err.message
+                }, this.parse.imports, this._fileInfo.filename);
+            }
+            els = result[0].elements;
+        });
+    }
+    return els;
+};
+Selector.prototype.createEmptySelectors = function () {
+    var el = new element_1.default('', '&', false, this._index, this._fileInfo);
+    var sels = [new Selector([el], null, null, this._index, this._fileInfo)];
+    sels[0].mediaEmpty = true;
+    return sels;
+};
+Selector.prototype.match = function (other) {
+    var elements = this.elements;
+    var len = elements.length;
+    var olen;
+    var i;
+    other = other.mixinElements();
+    olen = other.length;
+    if (olen === 0 || len < olen) {
+        return 0;
+    }
+    else {
+        for (i = 0; i < olen; i++) {
+            if (elements[i].value !== other[i]) {
+                return 0;
             }
         }
-        return olen; // return number of matched elements
-    };
-    Selector.prototype.mixinElements = function () {
-        if (this.mixinElements_) {
-            return this.mixinElements_;
+    }
+    return olen; // return number of matched elements
+};
+Selector.prototype.mixinElements = function () {
+    if (this.mixinElements_) {
+        return this.mixinElements_;
+    }
+    var elements = this.elements.map(function (v) { return v.combinator.value + (v.value.value || v.value); }).join('').match(/[,&#\*\.\w-]([\w-]|(\\.))*/g);
+    if (elements) {
+        if (elements[0] === '&') {
+            elements.shift();
         }
-        var elements = this.elements.map(function (v) { return v.combinator.value + (v.value.value || v.value); }).join('').match(/[,&#\*\.\w-]([\w-]|(\\.))*/g);
-        if (elements) {
-            if (elements[0] === '&') {
-                elements.shift();
-            }
-        }
-        else {
-            elements = [];
-        }
-        return (this.mixinElements_ = elements);
-    };
-    Selector.prototype.isJustParentSelector = function () {
-        return !this.mediaEmpty &&
-            this.elements.length === 1 &&
-            this.elements[0].value === '&' &&
-            (this.elements[0].combinator.value === ' ' || this.elements[0].combinator.value === '');
-    };
-    Selector.prototype.eval = function (context) {
-        var evaldCondition = this.condition && this.condition.eval(context);
-        var elements = this.elements;
-        var extendList = this.extendList;
-        elements = elements && elements.map(function (e) { return e.eval(context); });
-        extendList = extendList && extendList.map(function (extend) { return extend.eval(context); });
-        return this.createDerived(elements, extendList, evaldCondition);
-    };
-    Selector.prototype.genCSS = function (context, output) {
-        var i;
-        var element;
-        if ((!context || !context.firstSelector) && this.elements[0].combinator.value === '') {
-            output.add(' ', this.fileInfo(), this.getIndex());
-        }
-        for (i = 0; i < this.elements.length; i++) {
-            element = this.elements[i];
-            element.genCSS(context, output);
-        }
-    };
-    Selector.prototype.getIsOutput = function () {
-        return this.evaldCondition;
-    };
-    return Selector;
-}(node_1.default));
+    }
+    else {
+        elements = [];
+    }
+    return (this.mixinElements_ = elements);
+};
+Selector.prototype.isJustParentSelector = function () {
+    return !this.mediaEmpty &&
+        this.elements.length === 1 &&
+        this.elements[0].value === '&' &&
+        (this.elements[0].combinator.value === ' ' || this.elements[0].combinator.value === '');
+};
+Selector.prototype.eval = function (context) {
+    var evaldCondition = this.condition && this.condition.eval(context);
+    var elements = this.elements;
+    var extendList = this.extendList;
+    elements = elements && elements.map(function (e) { return e.eval(context); });
+    extendList = extendList && extendList.map(function (extend) { return extend.eval(context); });
+    return this.createDerived(elements, extendList, evaldCondition);
+};
+Selector.prototype.genCSS = function (context, output) {
+    var i;
+    var element;
+    if ((!context || !context.firstSelector) && this.elements[0].combinator.value === '') {
+        output.add(' ', this.fileInfo(), this.getIndex());
+    }
+    for (i = 0; i < this.elements.length; i++) {
+        element = this.elements[i];
+        element.genCSS(context, output);
+    }
+};
+Selector.prototype.getIsOutput = function () {
+    return this.evaldCondition;
+};
 Selector.prototype.type = 'Selector';
 exports.default = Selector;
 //# sourceMappingURL=selector.js.map
-}, function(modId) { var map = {"./node":1607654390936,"./element":1607654390940,"../less-error":1607654390943}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390940, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223,"./element":1607851992227,"../less-error":1607851992230}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992227, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -1607,124 +1545,88 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var node_1 = __importDefault(require("./node"));
 var paren_1 = __importDefault(require("./paren"));
 var combinator_1 = __importDefault(require("./combinator"));
-var Element = /** @class */ (function (_super) {
-    __extends(Element, _super);
-    function Element(combinator, value, isVariable, index, currentFileInfo, visibilityInfo) {
-        var _this = _super.call(this) || this;
-        _this.combinator = combinator instanceof combinator_1.default ?
-            combinator : new combinator_1.default(combinator);
-        if (typeof value === 'string') {
-            _this.value = value.trim();
-        }
-        else if (value) {
-            _this.value = value;
-        }
-        else {
-            _this.value = '';
-        }
-        _this.isVariable = isVariable;
-        _this._index = index;
-        _this._fileInfo = currentFileInfo;
-        _this.copyVisibilityInfo(visibilityInfo);
-        _this.setParent(_this.combinator, _this);
-        return _this;
+var Element = function (combinator, value, isVariable, index, currentFileInfo, visibilityInfo) {
+    this.combinator = combinator instanceof combinator_1.default ?
+        combinator : new combinator_1.default(combinator);
+    if (typeof value === 'string') {
+        this.value = value.trim();
     }
-    Element.prototype.accept = function (visitor) {
-        var value = this.value;
-        this.combinator = visitor.visit(this.combinator);
-        if (typeof value === 'object') {
-            this.value = visitor.visit(value);
-        }
-    };
-    Element.prototype.eval = function (context) {
-        return new Element(this.combinator, this.value.eval ? this.value.eval(context) : this.value, this.isVariable, this.getIndex(), this.fileInfo(), this.visibilityInfo());
-    };
-    Element.prototype.clone = function () {
-        return new Element(this.combinator, this.value, this.isVariable, this.getIndex(), this.fileInfo(), this.visibilityInfo());
-    };
-    Element.prototype.genCSS = function (context, output) {
-        output.add(this.toCSS(context), this.fileInfo(), this.getIndex());
-    };
-    Element.prototype.toCSS = function (context) {
-        if (context === void 0) { context = {}; }
-        var value = this.value;
-        var firstSelector = context.firstSelector;
-        if (value instanceof paren_1.default) {
-            // selector in parens should not be affected by outer selector
-            // flags (breaks only interpolated selectors - see #1973)
-            context.firstSelector = true;
-        }
-        value = value.toCSS ? value.toCSS(context) : value;
-        context.firstSelector = firstSelector;
-        if (value === '' && this.combinator.value.charAt(0) === '&') {
-            return '';
-        }
-        else {
-            return this.combinator.toCSS(context) + value;
-        }
-    };
-    return Element;
-}(node_1.default));
+    else if (value) {
+        this.value = value;
+    }
+    else {
+        this.value = '';
+    }
+    this.isVariable = isVariable;
+    this._index = index;
+    this._fileInfo = currentFileInfo;
+    this.copyVisibilityInfo(visibilityInfo);
+    this.setParent(this.combinator, this);
+};
+Element.prototype = new node_1.default();
+Element.prototype.accept = function (visitor) {
+    var value = this.value;
+    this.combinator = visitor.visit(this.combinator);
+    if (typeof value === 'object') {
+        this.value = visitor.visit(value);
+    }
+};
+Element.prototype.eval = function (context) {
+    return new Element(this.combinator, this.value.eval ? this.value.eval(context) : this.value, this.isVariable, this.getIndex(), this.fileInfo(), this.visibilityInfo());
+};
+Element.prototype.clone = function () {
+    return new Element(this.combinator, this.value, this.isVariable, this.getIndex(), this.fileInfo(), this.visibilityInfo());
+};
+Element.prototype.genCSS = function (context, output) {
+    output.add(this.toCSS(context), this.fileInfo(), this.getIndex());
+};
+Element.prototype.toCSS = function (context) {
+    if (context === void 0) { context = {}; }
+    var value = this.value;
+    var firstSelector = context.firstSelector;
+    if (value instanceof paren_1.default) {
+        // selector in parens should not be affected by outer selector
+        // flags (breaks only interpolated selectors - see #1973)
+        context.firstSelector = true;
+    }
+    value = value.toCSS ? value.toCSS(context) : value;
+    context.firstSelector = firstSelector;
+    if (value === '' && this.combinator.value.charAt(0) === '&') {
+        return '';
+    }
+    else {
+        return this.combinator.toCSS(context) + value;
+    }
+};
 Element.prototype.type = 'Element';
 exports.default = Element;
 //# sourceMappingURL=element.js.map
-}, function(modId) { var map = {"./node":1607654390936,"./paren":1607654390941,"./combinator":1607654390942}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390941, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223,"./paren":1607851992228,"./combinator":1607851992229}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992228, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var node_1 = __importDefault(require("./node"));
-var Paren = /** @class */ (function (_super) {
-    __extends(Paren, _super);
-    function Paren(node) {
-        var _this = _super.call(this) || this;
-        _this.value = node;
-        return _this;
-    }
-    Paren.prototype.genCSS = function (context, output) {
-        output.add('(');
-        this.value.genCSS(context, output);
-        output.add(')');
-    };
-    Paren.prototype.eval = function (context) {
-        return new Paren(this.value.eval(context));
-    };
-    return Paren;
-}(node_1.default));
+var Paren = function (node) {
+    this.value = node;
+};
+Paren.prototype = new node_1.default();
+Paren.prototype.genCSS = function (context, output) {
+    output.add('(');
+    this.value.genCSS(context, output);
+    output.add(')');
+};
+Paren.prototype.eval = function (context) {
+    return new Paren(this.value.eval(context));
+};
 Paren.prototype.type = 'Paren';
 exports.default = Paren;
 //# sourceMappingURL=paren.js.map
-}, function(modId) { var map = {"./node":1607654390936}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390942, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992229, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -1735,31 +1637,26 @@ var _noSpaceCombinators = {
     ' ': true,
     '|': true
 };
-var Combinator = /** @class */ (function (_super) {
-    __extends(Combinator, _super);
-    function Combinator(value) {
-        var _this = _super.call(this) || this;
-        if (value === ' ') {
-            _this.value = ' ';
-            _this.emptyOrWhitespace = true;
-        }
-        else {
-            _this.value = value ? value.trim() : '';
-            _this.emptyOrWhitespace = _this.value === '';
-        }
-        return _this;
+var Combinator = function (value) {
+    if (value === ' ') {
+        this.value = ' ';
+        this.emptyOrWhitespace = true;
     }
-    Combinator.prototype.genCSS = function (context, output) {
-        var spaceOrEmpty = (context.compress || _noSpaceCombinators[this.value]) ? '' : ' ';
-        output.add(spaceOrEmpty + this.value + spaceOrEmpty);
-    };
-    return Combinator;
-}(node_1.default));
+    else {
+        this.value = value ? value.trim() : '';
+        this.emptyOrWhitespace = this.value === '';
+    }
+};
+Combinator.prototype = new node_1.default();
+Combinator.prototype.genCSS = function (context, output) {
+    var spaceOrEmpty = (context.compress || _noSpaceCombinators[this.value]) ? '' : ' ';
+    output.add(spaceOrEmpty + this.value + spaceOrEmpty);
+};
 Combinator.prototype.type = 'Combinator';
 exports.default = Combinator;
 //# sourceMappingURL=combinator.js.map
-}, function(modId) { var map = {"./node":1607654390936}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390943, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992230, function(require, module, exports) {
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -1922,8 +1819,8 @@ LessError.prototype.toString = function (options) {
 };
 exports.default = LessError;
 //# sourceMappingURL=less-error.js.map
-}, function(modId) { var map = {"./utils":1607654390944}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390944, function(require, module, exports) {
+}, function(modId) { var map = {"./utils":1607851992231}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992231, function(require, module, exports) {
 
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
@@ -2077,8 +1974,8 @@ function flattenArray(arr, result) {
 }
 exports.flattenArray = flattenArray;
 //# sourceMappingURL=utils.js.map
-}, function(modId) { var map = {"./constants":1607654390945}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390945, function(require, module, exports) {
+}, function(modId) { var map = {"./constants":1607851992232}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992232, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.RewriteUrls = exports.Math = void 0;
@@ -2095,21 +1992,8 @@ exports.RewriteUrls = {
 };
 //# sourceMappingURL=constants.js.map
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390946, function(require, module, exports) {
+__DEFINE__(1607851992233, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
@@ -2146,776 +2030,758 @@ var function_registry_1 = __importDefault(require("../functions/function-registr
 var default_1 = __importDefault(require("../functions/default"));
 var debug_info_1 = __importDefault(require("./debug-info"));
 var utils = __importStar(require("../utils"));
-var Ruleset = /** @class */ (function (_super) {
-    __extends(Ruleset, _super);
-    function Ruleset(selectors, rules, strictImports, visibilityInfo) {
-        var _this = _super.call(this) || this;
-        _this.selectors = selectors;
-        _this.rules = rules;
-        _this._lookups = {};
-        _this._variables = null;
-        _this._properties = null;
-        _this.strictImports = strictImports;
-        _this.copyVisibilityInfo(visibilityInfo);
-        _this.allowRoot = true;
-        _this.setParent(_this.selectors, _this);
-        _this.setParent(_this.rules, _this);
-        return _this;
+var Ruleset = function (selectors, rules, strictImports, visibilityInfo) {
+    this.selectors = selectors;
+    this.rules = rules;
+    this._lookups = {};
+    this._variables = null;
+    this._properties = null;
+    this.strictImports = strictImports;
+    this.copyVisibilityInfo(visibilityInfo);
+    this.allowRoot = true;
+    this.setParent(this.selectors, this);
+    this.setParent(this.rules, this);
+};
+Ruleset.prototype = new node_1.default();
+Ruleset.prototype.isRulesetLike = function () {
+    return true;
+};
+Ruleset.prototype.accept = function (visitor) {
+    if (this.paths) {
+        this.paths = visitor.visitArray(this.paths, true);
     }
-    Ruleset.prototype.isRulesetLike = function () {
-        return true;
-    };
-    Ruleset.prototype.accept = function (visitor) {
-        if (this.paths) {
-            this.paths = visitor.visitArray(this.paths, true);
+    else if (this.selectors) {
+        this.selectors = visitor.visitArray(this.selectors);
+    }
+    if (this.rules && this.rules.length) {
+        this.rules = visitor.visitArray(this.rules);
+    }
+};
+Ruleset.prototype.eval = function (context) {
+    var that = this;
+    var selectors;
+    var selCnt;
+    var selector;
+    var i;
+    var hasVariable;
+    var hasOnePassingSelector = false;
+    if (this.selectors && (selCnt = this.selectors.length)) {
+        selectors = new Array(selCnt);
+        default_1.default.error({
+            type: 'Syntax',
+            message: 'it is currently only allowed in parametric mixin guards,'
+        });
+        for (i = 0; i < selCnt; i++) {
+            selector = this.selectors[i].eval(context);
+            for (var j = 0; j < selector.elements.length; j++) {
+                if (selector.elements[j].isVariable) {
+                    hasVariable = true;
+                    break;
+                }
+            }
+            selectors[i] = selector;
+            if (selector.evaldCondition) {
+                hasOnePassingSelector = true;
+            }
         }
-        else if (this.selectors) {
-            this.selectors = visitor.visitArray(this.selectors);
-        }
-        if (this.rules && this.rules.length) {
-            this.rules = visitor.visitArray(this.rules);
-        }
-    };
-    Ruleset.prototype.eval = function (context) {
-        var that = this;
-        var selectors;
-        var selCnt;
-        var selector;
-        var i;
-        var hasVariable;
-        var hasOnePassingSelector = false;
-        if (this.selectors && (selCnt = this.selectors.length)) {
-            selectors = new Array(selCnt);
-            default_1.default.error({
-                type: 'Syntax',
-                message: 'it is currently only allowed in parametric mixin guards,'
-            });
+        if (hasVariable) {
+            var toParseSelectors = new Array(selCnt);
             for (i = 0; i < selCnt; i++) {
-                selector = this.selectors[i].eval(context);
-                for (var j = 0; j < selector.elements.length; j++) {
-                    if (selector.elements[j].isVariable) {
-                        hasVariable = true;
-                        break;
-                    }
+                selector = selectors[i];
+                toParseSelectors[i] = selector.toCSS(context);
+            }
+            this.parse.parseNode(toParseSelectors.join(','), ["selectors"], selectors[0].getIndex(), selectors[0].fileInfo(), function (err, result) {
+                if (result) {
+                    selectors = utils.flattenArray(result);
                 }
-                selectors[i] = selector;
-                if (selector.evaldCondition) {
-                    hasOnePassingSelector = true;
+            });
+        }
+        default_1.default.reset();
+    }
+    else {
+        hasOnePassingSelector = true;
+    }
+    var rules = this.rules ? utils.copyArray(this.rules) : null;
+    var ruleset = new Ruleset(selectors, rules, this.strictImports, this.visibilityInfo());
+    var rule;
+    var subRule;
+    ruleset.originalRuleset = this;
+    ruleset.root = this.root;
+    ruleset.firstRoot = this.firstRoot;
+    ruleset.allowImports = this.allowImports;
+    if (this.debugInfo) {
+        ruleset.debugInfo = this.debugInfo;
+    }
+    if (!hasOnePassingSelector) {
+        rules.length = 0;
+    }
+    // inherit a function registry from the frames stack when possible;
+    // otherwise from the global registry
+    ruleset.functionRegistry = (function (frames) {
+        var i = 0;
+        var n = frames.length;
+        var found;
+        for (; i !== n; ++i) {
+            found = frames[i].functionRegistry;
+            if (found) {
+                return found;
+            }
+        }
+        return function_registry_1.default;
+    })(context.frames).inherit();
+    // push the current ruleset to the frames stack
+    var ctxFrames = context.frames;
+    ctxFrames.unshift(ruleset);
+    // currrent selectors
+    var ctxSelectors = context.selectors;
+    if (!ctxSelectors) {
+        context.selectors = ctxSelectors = [];
+    }
+    ctxSelectors.unshift(this.selectors);
+    // Evaluate imports
+    if (ruleset.root || ruleset.allowImports || !ruleset.strictImports) {
+        ruleset.evalImports(context);
+    }
+    // Store the frames around mixin definitions,
+    // so they can be evaluated like closures when the time comes.
+    var rsRules = ruleset.rules;
+    for (i = 0; (rule = rsRules[i]); i++) {
+        if (rule.evalFirst) {
+            rsRules[i] = rule.eval(context);
+        }
+    }
+    var mediaBlockCount = (context.mediaBlocks && context.mediaBlocks.length) || 0;
+    // Evaluate mixin calls.
+    for (i = 0; (rule = rsRules[i]); i++) {
+        if (rule.type === 'MixinCall') {
+            /* jshint loopfunc:true */
+            rules = rule.eval(context).filter(function (r) {
+                if ((r instanceof declaration_1.default) && r.variable) {
+                    // do not pollute the scope if the variable is
+                    // already there. consider returning false here
+                    // but we need a way to "return" variable from mixins
+                    return !(ruleset.variable(r.name));
                 }
-            }
-            if (hasVariable) {
-                var toParseSelectors = new Array(selCnt);
-                for (i = 0; i < selCnt; i++) {
-                    selector = selectors[i];
-                    toParseSelectors[i] = selector.toCSS(context);
+                return true;
+            });
+            rsRules.splice.apply(rsRules, [i, 1].concat(rules));
+            i += rules.length - 1;
+            ruleset.resetCache();
+        }
+        else if (rule.type === 'VariableCall') {
+            /* jshint loopfunc:true */
+            rules = rule.eval(context).rules.filter(function (r) {
+                if ((r instanceof declaration_1.default) && r.variable) {
+                    // do not pollute the scope at all
+                    return false;
                 }
-                this.parse.parseNode(toParseSelectors.join(','), ["selectors"], selectors[0].getIndex(), selectors[0].fileInfo(), function (err, result) {
-                    if (result) {
-                        selectors = utils.flattenArray(result);
-                    }
-                });
-            }
-            default_1.default.reset();
+                return true;
+            });
+            rsRules.splice.apply(rsRules, [i, 1].concat(rules));
+            i += rules.length - 1;
+            ruleset.resetCache();
         }
-        else {
-            hasOnePassingSelector = true;
+    }
+    // Evaluate everything else
+    for (i = 0; (rule = rsRules[i]); i++) {
+        if (!rule.evalFirst) {
+            rsRules[i] = rule = rule.eval ? rule.eval(context) : rule;
         }
-        var rules = this.rules ? utils.copyArray(this.rules) : null;
-        var ruleset = new Ruleset(selectors, rules, this.strictImports, this.visibilityInfo());
-        var rule;
-        var subRule;
-        ruleset.originalRuleset = this;
-        ruleset.root = this.root;
-        ruleset.firstRoot = this.firstRoot;
-        ruleset.allowImports = this.allowImports;
-        if (this.debugInfo) {
-            ruleset.debugInfo = this.debugInfo;
-        }
-        if (!hasOnePassingSelector) {
-            rules.length = 0;
-        }
-        // inherit a function registry from the frames stack when possible;
-        // otherwise from the global registry
-        ruleset.functionRegistry = (function (frames) {
-            var i = 0;
-            var n = frames.length;
-            var found;
-            for (; i !== n; ++i) {
-                found = frames[i].functionRegistry;
-                if (found) {
-                    return found;
-                }
-            }
-            return function_registry_1.default;
-        })(context.frames).inherit();
-        // push the current ruleset to the frames stack
-        var ctxFrames = context.frames;
-        ctxFrames.unshift(ruleset);
-        // currrent selectors
-        var ctxSelectors = context.selectors;
-        if (!ctxSelectors) {
-            context.selectors = ctxSelectors = [];
-        }
-        ctxSelectors.unshift(this.selectors);
-        // Evaluate imports
-        if (ruleset.root || ruleset.allowImports || !ruleset.strictImports) {
-            ruleset.evalImports(context);
-        }
-        // Store the frames around mixin definitions,
-        // so they can be evaluated like closures when the time comes.
-        var rsRules = ruleset.rules;
-        for (i = 0; (rule = rsRules[i]); i++) {
-            if (rule.evalFirst) {
-                rsRules[i] = rule.eval(context);
-            }
-        }
-        var mediaBlockCount = (context.mediaBlocks && context.mediaBlocks.length) || 0;
-        // Evaluate mixin calls.
-        for (i = 0; (rule = rsRules[i]); i++) {
-            if (rule.type === 'MixinCall') {
-                /* jshint loopfunc:true */
-                rules = rule.eval(context).filter(function (r) {
-                    if ((r instanceof declaration_1.default) && r.variable) {
-                        // do not pollute the scope if the variable is
-                        // already there. consider returning false here
-                        // but we need a way to "return" variable from mixins
-                        return !(ruleset.variable(r.name));
-                    }
-                    return true;
-                });
-                rsRules.splice.apply(rsRules, [i, 1].concat(rules));
-                i += rules.length - 1;
-                ruleset.resetCache();
-            }
-            else if (rule.type === 'VariableCall') {
-                /* jshint loopfunc:true */
-                rules = rule.eval(context).rules.filter(function (r) {
-                    if ((r instanceof declaration_1.default) && r.variable) {
-                        // do not pollute the scope at all
-                        return false;
-                    }
-                    return true;
-                });
-                rsRules.splice.apply(rsRules, [i, 1].concat(rules));
-                i += rules.length - 1;
-                ruleset.resetCache();
-            }
-        }
-        // Evaluate everything else
-        for (i = 0; (rule = rsRules[i]); i++) {
-            if (!rule.evalFirst) {
-                rsRules[i] = rule = rule.eval ? rule.eval(context) : rule;
-            }
-        }
-        // Evaluate everything else
-        for (i = 0; (rule = rsRules[i]); i++) {
-            // for rulesets, check if it is a css guard and can be removed
-            if (rule instanceof Ruleset && rule.selectors && rule.selectors.length === 1) {
-                // check if it can be folded in (e.g. & where)
-                if (rule.selectors[0] && rule.selectors[0].isJustParentSelector()) {
-                    rsRules.splice(i--, 1);
-                    for (var j = 0; (subRule = rule.rules[j]); j++) {
-                        if (subRule instanceof node_1.default) {
-                            subRule.copyVisibilityInfo(rule.visibilityInfo());
-                            if (!(subRule instanceof declaration_1.default) || !subRule.variable) {
-                                rsRules.splice(++i, 0, subRule);
-                            }
+    }
+    // Evaluate everything else
+    for (i = 0; (rule = rsRules[i]); i++) {
+        // for rulesets, check if it is a css guard and can be removed
+        if (rule instanceof Ruleset && rule.selectors && rule.selectors.length === 1) {
+            // check if it can be folded in (e.g. & where)
+            if (rule.selectors[0] && rule.selectors[0].isJustParentSelector()) {
+                rsRules.splice(i--, 1);
+                for (var j = 0; (subRule = rule.rules[j]); j++) {
+                    if (subRule instanceof node_1.default) {
+                        subRule.copyVisibilityInfo(rule.visibilityInfo());
+                        if (!(subRule instanceof declaration_1.default) || !subRule.variable) {
+                            rsRules.splice(++i, 0, subRule);
                         }
                     }
                 }
             }
         }
-        // Pop the stack
-        ctxFrames.shift();
-        ctxSelectors.shift();
-        if (context.mediaBlocks) {
-            for (i = mediaBlockCount; i < context.mediaBlocks.length; i++) {
-                context.mediaBlocks[i].bubbleSelectors(selectors);
+    }
+    // Pop the stack
+    ctxFrames.shift();
+    ctxSelectors.shift();
+    if (context.mediaBlocks) {
+        for (i = mediaBlockCount; i < context.mediaBlocks.length; i++) {
+            context.mediaBlocks[i].bubbleSelectors(selectors);
+        }
+    }
+    return ruleset;
+};
+Ruleset.prototype.evalImports = function (context) {
+    var rules = this.rules;
+    var i;
+    var importRules;
+    if (!rules) {
+        return;
+    }
+    for (i = 0; i < rules.length; i++) {
+        if (rules[i].type === 'Import') {
+            importRules = rules[i].eval(context);
+            if (importRules && (importRules.length || importRules.length === 0)) {
+                rules.splice.apply(rules, [i, 1].concat(importRules));
+                i += importRules.length - 1;
+            }
+            else {
+                rules.splice(i, 1, importRules);
+            }
+            this.resetCache();
+        }
+    }
+};
+Ruleset.prototype.makeImportant = function () {
+    var result = new Ruleset(this.selectors, this.rules.map(function (r) {
+        if (r.makeImportant) {
+            return r.makeImportant();
+        }
+        else {
+            return r;
+        }
+    }), this.strictImports, this.visibilityInfo());
+    return result;
+};
+Ruleset.prototype.matchArgs = function (args) {
+    return !args || args.length === 0;
+};
+// lets you call a css selector with a guard
+Ruleset.prototype.matchCondition = function (args, context) {
+    var lastSelector = this.selectors[this.selectors.length - 1];
+    if (!lastSelector.evaldCondition) {
+        return false;
+    }
+    if (lastSelector.condition &&
+        !lastSelector.condition.eval(new contexts_1.default.Eval(context, context.frames))) {
+        return false;
+    }
+    return true;
+};
+Ruleset.prototype.resetCache = function () {
+    this._rulesets = null;
+    this._variables = null;
+    this._properties = null;
+    this._lookups = {};
+};
+Ruleset.prototype.variables = function () {
+    if (!this._variables) {
+        this._variables = !this.rules ? {} : this.rules.reduce(function (hash, r) {
+            if (r instanceof declaration_1.default && r.variable === true) {
+                hash[r.name] = r;
+            }
+            // when evaluating variables in an import statement, imports have not been eval'd
+            // so we need to go inside import statements.
+            // guard against root being a string (in the case of inlined less)
+            if (r.type === 'Import' && r.root && r.root.variables) {
+                var vars = r.root.variables();
+                for (var name_1 in vars) {
+                    if (vars.hasOwnProperty(name_1)) {
+                        hash[name_1] = r.root.variable(name_1);
+                    }
+                }
+            }
+            return hash;
+        }, {});
+    }
+    return this._variables;
+};
+Ruleset.prototype.properties = function () {
+    if (!this._properties) {
+        this._properties = !this.rules ? {} : this.rules.reduce(function (hash, r) {
+            if (r instanceof declaration_1.default && r.variable !== true) {
+                var name_2 = (r.name.length === 1) && (r.name[0] instanceof keyword_1.default) ?
+                    r.name[0].value : r.name;
+                // Properties don't overwrite as they can merge
+                if (!hash["$" + name_2]) {
+                    hash["$" + name_2] = [r];
+                }
+                else {
+                    hash["$" + name_2].push(r);
+                }
+            }
+            return hash;
+        }, {});
+    }
+    return this._properties;
+};
+Ruleset.prototype.variable = function (name) {
+    var decl = this.variables()[name];
+    if (decl) {
+        return this.parseValue(decl);
+    }
+};
+Ruleset.prototype.property = function (name) {
+    var decl = this.properties()[name];
+    if (decl) {
+        return this.parseValue(decl);
+    }
+};
+Ruleset.prototype.lastDeclaration = function () {
+    for (var i = this.rules.length; i > 0; i--) {
+        var decl = this.rules[i - 1];
+        if (decl instanceof declaration_1.default) {
+            return this.parseValue(decl);
+        }
+    }
+};
+Ruleset.prototype.parseValue = function (toParse) {
+    var self = this;
+    function transformDeclaration(decl) {
+        if (decl.value instanceof anonymous_1.default && !decl.parsed) {
+            if (typeof decl.value.value === 'string') {
+                this.parse.parseNode(decl.value.value, ['value', 'important'], decl.value.getIndex(), decl.fileInfo(), function (err, result) {
+                    if (err) {
+                        decl.parsed = true;
+                    }
+                    if (result) {
+                        decl.value = result[0];
+                        decl.important = result[1] || '';
+                        decl.parsed = true;
+                    }
+                });
+            }
+            else {
+                decl.parsed = true;
+            }
+            return decl;
+        }
+        else {
+            return decl;
+        }
+    }
+    if (!Array.isArray(toParse)) {
+        return transformDeclaration.call(self, toParse);
+    }
+    else {
+        var nodes_1 = [];
+        toParse.forEach(function (n) {
+            nodes_1.push(transformDeclaration.call(self, n));
+        });
+        return nodes_1;
+    }
+};
+Ruleset.prototype.rulesets = function () {
+    if (!this.rules) {
+        return [];
+    }
+    var filtRules = [];
+    var rules = this.rules;
+    var i;
+    var rule;
+    for (i = 0; (rule = rules[i]); i++) {
+        if (rule.isRuleset) {
+            filtRules.push(rule);
+        }
+    }
+    return filtRules;
+};
+Ruleset.prototype.prependRule = function (rule) {
+    var rules = this.rules;
+    if (rules) {
+        rules.unshift(rule);
+    }
+    else {
+        this.rules = [rule];
+    }
+    this.setParent(rule, this);
+};
+Ruleset.prototype.find = function (selector, self, filter) {
+    if (self === void 0) { self = this; }
+    var rules = [];
+    var match;
+    var foundMixins;
+    var key = selector.toCSS();
+    if (key in this._lookups) {
+        return this._lookups[key];
+    }
+    this.rulesets().forEach(function (rule) {
+        if (rule !== self) {
+            for (var j = 0; j < rule.selectors.length; j++) {
+                match = selector.match(rule.selectors[j]);
+                if (match) {
+                    if (selector.elements.length > match) {
+                        if (!filter || filter(rule)) {
+                            foundMixins = rule.find(new selector_1.default(selector.elements.slice(match)), self, filter);
+                            for (var i = 0; i < foundMixins.length; ++i) {
+                                foundMixins[i].path.push(rule);
+                            }
+                            Array.prototype.push.apply(rules, foundMixins);
+                        }
+                    }
+                    else {
+                        rules.push({ rule: rule, path: [] });
+                    }
+                    break;
+                }
             }
         }
-        return ruleset;
-    };
-    Ruleset.prototype.evalImports = function (context) {
-        var rules = this.rules;
+    });
+    this._lookups[key] = rules;
+    return rules;
+};
+Ruleset.prototype.genCSS = function (context, output) {
+    var i;
+    var j;
+    var charsetRuleNodes = [];
+    var ruleNodes = [];
+    var // Line number debugging
+    debugInfo;
+    var rule;
+    var path;
+    context.tabLevel = (context.tabLevel || 0);
+    if (!this.root) {
+        context.tabLevel++;
+    }
+    var tabRuleStr = context.compress ? '' : Array(context.tabLevel + 1).join('  ');
+    var tabSetStr = context.compress ? '' : Array(context.tabLevel).join('  ');
+    var sep;
+    var charsetNodeIndex = 0;
+    var importNodeIndex = 0;
+    for (i = 0; (rule = this.rules[i]); i++) {
+        if (rule instanceof comment_1.default) {
+            if (importNodeIndex === i) {
+                importNodeIndex++;
+            }
+            ruleNodes.push(rule);
+        }
+        else if (rule.isCharset && rule.isCharset()) {
+            ruleNodes.splice(charsetNodeIndex, 0, rule);
+            charsetNodeIndex++;
+            importNodeIndex++;
+        }
+        else if (rule.type === 'Import') {
+            ruleNodes.splice(importNodeIndex, 0, rule);
+            importNodeIndex++;
+        }
+        else {
+            ruleNodes.push(rule);
+        }
+    }
+    ruleNodes = charsetRuleNodes.concat(ruleNodes);
+    // If this is the root node, we don't render
+    // a selector, or {}.
+    if (!this.root) {
+        debugInfo = debug_info_1.default(context, this, tabSetStr);
+        if (debugInfo) {
+            output.add(debugInfo);
+            output.add(tabSetStr);
+        }
+        var paths = this.paths;
+        var pathCnt = paths.length;
+        var pathSubCnt = void 0;
+        sep = context.compress ? ',' : (",\n" + tabSetStr);
+        for (i = 0; i < pathCnt; i++) {
+            path = paths[i];
+            if (!(pathSubCnt = path.length)) {
+                continue;
+            }
+            if (i > 0) {
+                output.add(sep);
+            }
+            context.firstSelector = true;
+            path[0].genCSS(context, output);
+            context.firstSelector = false;
+            for (j = 1; j < pathSubCnt; j++) {
+                path[j].genCSS(context, output);
+            }
+        }
+        output.add((context.compress ? '{' : ' {\n') + tabRuleStr);
+    }
+    // Compile rules and rulesets
+    for (i = 0; (rule = ruleNodes[i]); i++) {
+        if (i + 1 === ruleNodes.length) {
+            context.lastRule = true;
+        }
+        var currentLastRule = context.lastRule;
+        if (rule.isRulesetLike(rule)) {
+            context.lastRule = false;
+        }
+        if (rule.genCSS) {
+            rule.genCSS(context, output);
+        }
+        else if (rule.value) {
+            output.add(rule.value.toString());
+        }
+        context.lastRule = currentLastRule;
+        if (!context.lastRule && rule.isVisible()) {
+            output.add(context.compress ? '' : ("\n" + tabRuleStr));
+        }
+        else {
+            context.lastRule = false;
+        }
+    }
+    if (!this.root) {
+        output.add((context.compress ? '}' : "\n" + tabSetStr + "}"));
+        context.tabLevel--;
+    }
+    if (!output.isEmpty() && !context.compress && this.firstRoot) {
+        output.add('\n');
+    }
+};
+Ruleset.prototype.joinSelectors = function (paths, context, selectors) {
+    for (var s = 0; s < selectors.length; s++) {
+        this.joinSelector(paths, context, selectors[s]);
+    }
+};
+Ruleset.prototype.joinSelector = function (paths, context, selector) {
+    function createParenthesis(elementsToPak, originalElement) {
+        var replacementParen;
+        var j;
+        if (elementsToPak.length === 0) {
+            replacementParen = new paren_1.default(elementsToPak[0]);
+        }
+        else {
+            var insideParent = new Array(elementsToPak.length);
+            for (j = 0; j < elementsToPak.length; j++) {
+                insideParent[j] = new element_1.default(null, elementsToPak[j], originalElement.isVariable, originalElement._index, originalElement._fileInfo);
+            }
+            replacementParen = new paren_1.default(new selector_1.default(insideParent));
+        }
+        return replacementParen;
+    }
+    function createSelector(containedElement, originalElement) {
+        var element;
+        var selector;
+        element = new element_1.default(null, containedElement, originalElement.isVariable, originalElement._index, originalElement._fileInfo);
+        selector = new selector_1.default([element]);
+        return selector;
+    }
+    // joins selector path from `beginningPath` with selector path in `addPath`
+    // `replacedElement` contains element that is being replaced by `addPath`
+    // returns concatenated path
+    function addReplacementIntoPath(beginningPath, addPath, replacedElement, originalSelector) {
+        var newSelectorPath;
+        var lastSelector;
+        var newJoinedSelector;
+        // our new selector path
+        newSelectorPath = [];
+        // construct the joined selector - if & is the first thing this will be empty,
+        // if not newJoinedSelector will be the last set of elements in the selector
+        if (beginningPath.length > 0) {
+            newSelectorPath = utils.copyArray(beginningPath);
+            lastSelector = newSelectorPath.pop();
+            newJoinedSelector = originalSelector.createDerived(utils.copyArray(lastSelector.elements));
+        }
+        else {
+            newJoinedSelector = originalSelector.createDerived([]);
+        }
+        if (addPath.length > 0) {
+            // /deep/ is a CSS4 selector - (removed, so should deprecate)
+            // that is valid without anything in front of it
+            // so if the & does not have a combinator that is "" or " " then
+            // and there is a combinator on the parent, then grab that.
+            // this also allows + a { & .b { .a & { ... though not sure why you would want to do that
+            var combinator = replacedElement.combinator;
+            var parentEl = addPath[0].elements[0];
+            if (combinator.emptyOrWhitespace && !parentEl.combinator.emptyOrWhitespace) {
+                combinator = parentEl.combinator;
+            }
+            // join the elements so far with the first part of the parent
+            newJoinedSelector.elements.push(new element_1.default(combinator, parentEl.value, replacedElement.isVariable, replacedElement._index, replacedElement._fileInfo));
+            newJoinedSelector.elements = newJoinedSelector.elements.concat(addPath[0].elements.slice(1));
+        }
+        // now add the joined selector - but only if it is not empty
+        if (newJoinedSelector.elements.length !== 0) {
+            newSelectorPath.push(newJoinedSelector);
+        }
+        // put together the parent selectors after the join (e.g. the rest of the parent)
+        if (addPath.length > 1) {
+            var restOfPath = addPath.slice(1);
+            restOfPath = restOfPath.map(function (selector) { return selector.createDerived(selector.elements, []); });
+            newSelectorPath = newSelectorPath.concat(restOfPath);
+        }
+        return newSelectorPath;
+    }
+    // joins selector path from `beginningPath` with every selector path in `addPaths` array
+    // `replacedElement` contains element that is being replaced by `addPath`
+    // returns array with all concatenated paths
+    function addAllReplacementsIntoPath(beginningPath, addPaths, replacedElement, originalSelector, result) {
+        var j;
+        for (j = 0; j < beginningPath.length; j++) {
+            var newSelectorPath = addReplacementIntoPath(beginningPath[j], addPaths, replacedElement, originalSelector);
+            result.push(newSelectorPath);
+        }
+        return result;
+    }
+    function mergeElementsOnToSelectors(elements, selectors) {
         var i;
-        var importRules;
-        if (!rules) {
+        var sel;
+        if (elements.length === 0) {
             return;
         }
-        for (i = 0; i < rules.length; i++) {
-            if (rules[i].type === 'Import') {
-                importRules = rules[i].eval(context);
-                if (importRules && (importRules.length || importRules.length === 0)) {
-                    rules.splice.apply(rules, [i, 1].concat(importRules));
-                    i += importRules.length - 1;
-                }
-                else {
-                    rules.splice(i, 1, importRules);
-                }
-                this.resetCache();
-            }
+        if (selectors.length === 0) {
+            selectors.push([new selector_1.default(elements)]);
+            return;
         }
-    };
-    Ruleset.prototype.makeImportant = function () {
-        var result = new Ruleset(this.selectors, this.rules.map(function (r) {
-            if (r.makeImportant) {
-                return r.makeImportant();
+        for (i = 0; (sel = selectors[i]); i++) {
+            // if the previous thing in sel is a parent this needs to join on to it
+            if (sel.length > 0) {
+                sel[sel.length - 1] = sel[sel.length - 1].createDerived(sel[sel.length - 1].elements.concat(elements));
             }
             else {
-                return r;
-            }
-        }), this.strictImports, this.visibilityInfo());
-        return result;
-    };
-    Ruleset.prototype.matchArgs = function (args) {
-        return !args || args.length === 0;
-    };
-    // lets you call a css selector with a guard
-    Ruleset.prototype.matchCondition = function (args, context) {
-        var lastSelector = this.selectors[this.selectors.length - 1];
-        if (!lastSelector.evaldCondition) {
-            return false;
-        }
-        if (lastSelector.condition &&
-            !lastSelector.condition.eval(new contexts_1.default.Eval(context, context.frames))) {
-            return false;
-        }
-        return true;
-    };
-    Ruleset.prototype.resetCache = function () {
-        this._rulesets = null;
-        this._variables = null;
-        this._properties = null;
-        this._lookups = {};
-    };
-    Ruleset.prototype.variables = function () {
-        if (!this._variables) {
-            this._variables = !this.rules ? {} : this.rules.reduce(function (hash, r) {
-                if (r instanceof declaration_1.default && r.variable === true) {
-                    hash[r.name] = r;
-                }
-                // when evaluating variables in an import statement, imports have not been eval'd
-                // so we need to go inside import statements.
-                // guard against root being a string (in the case of inlined less)
-                if (r.type === 'Import' && r.root && r.root.variables) {
-                    var vars = r.root.variables();
-                    for (var name_1 in vars) {
-                        if (vars.hasOwnProperty(name_1)) {
-                            hash[name_1] = r.root.variable(name_1);
-                        }
-                    }
-                }
-                return hash;
-            }, {});
-        }
-        return this._variables;
-    };
-    Ruleset.prototype.properties = function () {
-        if (!this._properties) {
-            this._properties = !this.rules ? {} : this.rules.reduce(function (hash, r) {
-                if (r instanceof declaration_1.default && r.variable !== true) {
-                    var name_2 = (r.name.length === 1) && (r.name[0] instanceof keyword_1.default) ?
-                        r.name[0].value : r.name;
-                    // Properties don't overwrite as they can merge
-                    if (!hash["$" + name_2]) {
-                        hash["$" + name_2] = [r];
-                    }
-                    else {
-                        hash["$" + name_2].push(r);
-                    }
-                }
-                return hash;
-            }, {});
-        }
-        return this._properties;
-    };
-    Ruleset.prototype.variable = function (name) {
-        var decl = this.variables()[name];
-        if (decl) {
-            return this.parseValue(decl);
-        }
-    };
-    Ruleset.prototype.property = function (name) {
-        var decl = this.properties()[name];
-        if (decl) {
-            return this.parseValue(decl);
-        }
-    };
-    Ruleset.prototype.lastDeclaration = function () {
-        for (var i = this.rules.length; i > 0; i--) {
-            var decl = this.rules[i - 1];
-            if (decl instanceof declaration_1.default) {
-                return this.parseValue(decl);
+                sel.push(new selector_1.default(elements));
             }
         }
-    };
-    Ruleset.prototype.parseValue = function (toParse) {
-        var self = this;
-        function transformDeclaration(decl) {
-            if (decl.value instanceof anonymous_1.default && !decl.parsed) {
-                if (typeof decl.value.value === 'string') {
-                    this.parse.parseNode(decl.value.value, ['value', 'important'], decl.value.getIndex(), decl.fileInfo(), function (err, result) {
-                        if (err) {
-                            decl.parsed = true;
-                        }
-                        if (result) {
-                            decl.value = result[0];
-                            decl.important = result[1] || '';
-                            decl.parsed = true;
-                        }
-                    });
-                }
-                else {
-                    decl.parsed = true;
-                }
-                return decl;
-            }
-            else {
-                return decl;
-            }
-        }
-        if (!Array.isArray(toParse)) {
-            return transformDeclaration.call(self, toParse);
-        }
-        else {
-            var nodes_1 = [];
-            toParse.forEach(function (n) {
-                nodes_1.push(transformDeclaration.call(self, n));
-            });
-            return nodes_1;
-        }
-    };
-    Ruleset.prototype.rulesets = function () {
-        if (!this.rules) {
-            return [];
-        }
-        var filtRules = [];
-        var rules = this.rules;
-        var i;
-        var rule;
-        for (i = 0; (rule = rules[i]); i++) {
-            if (rule.isRuleset) {
-                filtRules.push(rule);
-            }
-        }
-        return filtRules;
-    };
-    Ruleset.prototype.prependRule = function (rule) {
-        var rules = this.rules;
-        if (rules) {
-            rules.unshift(rule);
-        }
-        else {
-            this.rules = [rule];
-        }
-        this.setParent(rule, this);
-    };
-    Ruleset.prototype.find = function (selector, self, filter) {
-        if (self === void 0) { self = this; }
-        var rules = [];
-        var match;
-        var foundMixins;
-        var key = selector.toCSS();
-        if (key in this._lookups) {
-            return this._lookups[key];
-        }
-        this.rulesets().forEach(function (rule) {
-            if (rule !== self) {
-                for (var j = 0; j < rule.selectors.length; j++) {
-                    match = selector.match(rule.selectors[j]);
-                    if (match) {
-                        if (selector.elements.length > match) {
-                            if (!filter || filter(rule)) {
-                                foundMixins = rule.find(new selector_1.default(selector.elements.slice(match)), self, filter);
-                                for (var i = 0; i < foundMixins.length; ++i) {
-                                    foundMixins[i].path.push(rule);
-                                }
-                                Array.prototype.push.apply(rules, foundMixins);
-                            }
-                        }
-                        else {
-                            rules.push({ rule: rule, path: [] });
-                        }
-                        break;
-                    }
-                }
-            }
-        });
-        this._lookups[key] = rules;
-        return rules;
-    };
-    Ruleset.prototype.genCSS = function (context, output) {
+    }
+    // replace all parent selectors inside `inSelector` by content of `context` array
+    // resulting selectors are returned inside `paths` array
+    // returns true if `inSelector` contained at least one parent selector
+    function replaceParentSelector(paths, context, inSelector) {
+        // The paths are [[Selector]]
+        // The first list is a list of comma separated selectors
+        // The inner list is a list of inheritance separated selectors
+        // e.g.
+        // .a, .b {
+        //   .c {
+        //   }
+        // }
+        // == [[.a] [.c]] [[.b] [.c]]
+        //
         var i;
         var j;
-        var charsetRuleNodes = [];
-        var ruleNodes = [];
-        var // Line number debugging
-        debugInfo;
-        var rule;
-        var path;
-        context.tabLevel = (context.tabLevel || 0);
-        if (!this.root) {
-            context.tabLevel++;
+        var k;
+        var currentElements;
+        var newSelectors;
+        var selectorsMultiplied;
+        var sel;
+        var el;
+        var hadParentSelector = false;
+        var length;
+        var lastSelector;
+        function findNestedSelector(element) {
+            var maybeSelector;
+            if (!(element.value instanceof paren_1.default)) {
+                return null;
+            }
+            maybeSelector = element.value.value;
+            if (!(maybeSelector instanceof selector_1.default)) {
+                return null;
+            }
+            return maybeSelector;
         }
-        var tabRuleStr = context.compress ? '' : Array(context.tabLevel + 1).join('  ');
-        var tabSetStr = context.compress ? '' : Array(context.tabLevel).join('  ');
-        var sep;
-        var charsetNodeIndex = 0;
-        var importNodeIndex = 0;
-        for (i = 0; (rule = this.rules[i]); i++) {
-            if (rule instanceof comment_1.default) {
-                if (importNodeIndex === i) {
-                    importNodeIndex++;
-                }
-                ruleNodes.push(rule);
-            }
-            else if (rule.isCharset && rule.isCharset()) {
-                ruleNodes.splice(charsetNodeIndex, 0, rule);
-                charsetNodeIndex++;
-                importNodeIndex++;
-            }
-            else if (rule.type === 'Import') {
-                ruleNodes.splice(importNodeIndex, 0, rule);
-                importNodeIndex++;
-            }
-            else {
-                ruleNodes.push(rule);
-            }
-        }
-        ruleNodes = charsetRuleNodes.concat(ruleNodes);
-        // If this is the root node, we don't render
-        // a selector, or {}.
-        if (!this.root) {
-            debugInfo = debug_info_1.default(context, this, tabSetStr);
-            if (debugInfo) {
-                output.add(debugInfo);
-                output.add(tabSetStr);
-            }
-            var paths = this.paths;
-            var pathCnt = paths.length;
-            var pathSubCnt = void 0;
-            sep = context.compress ? ',' : (",\n" + tabSetStr);
-            for (i = 0; i < pathCnt; i++) {
-                path = paths[i];
-                if (!(pathSubCnt = path.length)) {
-                    continue;
-                }
-                if (i > 0) {
-                    output.add(sep);
-                }
-                context.firstSelector = true;
-                path[0].genCSS(context, output);
-                context.firstSelector = false;
-                for (j = 1; j < pathSubCnt; j++) {
-                    path[j].genCSS(context, output);
-                }
-            }
-            output.add((context.compress ? '{' : ' {\n') + tabRuleStr);
-        }
-        // Compile rules and rulesets
-        for (i = 0; (rule = ruleNodes[i]); i++) {
-            if (i + 1 === ruleNodes.length) {
-                context.lastRule = true;
-            }
-            var currentLastRule = context.lastRule;
-            if (rule.isRulesetLike(rule)) {
-                context.lastRule = false;
-            }
-            if (rule.genCSS) {
-                rule.genCSS(context, output);
-            }
-            else if (rule.value) {
-                output.add(rule.value.toString());
-            }
-            context.lastRule = currentLastRule;
-            if (!context.lastRule && rule.isVisible()) {
-                output.add(context.compress ? '' : ("\n" + tabRuleStr));
-            }
-            else {
-                context.lastRule = false;
-            }
-        }
-        if (!this.root) {
-            output.add((context.compress ? '}' : "\n" + tabSetStr + "}"));
-            context.tabLevel--;
-        }
-        if (!output.isEmpty() && !context.compress && this.firstRoot) {
-            output.add('\n');
-        }
-    };
-    Ruleset.prototype.joinSelectors = function (paths, context, selectors) {
-        for (var s = 0; s < selectors.length; s++) {
-            this.joinSelector(paths, context, selectors[s]);
-        }
-    };
-    Ruleset.prototype.joinSelector = function (paths, context, selector) {
-        function createParenthesis(elementsToPak, originalElement) {
-            var replacementParen;
-            var j;
-            if (elementsToPak.length === 0) {
-                replacementParen = new paren_1.default(elementsToPak[0]);
-            }
-            else {
-                var insideParent = new Array(elementsToPak.length);
-                for (j = 0; j < elementsToPak.length; j++) {
-                    insideParent[j] = new element_1.default(null, elementsToPak[j], originalElement.isVariable, originalElement._index, originalElement._fileInfo);
-                }
-                replacementParen = new paren_1.default(new selector_1.default(insideParent));
-            }
-            return replacementParen;
-        }
-        function createSelector(containedElement, originalElement) {
-            var element;
-            var selector;
-            element = new element_1.default(null, containedElement, originalElement.isVariable, originalElement._index, originalElement._fileInfo);
-            selector = new selector_1.default([element]);
-            return selector;
-        }
-        // joins selector path from `beginningPath` with selector path in `addPath`
-        // `replacedElement` contains element that is being replaced by `addPath`
-        // returns concatenated path
-        function addReplacementIntoPath(beginningPath, addPath, replacedElement, originalSelector) {
-            var newSelectorPath;
-            var lastSelector;
-            var newJoinedSelector;
-            // our new selector path
-            newSelectorPath = [];
-            // construct the joined selector - if & is the first thing this will be empty,
-            // if not newJoinedSelector will be the last set of elements in the selector
-            if (beginningPath.length > 0) {
-                newSelectorPath = utils.copyArray(beginningPath);
-                lastSelector = newSelectorPath.pop();
-                newJoinedSelector = originalSelector.createDerived(utils.copyArray(lastSelector.elements));
-            }
-            else {
-                newJoinedSelector = originalSelector.createDerived([]);
-            }
-            if (addPath.length > 0) {
-                // /deep/ is a CSS4 selector - (removed, so should deprecate)
-                // that is valid without anything in front of it
-                // so if the & does not have a combinator that is "" or " " then
-                // and there is a combinator on the parent, then grab that.
-                // this also allows + a { & .b { .a & { ... though not sure why you would want to do that
-                var combinator = replacedElement.combinator;
-                var parentEl = addPath[0].elements[0];
-                if (combinator.emptyOrWhitespace && !parentEl.combinator.emptyOrWhitespace) {
-                    combinator = parentEl.combinator;
-                }
-                // join the elements so far with the first part of the parent
-                newJoinedSelector.elements.push(new element_1.default(combinator, parentEl.value, replacedElement.isVariable, replacedElement._index, replacedElement._fileInfo));
-                newJoinedSelector.elements = newJoinedSelector.elements.concat(addPath[0].elements.slice(1));
-            }
-            // now add the joined selector - but only if it is not empty
-            if (newJoinedSelector.elements.length !== 0) {
-                newSelectorPath.push(newJoinedSelector);
-            }
-            // put together the parent selectors after the join (e.g. the rest of the parent)
-            if (addPath.length > 1) {
-                var restOfPath = addPath.slice(1);
-                restOfPath = restOfPath.map(function (selector) { return selector.createDerived(selector.elements, []); });
-                newSelectorPath = newSelectorPath.concat(restOfPath);
-            }
-            return newSelectorPath;
-        }
-        // joins selector path from `beginningPath` with every selector path in `addPaths` array
-        // `replacedElement` contains element that is being replaced by `addPath`
-        // returns array with all concatenated paths
-        function addAllReplacementsIntoPath(beginningPath, addPaths, replacedElement, originalSelector, result) {
-            var j;
-            for (j = 0; j < beginningPath.length; j++) {
-                var newSelectorPath = addReplacementIntoPath(beginningPath[j], addPaths, replacedElement, originalSelector);
-                result.push(newSelectorPath);
-            }
-            return result;
-        }
-        function mergeElementsOnToSelectors(elements, selectors) {
-            var i;
-            var sel;
-            if (elements.length === 0) {
-                return;
-            }
-            if (selectors.length === 0) {
-                selectors.push([new selector_1.default(elements)]);
-                return;
-            }
-            for (i = 0; (sel = selectors[i]); i++) {
-                // if the previous thing in sel is a parent this needs to join on to it
-                if (sel.length > 0) {
-                    sel[sel.length - 1] = sel[sel.length - 1].createDerived(sel[sel.length - 1].elements.concat(elements));
-                }
-                else {
-                    sel.push(new selector_1.default(elements));
-                }
-            }
-        }
-        // replace all parent selectors inside `inSelector` by content of `context` array
-        // resulting selectors are returned inside `paths` array
-        // returns true if `inSelector` contained at least one parent selector
-        function replaceParentSelector(paths, context, inSelector) {
-            // The paths are [[Selector]]
-            // The first list is a list of comma separated selectors
-            // The inner list is a list of inheritance separated selectors
-            // e.g.
-            // .a, .b {
-            //   .c {
-            //   }
-            // }
-            // == [[.a] [.c]] [[.b] [.c]]
-            //
-            var i;
-            var j;
-            var k;
-            var currentElements;
-            var newSelectors;
-            var selectorsMultiplied;
-            var sel;
-            var el;
-            var hadParentSelector = false;
-            var length;
-            var lastSelector;
-            function findNestedSelector(element) {
-                var maybeSelector;
-                if (!(element.value instanceof paren_1.default)) {
-                    return null;
-                }
-                maybeSelector = element.value.value;
-                if (!(maybeSelector instanceof selector_1.default)) {
-                    return null;
-                }
-                return maybeSelector;
-            }
-            // the elements from the current selector so far
-            currentElements = [];
-            // the current list of new selectors to add to the path.
-            // We will build it up. We initiate it with one empty selector as we "multiply" the new selectors
-            // by the parents
-            newSelectors = [
-                []
-            ];
-            for (i = 0; (el = inSelector.elements[i]); i++) {
-                // non parent reference elements just get added
-                if (el.value !== '&') {
-                    var nestedSelector = findNestedSelector(el);
-                    if (nestedSelector != null) {
-                        // merge the current list of non parent selector elements
-                        // on to the current list of selectors to add
-                        mergeElementsOnToSelectors(currentElements, newSelectors);
-                        var nestedPaths = [];
-                        var replaced = void 0;
-                        var replacedNewSelectors = [];
-                        replaced = replaceParentSelector(nestedPaths, context, nestedSelector);
-                        hadParentSelector = hadParentSelector || replaced;
-                        // the nestedPaths array should have only one member - replaceParentSelector does not multiply selectors
-                        for (k = 0; k < nestedPaths.length; k++) {
-                            var replacementSelector = createSelector(createParenthesis(nestedPaths[k], el), el);
-                            addAllReplacementsIntoPath(newSelectors, [replacementSelector], el, inSelector, replacedNewSelectors);
-                        }
-                        newSelectors = replacedNewSelectors;
-                        currentElements = [];
-                    }
-                    else {
-                        currentElements.push(el);
-                    }
-                }
-                else {
-                    hadParentSelector = true;
-                    // the new list of selectors to add
-                    selectorsMultiplied = [];
+        // the elements from the current selector so far
+        currentElements = [];
+        // the current list of new selectors to add to the path.
+        // We will build it up. We initiate it with one empty selector as we "multiply" the new selectors
+        // by the parents
+        newSelectors = [
+            []
+        ];
+        for (i = 0; (el = inSelector.elements[i]); i++) {
+            // non parent reference elements just get added
+            if (el.value !== '&') {
+                var nestedSelector = findNestedSelector(el);
+                if (nestedSelector != null) {
                     // merge the current list of non parent selector elements
                     // on to the current list of selectors to add
                     mergeElementsOnToSelectors(currentElements, newSelectors);
-                    // loop through our current selectors
-                    for (j = 0; j < newSelectors.length; j++) {
-                        sel = newSelectors[j];
-                        // if we don't have any parent paths, the & might be in a mixin so that it can be used
-                        // whether there are parents or not
-                        if (context.length === 0) {
-                            // the combinator used on el should now be applied to the next element instead so that
-                            // it is not lost
-                            if (sel.length > 0) {
-                                sel[0].elements.push(new element_1.default(el.combinator, '', el.isVariable, el._index, el._fileInfo));
-                            }
-                            selectorsMultiplied.push(sel);
-                        }
-                        else {
-                            // and the parent selectors
-                            for (k = 0; k < context.length; k++) {
-                                // We need to put the current selectors
-                                // then join the last selector's elements on to the parents selectors
-                                var newSelectorPath = addReplacementIntoPath(sel, context[k], el, inSelector);
-                                // add that to our new set of selectors
-                                selectorsMultiplied.push(newSelectorPath);
-                            }
-                        }
+                    var nestedPaths = [];
+                    var replaced = void 0;
+                    var replacedNewSelectors = [];
+                    replaced = replaceParentSelector(nestedPaths, context, nestedSelector);
+                    hadParentSelector = hadParentSelector || replaced;
+                    // the nestedPaths array should have only one member - replaceParentSelector does not multiply selectors
+                    for (k = 0; k < nestedPaths.length; k++) {
+                        var replacementSelector = createSelector(createParenthesis(nestedPaths[k], el), el);
+                        addAllReplacementsIntoPath(newSelectors, [replacementSelector], el, inSelector, replacedNewSelectors);
                     }
-                    // our new selectors has been multiplied, so reset the state
-                    newSelectors = selectorsMultiplied;
+                    newSelectors = replacedNewSelectors;
                     currentElements = [];
                 }
-            }
-            // if we have any elements left over (e.g. .a& .b == .b)
-            // add them on to all the current selectors
-            mergeElementsOnToSelectors(currentElements, newSelectors);
-            for (i = 0; i < newSelectors.length; i++) {
-                length = newSelectors[i].length;
-                if (length > 0) {
-                    paths.push(newSelectors[i]);
-                    lastSelector = newSelectors[i][length - 1];
-                    newSelectors[i][length - 1] = lastSelector.createDerived(lastSelector.elements, inSelector.extendList);
-                }
-            }
-            return hadParentSelector;
-        }
-        function deriveSelector(visibilityInfo, deriveFrom) {
-            var newSelector = deriveFrom.createDerived(deriveFrom.elements, deriveFrom.extendList, deriveFrom.evaldCondition);
-            newSelector.copyVisibilityInfo(visibilityInfo);
-            return newSelector;
-        }
-        // joinSelector code follows
-        var i;
-        var newPaths;
-        var hadParentSelector;
-        newPaths = [];
-        hadParentSelector = replaceParentSelector(newPaths, context, selector);
-        if (!hadParentSelector) {
-            if (context.length > 0) {
-                newPaths = [];
-                for (i = 0; i < context.length; i++) {
-                    var concatenated = context[i].map(deriveSelector.bind(this, selector.visibilityInfo()));
-                    concatenated.push(selector);
-                    newPaths.push(concatenated);
+                else {
+                    currentElements.push(el);
                 }
             }
             else {
-                newPaths = [[selector]];
+                hadParentSelector = true;
+                // the new list of selectors to add
+                selectorsMultiplied = [];
+                // merge the current list of non parent selector elements
+                // on to the current list of selectors to add
+                mergeElementsOnToSelectors(currentElements, newSelectors);
+                // loop through our current selectors
+                for (j = 0; j < newSelectors.length; j++) {
+                    sel = newSelectors[j];
+                    // if we don't have any parent paths, the & might be in a mixin so that it can be used
+                    // whether there are parents or not
+                    if (context.length === 0) {
+                        // the combinator used on el should now be applied to the next element instead so that
+                        // it is not lost
+                        if (sel.length > 0) {
+                            sel[0].elements.push(new element_1.default(el.combinator, '', el.isVariable, el._index, el._fileInfo));
+                        }
+                        selectorsMultiplied.push(sel);
+                    }
+                    else {
+                        // and the parent selectors
+                        for (k = 0; k < context.length; k++) {
+                            // We need to put the current selectors
+                            // then join the last selector's elements on to the parents selectors
+                            var newSelectorPath = addReplacementIntoPath(sel, context[k], el, inSelector);
+                            // add that to our new set of selectors
+                            selectorsMultiplied.push(newSelectorPath);
+                        }
+                    }
+                }
+                // our new selectors has been multiplied, so reset the state
+                newSelectors = selectorsMultiplied;
+                currentElements = [];
             }
         }
-        for (i = 0; i < newPaths.length; i++) {
-            paths.push(newPaths[i]);
+        // if we have any elements left over (e.g. .a& .b == .b)
+        // add them on to all the current selectors
+        mergeElementsOnToSelectors(currentElements, newSelectors);
+        for (i = 0; i < newSelectors.length; i++) {
+            length = newSelectors[i].length;
+            if (length > 0) {
+                paths.push(newSelectors[i]);
+                lastSelector = newSelectors[i][length - 1];
+                newSelectors[i][length - 1] = lastSelector.createDerived(lastSelector.elements, inSelector.extendList);
+            }
         }
-    };
-    return Ruleset;
-}(node_1.default));
+        return hadParentSelector;
+    }
+    function deriveSelector(visibilityInfo, deriveFrom) {
+        var newSelector = deriveFrom.createDerived(deriveFrom.elements, deriveFrom.extendList, deriveFrom.evaldCondition);
+        newSelector.copyVisibilityInfo(visibilityInfo);
+        return newSelector;
+    }
+    // joinSelector code follows
+    var i;
+    var newPaths;
+    var hadParentSelector;
+    newPaths = [];
+    hadParentSelector = replaceParentSelector(newPaths, context, selector);
+    if (!hadParentSelector) {
+        if (context.length > 0) {
+            newPaths = [];
+            for (i = 0; i < context.length; i++) {
+                var concatenated = context[i].map(deriveSelector.bind(this, selector.visibilityInfo()));
+                concatenated.push(selector);
+                newPaths.push(concatenated);
+            }
+        }
+        else {
+            newPaths = [[selector]];
+        }
+    }
+    for (i = 0; i < newPaths.length; i++) {
+        paths.push(newPaths[i]);
+    }
+};
 Ruleset.prototype.type = 'Ruleset';
 Ruleset.prototype.isRuleset = true;
 exports.default = Ruleset;
 //# sourceMappingURL=ruleset.js.map
-}, function(modId) { var map = {"./node":1607654390936,"./declaration":1607654390947,"./keyword":1607654390949,"./comment":1607654390951,"./paren":1607654390941,"./selector":1607654390939,"./element":1607654390940,"./anonymous":1607654390950,"../contexts":1607654390953,"../functions/function-registry":1607654390954,"../functions/default":1607654390955,"./debug-info":1607654390952,"../utils":1607654390944}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390947, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223,"./declaration":1607851992234,"./keyword":1607851992236,"./comment":1607851992238,"./paren":1607851992228,"./selector":1607851992226,"./element":1607851992227,"./anonymous":1607851992237,"../contexts":1607851992240,"../functions/function-registry":1607851992241,"../functions/default":1607851992242,"./debug-info":1607851992239,"../utils":1607851992231}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992234, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
@@ -2945,86 +2811,81 @@ var keyword_1 = __importDefault(require("./keyword"));
 var anonymous_1 = __importDefault(require("./anonymous"));
 var Constants = __importStar(require("../constants"));
 var MATH = Constants.Math;
-var Declaration = /** @class */ (function (_super) {
-    __extends(Declaration, _super);
-    function Declaration(name, value, important, merge, index, currentFileInfo, inline, variable) {
-        var _this = _super.call(this) || this;
-        _this.name = name;
-        _this.value = (value instanceof node_1.default) ? value : new value_1.default([value ? new anonymous_1.default(value) : null]);
-        _this.important = important ? " " + important.trim() : '';
-        _this.merge = merge;
-        _this._index = index;
-        _this._fileInfo = currentFileInfo;
-        _this.inline = inline || false;
-        _this.variable = (variable !== undefined) ? variable
-            : (name.charAt && (name.charAt(0) === '@'));
-        _this.allowRoot = true;
-        _this.setParent(_this.value, _this);
-        return _this;
+var Declaration = function (name, value, important, merge, index, currentFileInfo, inline, variable) {
+    this.name = name;
+    this.value = (value instanceof node_1.default) ? value : new value_1.default([value ? new anonymous_1.default(value) : null]);
+    this.important = important ? " " + important.trim() : '';
+    this.merge = merge;
+    this._index = index;
+    this._fileInfo = currentFileInfo;
+    this.inline = inline || false;
+    this.variable = (variable !== undefined) ? variable
+        : (name.charAt && (name.charAt(0) === '@'));
+    this.allowRoot = true;
+    this.setParent(this.value, this);
+};
+Declaration.prototype = new node_1.default();
+Declaration.prototype.genCSS = function (context, output) {
+    output.add(this.name + (context.compress ? ':' : ': '), this.fileInfo(), this.getIndex());
+    try {
+        this.value.genCSS(context, output);
     }
-    Declaration.prototype.genCSS = function (context, output) {
-        output.add(this.name + (context.compress ? ':' : ': '), this.fileInfo(), this.getIndex());
-        try {
-            this.value.genCSS(context, output);
+    catch (e) {
+        e.index = this._index;
+        e.filename = this._fileInfo.filename;
+        throw e;
+    }
+    output.add(this.important + ((this.inline || (context.lastRule && context.compress)) ? '' : ';'), this._fileInfo, this._index);
+};
+Declaration.prototype.eval = function (context) {
+    var mathBypass = false;
+    var prevMath;
+    var name = this.name;
+    var evaldValue;
+    var variable = this.variable;
+    if (typeof name !== 'string') {
+        // expand 'primitive' name directly to get
+        // things faster (~10% for benchmark.less):
+        name = (name.length === 1) && (name[0] instanceof keyword_1.default) ?
+            name[0].value : evalName(context, name);
+        variable = false; // never treat expanded interpolation as new variable name
+    }
+    // @todo remove when parens-division is default
+    if (name === 'font' && context.math === MATH.ALWAYS) {
+        mathBypass = true;
+        prevMath = context.math;
+        context.math = MATH.PARENS_DIVISION;
+    }
+    try {
+        context.importantScope.push({});
+        evaldValue = this.value.eval(context);
+        if (!this.variable && evaldValue.type === 'DetachedRuleset') {
+            throw { message: 'Rulesets cannot be evaluated on a property.',
+                index: this.getIndex(), filename: this.fileInfo().filename };
         }
-        catch (e) {
-            e.index = this._index;
-            e.filename = this._fileInfo.filename;
-            throw e;
+        var important = this.important;
+        var importantResult = context.importantScope.pop();
+        if (!important && importantResult.important) {
+            important = importantResult.important;
         }
-        output.add(this.important + ((this.inline || (context.lastRule && context.compress)) ? '' : ';'), this._fileInfo, this._index);
-    };
-    Declaration.prototype.eval = function (context) {
-        var mathBypass = false;
-        var prevMath;
-        var name = this.name;
-        var evaldValue;
-        var variable = this.variable;
-        if (typeof name !== 'string') {
-            // expand 'primitive' name directly to get
-            // things faster (~10% for benchmark.less):
-            name = (name.length === 1) && (name[0] instanceof keyword_1.default) ?
-                name[0].value : evalName(context, name);
-            variable = false; // never treat expanded interpolation as new variable name
+        return new Declaration(name, evaldValue, important, this.merge, this.getIndex(), this.fileInfo(), this.inline, variable);
+    }
+    catch (e) {
+        if (typeof e.index !== 'number') {
+            e.index = this.getIndex();
+            e.filename = this.fileInfo().filename;
         }
-        // @todo remove when parens-division is default
-        if (name === 'font' && context.math === MATH.ALWAYS) {
-            mathBypass = true;
-            prevMath = context.math;
-            context.math = MATH.PARENS_DIVISION;
+        throw e;
+    }
+    finally {
+        if (mathBypass) {
+            context.math = prevMath;
         }
-        try {
-            context.importantScope.push({});
-            evaldValue = this.value.eval(context);
-            if (!this.variable && evaldValue.type === 'DetachedRuleset') {
-                throw { message: 'Rulesets cannot be evaluated on a property.',
-                    index: this.getIndex(), filename: this.fileInfo().filename };
-            }
-            var important = this.important;
-            var importantResult = context.importantScope.pop();
-            if (!important && importantResult.important) {
-                important = importantResult.important;
-            }
-            return new Declaration(name, evaldValue, important, this.merge, this.getIndex(), this.fileInfo(), this.inline, variable);
-        }
-        catch (e) {
-            if (typeof e.index !== 'number') {
-                e.index = this.getIndex();
-                e.filename = this.fileInfo().filename;
-            }
-            throw e;
-        }
-        finally {
-            if (mathBypass) {
-                context.math = prevMath;
-            }
-        }
-    };
-    Declaration.prototype.makeImportant = function () {
-        return new Declaration(this.name, this.value, '!important', this.merge, this.getIndex(), this.fileInfo(), this.inline);
-    };
-    return Declaration;
-}(node_1.default));
+    }
+};
+Declaration.prototype.makeImportant = function () {
+    return new Declaration(this.name, this.value, '!important', this.merge, this.getIndex(), this.fileInfo(), this.inline);
+};
 function evalName(context, name) {
     var value = '';
     var i;
@@ -3038,214 +2899,142 @@ function evalName(context, name) {
 Declaration.prototype.type = 'Declaration';
 exports.default = Declaration;
 //# sourceMappingURL=declaration.js.map
-}, function(modId) { var map = {"./node":1607654390936,"./value":1607654390948,"./keyword":1607654390949,"./anonymous":1607654390950,"../constants":1607654390945}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390948, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223,"./value":1607851992235,"./keyword":1607851992236,"./anonymous":1607851992237,"../constants":1607851992232}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992235, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var node_1 = __importDefault(require("./node"));
-var Value = /** @class */ (function (_super) {
-    __extends(Value, _super);
-    function Value(value) {
-        var _this = _super.call(this) || this;
-        if (!value) {
-            throw new Error('Value requires an array argument');
-        }
-        if (!Array.isArray(value)) {
-            _this.value = [value];
-        }
-        else {
-            _this.value = value;
-        }
-        return _this;
+var Value = function (value) {
+    if (!value) {
+        throw new Error('Value requires an array argument');
     }
-    Value.prototype.accept = function (visitor) {
-        if (this.value) {
-            this.value = visitor.visitArray(this.value);
+    if (!Array.isArray(value)) {
+        this.value = [value];
+    }
+    else {
+        this.value = value;
+    }
+};
+Value.prototype = new node_1.default();
+Value.prototype.accept = function (visitor) {
+    if (this.value) {
+        this.value = visitor.visitArray(this.value);
+    }
+};
+Value.prototype.eval = function (context) {
+    if (this.value.length === 1) {
+        return this.value[0].eval(context);
+    }
+    else {
+        return new Value(this.value.map(function (v) { return v.eval(context); }));
+    }
+};
+Value.prototype.genCSS = function (context, output) {
+    var i;
+    for (i = 0; i < this.value.length; i++) {
+        this.value[i].genCSS(context, output);
+        if (i + 1 < this.value.length) {
+            output.add((context && context.compress) ? ',' : ', ');
         }
-    };
-    Value.prototype.eval = function (context) {
-        if (this.value.length === 1) {
-            return this.value[0].eval(context);
-        }
-        else {
-            return new Value(this.value.map(function (v) { return v.eval(context); }));
-        }
-    };
-    Value.prototype.genCSS = function (context, output) {
-        var i;
-        for (i = 0; i < this.value.length; i++) {
-            this.value[i].genCSS(context, output);
-            if (i + 1 < this.value.length) {
-                output.add((context && context.compress) ? ',' : ', ');
-            }
-        }
-    };
-    return Value;
-}(node_1.default));
+    }
+};
 Value.prototype.type = 'Value';
 exports.default = Value;
 //# sourceMappingURL=value.js.map
-}, function(modId) { var map = {"./node":1607654390936}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390949, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992236, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var node_1 = __importDefault(require("./node"));
-var Keyword = /** @class */ (function (_super) {
-    __extends(Keyword, _super);
-    function Keyword(value) {
-        var _this = _super.call(this) || this;
-        _this.value = value;
-        return _this;
+var Keyword = function (value) {
+    this.value = value;
+};
+Keyword.prototype = new node_1.default();
+Keyword.prototype.genCSS = function (context, output) {
+    if (this.value === '%') {
+        throw { type: 'Syntax', message: 'Invalid % without number' };
     }
-    Keyword.prototype.genCSS = function (context, output) {
-        if (this.value === '%') {
-            throw { type: 'Syntax', message: 'Invalid % without number' };
-        }
-        output.add(this.value);
-    };
-    return Keyword;
-}(node_1.default));
+    output.add(this.value);
+};
 Keyword.prototype.type = 'Keyword';
 Keyword.True = new Keyword('true');
 Keyword.False = new Keyword('false');
 exports.default = Keyword;
 //# sourceMappingURL=keyword.js.map
-}, function(modId) { var map = {"./node":1607654390936}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390950, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992237, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var node_1 = __importDefault(require("./node"));
-var Anonymous = /** @class */ (function (_super) {
-    __extends(Anonymous, _super);
-    function Anonymous(value, index, currentFileInfo, mapLines, rulesetLike, visibilityInfo) {
-        var _this = _super.call(this) || this;
-        _this.value = value;
-        _this._index = index;
-        _this._fileInfo = currentFileInfo;
-        _this.mapLines = mapLines;
-        _this.rulesetLike = (typeof rulesetLike === 'undefined') ? false : rulesetLike;
-        _this.allowRoot = true;
-        _this.copyVisibilityInfo(visibilityInfo);
-        return _this;
+var Anonymous = function (value, index, currentFileInfo, mapLines, rulesetLike, visibilityInfo) {
+    this.value = value;
+    this._index = index;
+    this._fileInfo = currentFileInfo;
+    this.mapLines = mapLines;
+    this.rulesetLike = (typeof rulesetLike === 'undefined') ? false : rulesetLike;
+    this.allowRoot = true;
+    this.copyVisibilityInfo(visibilityInfo);
+};
+Anonymous.prototype = new node_1.default();
+Anonymous.prototype.eval = function () {
+    return new Anonymous(this.value, this._index, this._fileInfo, this.mapLines, this.rulesetLike, this.visibilityInfo());
+};
+Anonymous.prototype.compare = function (other) {
+    return other.toCSS && this.toCSS() === other.toCSS() ? 0 : undefined;
+};
+Anonymous.prototype.isRulesetLike = function () {
+    return this.rulesetLike;
+};
+Anonymous.prototype.genCSS = function (context, output) {
+    this.nodeVisible = Boolean(this.value);
+    if (this.nodeVisible) {
+        output.add(this.value, this._fileInfo, this._index, this.mapLines);
     }
-    Anonymous.prototype.eval = function () {
-        return new Anonymous(this.value, this._index, this._fileInfo, this.mapLines, this.rulesetLike, this.visibilityInfo());
-    };
-    Anonymous.prototype.compare = function (other) {
-        return other.toCSS && this.toCSS() === other.toCSS() ? 0 : undefined;
-    };
-    Anonymous.prototype.isRulesetLike = function () {
-        return this.rulesetLike;
-    };
-    Anonymous.prototype.genCSS = function (context, output) {
-        this.nodeVisible = Boolean(this.value);
-        if (this.nodeVisible) {
-            output.add(this.value, this._fileInfo, this._index, this.mapLines);
-        }
-    };
-    return Anonymous;
-}(node_1.default));
+};
 Anonymous.prototype.type = 'Anonymous';
 exports.default = Anonymous;
 //# sourceMappingURL=anonymous.js.map
-}, function(modId) { var map = {"./node":1607654390936}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390951, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992238, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var node_1 = __importDefault(require("./node"));
 var debug_info_1 = __importDefault(require("./debug-info"));
-var Comment = /** @class */ (function (_super) {
-    __extends(Comment, _super);
-    function Comment(value, isLineComment, index, currentFileInfo) {
-        var _this = _super.call(this) || this;
-        _this.value = value;
-        _this.isLineComment = isLineComment;
-        _this._index = index;
-        _this._fileInfo = currentFileInfo;
-        _this.allowRoot = true;
-        return _this;
+var Comment = function (value, isLineComment, index, currentFileInfo) {
+    this.value = value;
+    this.isLineComment = isLineComment;
+    this._index = index;
+    this._fileInfo = currentFileInfo;
+    this.allowRoot = true;
+};
+Comment.prototype = new node_1.default();
+Comment.prototype.genCSS = function (context, output) {
+    if (this.debugInfo) {
+        output.add(debug_info_1.default(context, this), this.fileInfo(), this.getIndex());
     }
-    Comment.prototype.genCSS = function (context, output) {
-        if (this.debugInfo) {
-            output.add(debug_info_1.default(context, this), this.fileInfo(), this.getIndex());
-        }
-        output.add(this.value);
-    };
-    Comment.prototype.isSilent = function (context) {
-        var isCompressed = context.compress && this.value[2] !== '!';
-        return this.isLineComment || isCompressed;
-    };
-    return Comment;
-}(node_1.default));
+    output.add(this.value);
+};
+Comment.prototype.isSilent = function (context) {
+    var isCompressed = context.compress && this.value[2] !== '!';
+    return this.isLineComment || isCompressed;
+};
 Comment.prototype.type = 'Comment';
 exports.default = Comment;
 //# sourceMappingURL=comment.js.map
-}, function(modId) { var map = {"./node":1607654390936,"./debug-info":1607654390952}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390952, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223,"./debug-info":1607851992239}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992239, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var debugInfo = function (context, ctx, lineSeparator) {
@@ -3284,7 +3073,7 @@ debugInfo.asMediaQuery = function (ctx) {
 exports.default = debugInfo;
 //# sourceMappingURL=debug-info.js.map
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390953, function(require, module, exports) {
+__DEFINE__(1607851992240, function(require, module, exports) {
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -3456,8 +3245,8 @@ contexts.Eval = /** @class */ (function () {
     return Eval;
 }());
 //# sourceMappingURL=contexts.js.map
-}, function(modId) { var map = {"./constants":1607654390945}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390954, function(require, module, exports) {
+}, function(modId) { var map = {"./constants":1607851992232}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992241, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 function makeRegistry(base) {
@@ -3495,7 +3284,7 @@ function makeRegistry(base) {
 exports.default = makeRegistry(null);
 //# sourceMappingURL=function-registry.js.map
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390955, function(require, module, exports) {
+__DEFINE__(1607851992242, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -3525,22 +3314,9 @@ var defaultFunc = {
 };
 exports.default = defaultFunc;
 //# sourceMappingURL=default.js.map
-}, function(modId) { var map = {"../tree/keyword":1607654390949}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390956, function(require, module, exports) {
+}, function(modId) { var map = {"../tree/keyword":1607851992236}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992243, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
@@ -3567,47 +3343,29 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var node_1 = __importDefault(require("./node"));
 var contexts_1 = __importDefault(require("../contexts"));
 var utils = __importStar(require("../utils"));
-var DetachedRuleset = /** @class */ (function (_super) {
-    __extends(DetachedRuleset, _super);
-    function DetachedRuleset(ruleset, frames) {
-        var _this = _super.call(this) || this;
-        _this.ruleset = ruleset;
-        _this.frames = frames;
-        _this.setParent(_this.ruleset, _this);
-        return _this;
-    }
-    DetachedRuleset.prototype.accept = function (visitor) {
-        this.ruleset = visitor.visit(this.ruleset);
-    };
-    DetachedRuleset.prototype.eval = function (context) {
-        var frames = this.frames || utils.copyArray(context.frames);
-        return new DetachedRuleset(this.ruleset, frames);
-    };
-    DetachedRuleset.prototype.callEval = function (context) {
-        return this.ruleset.eval(this.frames ? new contexts_1.default.Eval(context, this.frames.concat(context.frames)) : context);
-    };
-    return DetachedRuleset;
-}(node_1.default));
+var DetachedRuleset = function (ruleset, frames) {
+    this.ruleset = ruleset;
+    this.frames = frames;
+    this.setParent(this.ruleset, this);
+};
+DetachedRuleset.prototype = new node_1.default();
+DetachedRuleset.prototype.accept = function (visitor) {
+    this.ruleset = visitor.visit(this.ruleset);
+};
+DetachedRuleset.prototype.eval = function (context) {
+    var frames = this.frames || utils.copyArray(context.frames);
+    return new DetachedRuleset(this.ruleset, frames);
+};
+DetachedRuleset.prototype.callEval = function (context) {
+    return this.ruleset.eval(this.frames ? new contexts_1.default.Eval(context, this.frames.concat(context.frames)) : context);
+};
 DetachedRuleset.prototype.type = 'DetachedRuleset';
 DetachedRuleset.prototype.evalFirst = true;
 exports.default = DetachedRuleset;
 //# sourceMappingURL=detached-ruleset.js.map
-}, function(modId) { var map = {"./node":1607654390936,"../contexts":1607654390953,"../utils":1607654390944}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390957, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223,"../contexts":1607851992240,"../utils":1607851992231}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992244, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
@@ -3636,75 +3394,57 @@ var color_1 = __importDefault(require("./color"));
 var dimension_1 = __importDefault(require("./dimension"));
 var Constants = __importStar(require("../constants"));
 var MATH = Constants.Math;
-var Operation = /** @class */ (function (_super) {
-    __extends(Operation, _super);
-    function Operation(op, operands, isSpaced) {
-        var _this = _super.call(this) || this;
-        _this.op = op.trim();
-        _this.operands = operands;
-        _this.isSpaced = isSpaced;
-        return _this;
+var Operation = function (op, operands, isSpaced) {
+    this.op = op.trim();
+    this.operands = operands;
+    this.isSpaced = isSpaced;
+};
+Operation.prototype = new node_1.default();
+Operation.prototype.accept = function (visitor) {
+    this.operands = visitor.visitArray(this.operands);
+};
+Operation.prototype.eval = function (context) {
+    var a = this.operands[0].eval(context);
+    var b = this.operands[1].eval(context);
+    var op;
+    if (context.isMathOn(this.op)) {
+        op = this.op === './' ? '/' : this.op;
+        if (a instanceof dimension_1.default && b instanceof color_1.default) {
+            a = a.toColor();
+        }
+        if (b instanceof dimension_1.default && a instanceof color_1.default) {
+            b = b.toColor();
+        }
+        if (!a.operate) {
+            if (a instanceof Operation && a.op === '/' && context.math === MATH.PARENS_DIVISION) {
+                return new Operation(this.op, [a, b], this.isSpaced);
+            }
+            throw { type: 'Operation',
+                message: 'Operation on an invalid type' };
+        }
+        return a.operate(context, op, b);
     }
-    Operation.prototype.accept = function (visitor) {
-        this.operands = visitor.visitArray(this.operands);
-    };
-    Operation.prototype.eval = function (context) {
-        var a = this.operands[0].eval(context);
-        var b = this.operands[1].eval(context);
-        var op;
-        if (context.isMathOn(this.op)) {
-            op = this.op === './' ? '/' : this.op;
-            if (a instanceof dimension_1.default && b instanceof color_1.default) {
-                a = a.toColor();
-            }
-            if (b instanceof dimension_1.default && a instanceof color_1.default) {
-                b = b.toColor();
-            }
-            if (!a.operate) {
-                if (a instanceof Operation && a.op === '/' && context.math === MATH.PARENS_DIVISION) {
-                    return new Operation(this.op, [a, b], this.isSpaced);
-                }
-                throw { type: 'Operation',
-                    message: 'Operation on an invalid type' };
-            }
-            return a.operate(context, op, b);
-        }
-        else {
-            return new Operation(this.op, [a, b], this.isSpaced);
-        }
-    };
-    Operation.prototype.genCSS = function (context, output) {
-        this.operands[0].genCSS(context, output);
-        if (this.isSpaced) {
-            output.add(' ');
-        }
-        output.add(this.op);
-        if (this.isSpaced) {
-            output.add(' ');
-        }
-        this.operands[1].genCSS(context, output);
-    };
-    return Operation;
-}(node_1.default));
+    else {
+        return new Operation(this.op, [a, b], this.isSpaced);
+    }
+};
+Operation.prototype.genCSS = function (context, output) {
+    this.operands[0].genCSS(context, output);
+    if (this.isSpaced) {
+        output.add(' ');
+    }
+    output.add(this.op);
+    if (this.isSpaced) {
+        output.add(' ');
+    }
+    this.operands[1].genCSS(context, output);
+};
 Operation.prototype.type = 'Operation';
 exports.default = Operation;
 //# sourceMappingURL=operation.js.map
-}, function(modId) { var map = {"./node":1607654390936,"./color":1607654390937,"./dimension":1607654390958,"../constants":1607654390945}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390958, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223,"./color":1607851992224,"./dimension":1607851992245,"../constants":1607851992232}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992245, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -3716,174 +3456,156 @@ var color_1 = __importDefault(require("./color"));
 //
 // A number with a unit
 //
-var Dimension = /** @class */ (function (_super) {
-    __extends(Dimension, _super);
-    function Dimension(value, unit) {
-        var _this = _super.call(this) || this;
-        _this.value = parseFloat(value);
-        if (isNaN(_this.value)) {
-            throw new Error('Dimension is not a number.');
-        }
-        _this.unit = (unit && unit instanceof unit_1.default) ? unit :
-            new unit_1.default(unit ? [unit] : undefined);
-        _this.setParent(_this.unit, _this);
-        return _this;
+var Dimension = function (value, unit) {
+    this.value = parseFloat(value);
+    if (isNaN(this.value)) {
+        throw new Error('Dimension is not a number.');
     }
-    Dimension.prototype.accept = function (visitor) {
-        this.unit = visitor.visit(this.unit);
-    };
-    Dimension.prototype.eval = function (context) {
-        return this;
-    };
-    Dimension.prototype.toColor = function () {
-        return new color_1.default([this.value, this.value, this.value]);
-    };
-    Dimension.prototype.genCSS = function (context, output) {
-        if ((context && context.strictUnits) && !this.unit.isSingular()) {
-            throw new Error("Multiple units in dimension. Correct the units or use the unit function. Bad unit: " + this.unit.toString());
+    this.unit = (unit && unit instanceof unit_1.default) ? unit :
+        new unit_1.default(unit ? [unit] : undefined);
+    this.setParent(this.unit, this);
+};
+Dimension.prototype = new node_1.default();
+Dimension.prototype.accept = function (visitor) {
+    this.unit = visitor.visit(this.unit);
+};
+Dimension.prototype.eval = function (context) {
+    return this;
+};
+Dimension.prototype.toColor = function () {
+    return new color_1.default([this.value, this.value, this.value]);
+};
+Dimension.prototype.genCSS = function (context, output) {
+    if ((context && context.strictUnits) && !this.unit.isSingular()) {
+        throw new Error("Multiple units in dimension. Correct the units or use the unit function. Bad unit: " + this.unit.toString());
+    }
+    var value = this.fround(context, this.value);
+    var strValue = String(value);
+    if (value !== 0 && value < 0.000001 && value > -0.000001) {
+        // would be output 1e-6 etc.
+        strValue = value.toFixed(20).replace(/0+$/, '');
+    }
+    if (context && context.compress) {
+        // Zero values doesn't need a unit
+        if (value === 0 && this.unit.isLength()) {
+            output.add(strValue);
+            return;
         }
-        var value = this.fround(context, this.value);
-        var strValue = String(value);
-        if (value !== 0 && value < 0.000001 && value > -0.000001) {
-            // would be output 1e-6 etc.
-            strValue = value.toFixed(20).replace(/0+$/, '');
+        // Float values doesn't need a leading zero
+        if (value > 0 && value < 1) {
+            strValue = (strValue).substr(1);
         }
-        if (context && context.compress) {
-            // Zero values doesn't need a unit
-            if (value === 0 && this.unit.isLength()) {
-                output.add(strValue);
-                return;
-            }
-            // Float values doesn't need a leading zero
-            if (value > 0 && value < 1) {
-                strValue = (strValue).substr(1);
-            }
-        }
-        output.add(strValue);
-        this.unit.genCSS(context, output);
-    };
-    // In an operation between two Dimensions,
-    // we default to the first Dimension's unit,
-    // so `1px + 2` will yield `3px`.
-    Dimension.prototype.operate = function (context, op, other) {
-        /* jshint noempty:false */
-        var value = this._operate(context, op, this.value, other.value);
-        var unit = this.unit.clone();
-        if (op === '+' || op === '-') {
-            if (unit.numerator.length === 0 && unit.denominator.length === 0) {
-                unit = other.unit.clone();
-                if (this.unit.backupUnit) {
-                    unit.backupUnit = this.unit.backupUnit;
-                }
-            }
-            else if (other.unit.numerator.length === 0 && unit.denominator.length === 0) {
-                // do nothing
-            }
-            else {
-                other = other.convertTo(this.unit.usedUnits());
-                if (context.strictUnits && other.unit.toString() !== unit.toString()) {
-                    throw new Error("Incompatible units. Change the units or use the unit function. " +
-                        ("Bad units: '" + unit.toString() + "' and '" + other.unit.toString() + "'."));
-                }
-                value = this._operate(context, op, this.value, other.value);
+    }
+    output.add(strValue);
+    this.unit.genCSS(context, output);
+};
+// In an operation between two Dimensions,
+// we default to the first Dimension's unit,
+// so `1px + 2` will yield `3px`.
+Dimension.prototype.operate = function (context, op, other) {
+    /* jshint noempty:false */
+    var value = this._operate(context, op, this.value, other.value);
+    var unit = this.unit.clone();
+    if (op === '+' || op === '-') {
+        if (unit.numerator.length === 0 && unit.denominator.length === 0) {
+            unit = other.unit.clone();
+            if (this.unit.backupUnit) {
+                unit.backupUnit = this.unit.backupUnit;
             }
         }
-        else if (op === '*') {
-            unit.numerator = unit.numerator.concat(other.unit.numerator).sort();
-            unit.denominator = unit.denominator.concat(other.unit.denominator).sort();
-            unit.cancel();
-        }
-        else if (op === '/') {
-            unit.numerator = unit.numerator.concat(other.unit.denominator).sort();
-            unit.denominator = unit.denominator.concat(other.unit.numerator).sort();
-            unit.cancel();
-        }
-        return new Dimension(value, unit);
-    };
-    Dimension.prototype.compare = function (other) {
-        var a;
-        var b;
-        if (!(other instanceof Dimension)) {
-            return undefined;
-        }
-        if (this.unit.isEmpty() || other.unit.isEmpty()) {
-            a = this;
-            b = other;
+        else if (other.unit.numerator.length === 0 && unit.denominator.length === 0) {
+            // do nothing
         }
         else {
-            a = this.unify();
-            b = other.unify();
-            if (a.unit.compare(b.unit) !== 0) {
-                return undefined;
+            other = other.convertTo(this.unit.usedUnits());
+            if (context.strictUnits && other.unit.toString() !== unit.toString()) {
+                throw new Error("Incompatible units. Change the units or use the unit function. " +
+                    ("Bad units: '" + unit.toString() + "' and '" + other.unit.toString() + "'."));
             }
+            value = this._operate(context, op, this.value, other.value);
         }
-        return node_1.default.numericCompare(a.value, b.value);
-    };
-    Dimension.prototype.unify = function () {
-        return this.convertTo({ length: 'px', duration: 's', angle: 'rad' });
-    };
-    Dimension.prototype.convertTo = function (conversions) {
-        var value = this.value;
-        var unit = this.unit.clone();
-        var i;
-        var groupName;
-        var group;
-        var targetUnit;
-        var derivedConversions = {};
-        var applyUnit;
-        if (typeof conversions === 'string') {
-            for (i in unit_conversions_1.default) {
-                if (unit_conversions_1.default[i].hasOwnProperty(conversions)) {
-                    derivedConversions = {};
-                    derivedConversions[i] = conversions;
-                }
-            }
-            conversions = derivedConversions;
-        }
-        applyUnit = function (atomicUnit, denominator) {
-            /* jshint loopfunc:true */
-            if (group.hasOwnProperty(atomicUnit)) {
-                if (denominator) {
-                    value = value / (group[atomicUnit] / group[targetUnit]);
-                }
-                else {
-                    value = value * (group[atomicUnit] / group[targetUnit]);
-                }
-                return targetUnit;
-            }
-            return atomicUnit;
-        };
-        for (groupName in conversions) {
-            if (conversions.hasOwnProperty(groupName)) {
-                targetUnit = conversions[groupName];
-                group = unit_conversions_1.default[groupName];
-                unit.map(applyUnit);
-            }
-        }
+    }
+    else if (op === '*') {
+        unit.numerator = unit.numerator.concat(other.unit.numerator).sort();
+        unit.denominator = unit.denominator.concat(other.unit.denominator).sort();
         unit.cancel();
-        return new Dimension(value, unit);
+    }
+    else if (op === '/') {
+        unit.numerator = unit.numerator.concat(other.unit.denominator).sort();
+        unit.denominator = unit.denominator.concat(other.unit.numerator).sort();
+        unit.cancel();
+    }
+    return new Dimension(value, unit);
+};
+Dimension.prototype.compare = function (other) {
+    var a;
+    var b;
+    if (!(other instanceof Dimension)) {
+        return undefined;
+    }
+    if (this.unit.isEmpty() || other.unit.isEmpty()) {
+        a = this;
+        b = other;
+    }
+    else {
+        a = this.unify();
+        b = other.unify();
+        if (a.unit.compare(b.unit) !== 0) {
+            return undefined;
+        }
+    }
+    return node_1.default.numericCompare(a.value, b.value);
+};
+Dimension.prototype.unify = function () {
+    return this.convertTo({ length: 'px', duration: 's', angle: 'rad' });
+};
+Dimension.prototype.convertTo = function (conversions) {
+    var value = this.value;
+    var unit = this.unit.clone();
+    var i;
+    var groupName;
+    var group;
+    var targetUnit;
+    var derivedConversions = {};
+    var applyUnit;
+    if (typeof conversions === 'string') {
+        for (i in unit_conversions_1.default) {
+            if (unit_conversions_1.default[i].hasOwnProperty(conversions)) {
+                derivedConversions = {};
+                derivedConversions[i] = conversions;
+            }
+        }
+        conversions = derivedConversions;
+    }
+    applyUnit = function (atomicUnit, denominator) {
+        /* jshint loopfunc:true */
+        if (group.hasOwnProperty(atomicUnit)) {
+            if (denominator) {
+                value = value / (group[atomicUnit] / group[targetUnit]);
+            }
+            else {
+                value = value * (group[atomicUnit] / group[targetUnit]);
+            }
+            return targetUnit;
+        }
+        return atomicUnit;
     };
-    return Dimension;
-}(node_1.default));
+    for (groupName in conversions) {
+        if (conversions.hasOwnProperty(groupName)) {
+            targetUnit = conversions[groupName];
+            group = unit_conversions_1.default[groupName];
+            unit.map(applyUnit);
+        }
+    }
+    unit.cancel();
+    return new Dimension(value, unit);
+};
 Dimension.prototype.type = 'Dimension';
 exports.default = Dimension;
 //# sourceMappingURL=dimension.js.map
-}, function(modId) { var map = {"./node":1607654390936,"../data/unit-conversions":1607654390934,"./unit":1607654390959,"./color":1607654390937}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390959, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223,"../data/unit-conversions":1607851992221,"./unit":1607851992246,"./color":1607851992224}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992246, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
@@ -3910,222 +3632,186 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var node_1 = __importDefault(require("./node"));
 var unit_conversions_1 = __importDefault(require("../data/unit-conversions"));
 var utils = __importStar(require("../utils"));
-var Unit = /** @class */ (function (_super) {
-    __extends(Unit, _super);
-    function Unit(numerator, denominator, backupUnit) {
-        var _this = _super.call(this) || this;
-        _this.numerator = numerator ? utils.copyArray(numerator).sort() : [];
-        _this.denominator = denominator ? utils.copyArray(denominator).sort() : [];
-        if (backupUnit) {
-            _this.backupUnit = backupUnit;
-        }
-        else if (numerator && numerator.length) {
-            _this.backupUnit = numerator[0];
-        }
-        return _this;
+var Unit = function (numerator, denominator, backupUnit) {
+    this.numerator = numerator ? utils.copyArray(numerator).sort() : [];
+    this.denominator = denominator ? utils.copyArray(denominator).sort() : [];
+    if (backupUnit) {
+        this.backupUnit = backupUnit;
     }
-    Unit.prototype.clone = function () {
-        return new Unit(utils.copyArray(this.numerator), utils.copyArray(this.denominator), this.backupUnit);
-    };
-    Unit.prototype.genCSS = function (context, output) {
-        // Dimension checks the unit is singular and throws an error if in strict math mode.
-        var strictUnits = context && context.strictUnits;
-        if (this.numerator.length === 1) {
-            output.add(this.numerator[0]); // the ideal situation
+    else if (numerator && numerator.length) {
+        this.backupUnit = numerator[0];
+    }
+};
+Unit.prototype = new node_1.default();
+Unit.prototype.clone = function () {
+    return new Unit(utils.copyArray(this.numerator), utils.copyArray(this.denominator), this.backupUnit);
+};
+Unit.prototype.genCSS = function (context, output) {
+    // Dimension checks the unit is singular and throws an error if in strict math mode.
+    var strictUnits = context && context.strictUnits;
+    if (this.numerator.length === 1) {
+        output.add(this.numerator[0]); // the ideal situation
+    }
+    else if (!strictUnits && this.backupUnit) {
+        output.add(this.backupUnit);
+    }
+    else if (!strictUnits && this.denominator.length) {
+        output.add(this.denominator[0]);
+    }
+};
+Unit.prototype.toString = function () {
+    var i;
+    var returnStr = this.numerator.join('*');
+    for (i = 0; i < this.denominator.length; i++) {
+        returnStr += "/" + this.denominator[i];
+    }
+    return returnStr;
+};
+Unit.prototype.compare = function (other) {
+    return this.is(other.toString()) ? 0 : undefined;
+};
+Unit.prototype.is = function (unitString) {
+    return this.toString().toUpperCase() === unitString.toUpperCase();
+};
+Unit.prototype.isLength = function () {
+    return RegExp('^(px|em|ex|ch|rem|in|cm|mm|pc|pt|ex|vw|vh|vmin|vmax)$', 'gi').test(this.toCSS());
+};
+Unit.prototype.isEmpty = function () {
+    return this.numerator.length === 0 && this.denominator.length === 0;
+};
+Unit.prototype.isSingular = function () {
+    return this.numerator.length <= 1 && this.denominator.length === 0;
+};
+Unit.prototype.map = function (callback) {
+    var i;
+    for (i = 0; i < this.numerator.length; i++) {
+        this.numerator[i] = callback(this.numerator[i], false);
+    }
+    for (i = 0; i < this.denominator.length; i++) {
+        this.denominator[i] = callback(this.denominator[i], true);
+    }
+};
+Unit.prototype.usedUnits = function () {
+    var group;
+    var result = {};
+    var mapUnit;
+    var groupName;
+    mapUnit = function (atomicUnit) {
+        /* jshint loopfunc:true */
+        if (group.hasOwnProperty(atomicUnit) && !result[groupName]) {
+            result[groupName] = atomicUnit;
         }
-        else if (!strictUnits && this.backupUnit) {
-            output.add(this.backupUnit);
+        return atomicUnit;
+    };
+    for (groupName in unit_conversions_1.default) {
+        if (unit_conversions_1.default.hasOwnProperty(groupName)) {
+            group = unit_conversions_1.default[groupName];
+            this.map(mapUnit);
         }
-        else if (!strictUnits && this.denominator.length) {
-            output.add(this.denominator[0]);
-        }
-    };
-    Unit.prototype.toString = function () {
-        var i;
-        var returnStr = this.numerator.join('*');
-        for (i = 0; i < this.denominator.length; i++) {
-            returnStr += "/" + this.denominator[i];
-        }
-        return returnStr;
-    };
-    Unit.prototype.compare = function (other) {
-        return this.is(other.toString()) ? 0 : undefined;
-    };
-    Unit.prototype.is = function (unitString) {
-        return this.toString().toUpperCase() === unitString.toUpperCase();
-    };
-    Unit.prototype.isLength = function () {
-        return RegExp('^(px|em|ex|ch|rem|in|cm|mm|pc|pt|ex|vw|vh|vmin|vmax)$', 'gi').test(this.toCSS());
-    };
-    Unit.prototype.isEmpty = function () {
-        return this.numerator.length === 0 && this.denominator.length === 0;
-    };
-    Unit.prototype.isSingular = function () {
-        return this.numerator.length <= 1 && this.denominator.length === 0;
-    };
-    Unit.prototype.map = function (callback) {
-        var i;
-        for (i = 0; i < this.numerator.length; i++) {
-            this.numerator[i] = callback(this.numerator[i], false);
-        }
-        for (i = 0; i < this.denominator.length; i++) {
-            this.denominator[i] = callback(this.denominator[i], true);
-        }
-    };
-    Unit.prototype.usedUnits = function () {
-        var group;
-        var result = {};
-        var mapUnit;
-        var groupName;
-        mapUnit = function (atomicUnit) {
-            /* jshint loopfunc:true */
-            if (group.hasOwnProperty(atomicUnit) && !result[groupName]) {
-                result[groupName] = atomicUnit;
-            }
-            return atomicUnit;
-        };
-        for (groupName in unit_conversions_1.default) {
-            if (unit_conversions_1.default.hasOwnProperty(groupName)) {
-                group = unit_conversions_1.default[groupName];
-                this.map(mapUnit);
-            }
-        }
-        return result;
-    };
-    Unit.prototype.cancel = function () {
-        var counter = {};
-        var atomicUnit;
-        var i;
-        for (i = 0; i < this.numerator.length; i++) {
-            atomicUnit = this.numerator[i];
-            counter[atomicUnit] = (counter[atomicUnit] || 0) + 1;
-        }
-        for (i = 0; i < this.denominator.length; i++) {
-            atomicUnit = this.denominator[i];
-            counter[atomicUnit] = (counter[atomicUnit] || 0) - 1;
-        }
-        this.numerator = [];
-        this.denominator = [];
-        for (atomicUnit in counter) {
-            if (counter.hasOwnProperty(atomicUnit)) {
-                var count = counter[atomicUnit];
-                if (count > 0) {
-                    for (i = 0; i < count; i++) {
-                        this.numerator.push(atomicUnit);
-                    }
+    }
+    return result;
+};
+Unit.prototype.cancel = function () {
+    var counter = {};
+    var atomicUnit;
+    var i;
+    for (i = 0; i < this.numerator.length; i++) {
+        atomicUnit = this.numerator[i];
+        counter[atomicUnit] = (counter[atomicUnit] || 0) + 1;
+    }
+    for (i = 0; i < this.denominator.length; i++) {
+        atomicUnit = this.denominator[i];
+        counter[atomicUnit] = (counter[atomicUnit] || 0) - 1;
+    }
+    this.numerator = [];
+    this.denominator = [];
+    for (atomicUnit in counter) {
+        if (counter.hasOwnProperty(atomicUnit)) {
+            var count = counter[atomicUnit];
+            if (count > 0) {
+                for (i = 0; i < count; i++) {
+                    this.numerator.push(atomicUnit);
                 }
-                else if (count < 0) {
-                    for (i = 0; i < -count; i++) {
-                        this.denominator.push(atomicUnit);
-                    }
+            }
+            else if (count < 0) {
+                for (i = 0; i < -count; i++) {
+                    this.denominator.push(atomicUnit);
                 }
             }
         }
-        this.numerator.sort();
-        this.denominator.sort();
-    };
-    return Unit;
-}(node_1.default));
+    }
+    this.numerator.sort();
+    this.denominator.sort();
+};
 Unit.prototype.type = 'Unit';
 exports.default = Unit;
 //# sourceMappingURL=unit.js.map
-}, function(modId) { var map = {"./node":1607654390936,"../data/unit-conversions":1607654390934,"../utils":1607654390944}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390960, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223,"../data/unit-conversions":1607851992221,"../utils":1607851992231}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992247, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var node_1 = __importDefault(require("./node"));
 var call_1 = __importDefault(require("./call"));
-var Variable = /** @class */ (function (_super) {
-    __extends(Variable, _super);
-    function Variable(name, index, currentFileInfo) {
-        var _this = _super.call(this) || this;
-        _this.name = name;
-        _this._index = index;
-        _this._fileInfo = currentFileInfo;
-        return _this;
+var Variable = function (name, index, currentFileInfo) {
+    this.name = name;
+    this._index = index;
+    this._fileInfo = currentFileInfo;
+};
+Variable.prototype = new node_1.default();
+Variable.prototype.eval = function (context) {
+    var variable;
+    var name = this.name;
+    if (name.indexOf('@@') === 0) {
+        name = "@" + new Variable(name.slice(1), this.getIndex(), this.fileInfo()).eval(context).value;
     }
-    Variable.prototype.eval = function (context) {
-        var variable;
-        var name = this.name;
-        if (name.indexOf('@@') === 0) {
-            name = "@" + new Variable(name.slice(1), this.getIndex(), this.fileInfo()).eval(context).value;
-        }
-        if (this.evaluating) {
-            throw { type: 'Name', message: "Recursive variable definition for " + name, filename: this.fileInfo().filename,
-                index: this.getIndex() };
-        }
-        this.evaluating = true;
-        variable = this.find(context.frames, function (frame) {
-            var v = frame.variable(name);
-            if (v) {
-                if (v.important) {
-                    var importantScope = context.importantScope[context.importantScope.length - 1];
-                    importantScope.important = v.important;
-                }
-                // If in calc, wrap vars in a function call to cascade evaluate args first
-                if (context.inCalc) {
-                    return (new call_1.default('_SELF', [v.value])).eval(context);
-                }
-                else {
-                    return v.value.eval(context);
-                }
+    if (this.evaluating) {
+        throw { type: 'Name', message: "Recursive variable definition for " + name, filename: this.fileInfo().filename,
+            index: this.getIndex() };
+    }
+    this.evaluating = true;
+    variable = this.find(context.frames, function (frame) {
+        var v = frame.variable(name);
+        if (v) {
+            if (v.important) {
+                var importantScope = context.importantScope[context.importantScope.length - 1];
+                importantScope.important = v.important;
             }
-        });
-        if (variable) {
-            this.evaluating = false;
-            return variable;
-        }
-        else {
-            throw { type: 'Name', message: "variable " + name + " is undefined", filename: this.fileInfo().filename,
-                index: this.getIndex() };
-        }
-    };
-    Variable.prototype.find = function (obj, fun) {
-        for (var i = 0, r = void 0; i < obj.length; i++) {
-            r = fun.call(obj, obj[i]);
-            if (r) {
-                return r;
+            // If in calc, wrap vars in a function call to cascade evaluate args first
+            if (context.inCalc) {
+                return (new call_1.default('_SELF', [v.value])).eval(context);
+            }
+            else {
+                return v.value.eval(context);
             }
         }
-        return null;
-    };
-    return Variable;
-}(node_1.default));
+    });
+    if (variable) {
+        this.evaluating = false;
+        return variable;
+    }
+    else {
+        throw { type: 'Name', message: "variable " + name + " is undefined", filename: this.fileInfo().filename,
+            index: this.getIndex() };
+    }
+};
+Variable.prototype.find = function (obj, fun) {
+    for (var i = 0, r = void 0; i < obj.length; i++) {
+        r = fun.call(obj, obj[i]);
+        if (r) {
+            return r;
+        }
+    }
+    return null;
+};
 Variable.prototype.type = 'Variable';
 exports.default = Variable;
 //# sourceMappingURL=variable.js.map
-}, function(modId) { var map = {"./node":1607654390936,"./call":1607654390961}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390961, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223,"./call":1607851992248}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992248, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -4136,106 +3822,101 @@ var function_caller_1 = __importDefault(require("../functions/function-caller"))
 //
 // A function call node.
 //
-var Call = /** @class */ (function (_super) {
-    __extends(Call, _super);
-    function Call(name, args, index, currentFileInfo) {
-        var _this = _super.call(this) || this;
-        _this.name = name;
-        _this.args = args;
-        _this.calc = name === 'calc';
-        _this._index = index;
-        _this._fileInfo = currentFileInfo;
-        return _this;
+var Call = function (name, args, index, currentFileInfo) {
+    this.name = name;
+    this.args = args;
+    this.calc = name === 'calc';
+    this._index = index;
+    this._fileInfo = currentFileInfo;
+};
+Call.prototype = new node_1.default();
+Call.prototype.accept = function (visitor) {
+    if (this.args) {
+        this.args = visitor.visitArray(this.args);
     }
-    Call.prototype.accept = function (visitor) {
-        if (this.args) {
-            this.args = visitor.visitArray(this.args);
+};
+//
+// When evaluating a function call,
+// we either find the function in the functionRegistry,
+// in which case we call it, passing the  evaluated arguments,
+// if this returns null or we cannot find the function, we
+// simply print it out as it appeared originally [2].
+//
+// The reason why we evaluate the arguments, is in the case where
+// we try to pass a variable to a function, like: `saturate(@color)`.
+// The function should receive the value, not the variable.
+//
+Call.prototype.eval = function (context) {
+    var _this = this;
+    /**
+     * Turn off math for calc(), and switch back on for evaluating nested functions
+     */
+    var currentMathContext = context.mathOn;
+    context.mathOn = !this.calc;
+    if (this.calc || context.inCalc) {
+        context.enterCalc();
+    }
+    var exitCalc = function () {
+        if (_this.calc || context.inCalc) {
+            context.exitCalc();
         }
+        context.mathOn = currentMathContext;
     };
-    //
-    // When evaluating a function call,
-    // we either find the function in the functionRegistry,
-    // in which case we call it, passing the  evaluated arguments,
-    // if this returns null or we cannot find the function, we
-    // simply print it out as it appeared originally [2].
-    //
-    // The reason why we evaluate the arguments, is in the case where
-    // we try to pass a variable to a function, like: `saturate(@color)`.
-    // The function should receive the value, not the variable.
-    //
-    Call.prototype.eval = function (context) {
-        var _this = this;
-        /**
-         * Turn off math for calc(), and switch back on for evaluating nested functions
-         */
-        var currentMathContext = context.mathOn;
-        context.mathOn = !this.calc;
-        if (this.calc || context.inCalc) {
-            context.enterCalc();
+    var result;
+    var funcCaller = new function_caller_1.default(this.name, context, this.getIndex(), this.fileInfo());
+    if (funcCaller.isValid()) {
+        try {
+            result = funcCaller.call(this.args);
+            exitCalc();
         }
-        var exitCalc = function () {
-            if (_this.calc || context.inCalc) {
-                context.exitCalc();
+        catch (e) {
+            if (e.hasOwnProperty('line') && e.hasOwnProperty('column')) {
+                throw e;
             }
-            context.mathOn = currentMathContext;
-        };
-        var result;
-        var funcCaller = new function_caller_1.default(this.name, context, this.getIndex(), this.fileInfo());
-        if (funcCaller.isValid()) {
-            try {
-                result = funcCaller.call(this.args);
-                exitCalc();
-            }
-            catch (e) {
-                if (e.hasOwnProperty('line') && e.hasOwnProperty('column')) {
-                    throw e;
+            throw {
+                type: e.type || 'Runtime',
+                message: "error evaluating function `" + this.name + "`" + (e.message ? ": " + e.message : ''),
+                index: this.getIndex(),
+                filename: this.fileInfo().filename,
+                line: e.lineNumber,
+                column: e.columnNumber
+            };
+        }
+        if (result !== null && result !== undefined) {
+            // Results that that are not nodes are cast as Anonymous nodes
+            // Falsy values or booleans are returned as empty nodes
+            if (!(result instanceof node_1.default)) {
+                if (!result || result === true) {
+                    result = new anonymous_1.default(null);
                 }
-                throw {
-                    type: e.type || 'Runtime',
-                    message: "error evaluating function `" + this.name + "`" + (e.message ? ": " + e.message : ''),
-                    index: this.getIndex(),
-                    filename: this.fileInfo().filename,
-                    line: e.lineNumber,
-                    column: e.columnNumber
-                };
-            }
-            if (result !== null && result !== undefined) {
-                // Results that that are not nodes are cast as Anonymous nodes
-                // Falsy values or booleans are returned as empty nodes
-                if (!(result instanceof node_1.default)) {
-                    if (!result || result === true) {
-                        result = new anonymous_1.default(null);
-                    }
-                    else {
-                        result = new anonymous_1.default(result.toString());
-                    }
+                else {
+                    result = new anonymous_1.default(result.toString());
                 }
-                result._index = this._index;
-                result._fileInfo = this._fileInfo;
-                return result;
             }
+            result._index = this._index;
+            result._fileInfo = this._fileInfo;
+            return result;
         }
-        var args = this.args.map(function (a) { return a.eval(context); });
-        exitCalc();
-        return new Call(this.name, args, this.getIndex(), this.fileInfo());
-    };
-    Call.prototype.genCSS = function (context, output) {
-        output.add(this.name + "(", this.fileInfo(), this.getIndex());
-        for (var i = 0; i < this.args.length; i++) {
-            this.args[i].genCSS(context, output);
-            if (i + 1 < this.args.length) {
-                output.add(', ');
-            }
+    }
+    var args = this.args.map(function (a) { return a.eval(context); });
+    exitCalc();
+    return new Call(this.name, args, this.getIndex(), this.fileInfo());
+};
+Call.prototype.genCSS = function (context, output) {
+    output.add(this.name + "(", this.fileInfo(), this.getIndex());
+    for (var i = 0; i < this.args.length; i++) {
+        this.args[i].genCSS(context, output);
+        if (i + 1 < this.args.length) {
+            output.add(', ');
         }
-        output.add(')');
-    };
-    return Call;
-}(node_1.default));
+    }
+    output.add(')');
+};
 Call.prototype.type = 'Call';
 exports.default = Call;
 //# sourceMappingURL=call.js.map
-}, function(modId) { var map = {"./node":1607654390936,"./anonymous":1607654390950,"../functions/function-caller":1607654390962}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390962, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223,"./anonymous":1607851992237,"../functions/function-caller":1607851992249}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992249, function(require, module, exports) {
 
 var __spreadArrays = (this && this.__spreadArrays) || function () {
     for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
@@ -4302,22 +3983,9 @@ var functionCaller = /** @class */ (function () {
 }());
 exports.default = functionCaller;
 //# sourceMappingURL=function-caller.js.map
-}, function(modId) { var map = {"../tree/expression":1607654390963}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390963, function(require, module, exports) {
+}, function(modId) { var map = {"../tree/expression":1607851992250}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992250, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
@@ -4347,218 +4015,164 @@ var comment_1 = __importDefault(require("./comment"));
 var dimension_1 = __importDefault(require("./dimension"));
 var Constants = __importStar(require("../constants"));
 var MATH = Constants.Math;
-var Expression = /** @class */ (function (_super) {
-    __extends(Expression, _super);
-    function Expression(value, noSpacing) {
-        var _this = _super.call(this) || this;
-        _this.value = value;
-        _this.noSpacing = noSpacing;
-        if (!value) {
-            throw new Error('Expression requires an array parameter');
-        }
-        return _this;
+var Expression = function (value, noSpacing) {
+    this.value = value;
+    this.noSpacing = noSpacing;
+    if (!value) {
+        throw new Error('Expression requires an array parameter');
     }
-    Expression.prototype.accept = function (visitor) {
-        this.value = visitor.visitArray(this.value);
-    };
-    Expression.prototype.eval = function (context) {
-        var returnValue;
-        var mathOn = context.isMathOn();
-        var inParenthesis = this.parens &&
-            (context.math !== MATH.STRICT_LEGACY || !this.parensInOp);
-        var doubleParen = false;
-        if (inParenthesis) {
-            context.inParenthesis();
-        }
-        if (this.value.length > 1) {
-            returnValue = new Expression(this.value.map(function (e) {
-                if (!e.eval) {
-                    return e;
-                }
-                return e.eval(context);
-            }), this.noSpacing);
-        }
-        else if (this.value.length === 1) {
-            if (this.value[0].parens && !this.value[0].parensInOp && !context.inCalc) {
-                doubleParen = true;
+};
+Expression.prototype = new node_1.default();
+Expression.prototype.accept = function (visitor) {
+    this.value = visitor.visitArray(this.value);
+};
+Expression.prototype.eval = function (context) {
+    var returnValue;
+    var mathOn = context.isMathOn();
+    var inParenthesis = this.parens &&
+        (context.math !== MATH.STRICT_LEGACY || !this.parensInOp);
+    var doubleParen = false;
+    if (inParenthesis) {
+        context.inParenthesis();
+    }
+    if (this.value.length > 1) {
+        returnValue = new Expression(this.value.map(function (e) {
+            if (!e.eval) {
+                return e;
             }
-            returnValue = this.value[0].eval(context);
+            return e.eval(context);
+        }), this.noSpacing);
+    }
+    else if (this.value.length === 1) {
+        if (this.value[0].parens && !this.value[0].parensInOp && !context.inCalc) {
+            doubleParen = true;
         }
-        else {
-            returnValue = this;
+        returnValue = this.value[0].eval(context);
+    }
+    else {
+        returnValue = this;
+    }
+    if (inParenthesis) {
+        context.outOfParenthesis();
+    }
+    if (this.parens && this.parensInOp && !mathOn && !doubleParen
+        && (!(returnValue instanceof dimension_1.default))) {
+        returnValue = new paren_1.default(returnValue);
+    }
+    return returnValue;
+};
+Expression.prototype.genCSS = function (context, output) {
+    for (var i = 0; i < this.value.length; i++) {
+        this.value[i].genCSS(context, output);
+        if (!this.noSpacing && i + 1 < this.value.length) {
+            output.add(' ');
         }
-        if (inParenthesis) {
-            context.outOfParenthesis();
-        }
-        if (this.parens && this.parensInOp && !mathOn && !doubleParen
-            && (!(returnValue instanceof dimension_1.default))) {
-            returnValue = new paren_1.default(returnValue);
-        }
-        return returnValue;
-    };
-    Expression.prototype.genCSS = function (context, output) {
-        for (var i = 0; i < this.value.length; i++) {
-            this.value[i].genCSS(context, output);
-            if (!this.noSpacing && i + 1 < this.value.length) {
-                output.add(' ');
-            }
-        }
-    };
-    Expression.prototype.throwAwayComments = function () {
-        this.value = this.value.filter(function (v) { return !(v instanceof comment_1.default); });
-    };
-    return Expression;
-}(node_1.default));
+    }
+};
+Expression.prototype.throwAwayComments = function () {
+    this.value = this.value.filter(function (v) { return !(v instanceof comment_1.default); });
+};
 Expression.prototype.type = 'Expression';
 exports.default = Expression;
 //# sourceMappingURL=expression.js.map
-}, function(modId) { var map = {"./node":1607654390936,"./paren":1607654390941,"./comment":1607654390951,"./dimension":1607654390958,"../constants":1607654390945}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390964, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223,"./paren":1607851992228,"./comment":1607851992238,"./dimension":1607851992245,"../constants":1607851992232}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992251, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var node_1 = __importDefault(require("./node"));
 var declaration_1 = __importDefault(require("./declaration"));
-var Property = /** @class */ (function (_super) {
-    __extends(Property, _super);
-    function Property(name, index, currentFileInfo) {
-        var _this = _super.call(this) || this;
-        _this.name = name;
-        _this._index = index;
-        _this._fileInfo = currentFileInfo;
-        return _this;
+var Property = function (name, index, currentFileInfo) {
+    this.name = name;
+    this._index = index;
+    this._fileInfo = currentFileInfo;
+};
+Property.prototype = new node_1.default();
+Property.prototype.eval = function (context) {
+    var property;
+    var name = this.name;
+    // TODO: shorten this reference
+    var mergeRules = context.pluginManager.less.visitors.ToCSSVisitor.prototype._mergeRules;
+    if (this.evaluating) {
+        throw { type: 'Name', message: "Recursive property reference for " + name, filename: this.fileInfo().filename,
+            index: this.getIndex() };
     }
-    Property.prototype.eval = function (context) {
-        var property;
-        var name = this.name;
-        // TODO: shorten this reference
-        var mergeRules = context.pluginManager.less.visitors.ToCSSVisitor.prototype._mergeRules;
-        if (this.evaluating) {
-            throw { type: 'Name', message: "Recursive property reference for " + name, filename: this.fileInfo().filename,
-                index: this.getIndex() };
-        }
-        this.evaluating = true;
-        property = this.find(context.frames, function (frame) {
-            var v;
-            var vArr = frame.property(name);
-            if (vArr) {
-                for (var i = 0; i < vArr.length; i++) {
-                    v = vArr[i];
-                    vArr[i] = new declaration_1.default(v.name, v.value, v.important, v.merge, v.index, v.currentFileInfo, v.inline, v.variable);
-                }
-                mergeRules(vArr);
-                v = vArr[vArr.length - 1];
-                if (v.important) {
-                    var importantScope = context.importantScope[context.importantScope.length - 1];
-                    importantScope.important = v.important;
-                }
-                v = v.value.eval(context);
-                return v;
+    this.evaluating = true;
+    property = this.find(context.frames, function (frame) {
+        var v;
+        var vArr = frame.property(name);
+        if (vArr) {
+            for (var i = 0; i < vArr.length; i++) {
+                v = vArr[i];
+                vArr[i] = new declaration_1.default(v.name, v.value, v.important, v.merge, v.index, v.currentFileInfo, v.inline, v.variable);
             }
-        });
-        if (property) {
-            this.evaluating = false;
-            return property;
-        }
-        else {
-            throw { type: 'Name', message: "Property '" + name + "' is undefined", filename: this.currentFileInfo.filename,
-                index: this.index };
-        }
-    };
-    Property.prototype.find = function (obj, fun) {
-        for (var i = 0, r = void 0; i < obj.length; i++) {
-            r = fun.call(obj, obj[i]);
-            if (r) {
-                return r;
+            mergeRules(vArr);
+            v = vArr[vArr.length - 1];
+            if (v.important) {
+                var importantScope = context.importantScope[context.importantScope.length - 1];
+                importantScope.important = v.important;
             }
+            v = v.value.eval(context);
+            return v;
         }
-        return null;
-    };
-    return Property;
-}(node_1.default));
+    });
+    if (property) {
+        this.evaluating = false;
+        return property;
+    }
+    else {
+        throw { type: 'Name', message: "Property '" + name + "' is undefined", filename: this.currentFileInfo.filename,
+            index: this.index };
+    }
+};
+Property.prototype.find = function (obj, fun) {
+    for (var i = 0, r = void 0; i < obj.length; i++) {
+        r = fun.call(obj, obj[i]);
+        if (r) {
+            return r;
+        }
+    }
+    return null;
+};
 Property.prototype.type = 'Property';
 exports.default = Property;
 //# sourceMappingURL=property.js.map
-}, function(modId) { var map = {"./node":1607654390936,"./declaration":1607654390947}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390965, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223,"./declaration":1607851992234}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992252, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var node_1 = __importDefault(require("./node"));
-var Attribute = /** @class */ (function (_super) {
-    __extends(Attribute, _super);
-    function Attribute(key, op, value) {
-        var _this = _super.call(this) || this;
-        _this.key = key;
-        _this.op = op;
-        _this.value = value;
-        return _this;
+var Attribute = function (key, op, value) {
+    this.key = key;
+    this.op = op;
+    this.value = value;
+};
+Attribute.prototype = new node_1.default();
+Attribute.prototype.eval = function (context) {
+    return new Attribute(this.key.eval ? this.key.eval(context) : this.key, this.op, (this.value && this.value.eval) ? this.value.eval(context) : this.value);
+};
+Attribute.prototype.genCSS = function (context, output) {
+    output.add(this.toCSS(context));
+};
+Attribute.prototype.toCSS = function (context) {
+    var value = this.key.toCSS ? this.key.toCSS(context) : this.key;
+    if (this.op) {
+        value += this.op;
+        value += (this.value.toCSS ? this.value.toCSS(context) : this.value);
     }
-    Attribute.prototype.eval = function (context) {
-        return new Attribute(this.key.eval ? this.key.eval(context) : this.key, this.op, (this.value && this.value.eval) ? this.value.eval(context) : this.value);
-    };
-    Attribute.prototype.genCSS = function (context, output) {
-        output.add(this.toCSS(context));
-    };
-    Attribute.prototype.toCSS = function (context) {
-        var value = this.key.toCSS ? this.key.toCSS(context) : this.key;
-        if (this.op) {
-            value += this.op;
-            value += (this.value.toCSS ? this.value.toCSS(context) : this.value);
-        }
-        return "[" + value + "]";
-    };
-    return Attribute;
-}(node_1.default));
+    return "[" + value + "]";
+};
 Attribute.prototype.type = 'Attribute';
 exports.default = Attribute;
 //# sourceMappingURL=attribute.js.map
-}, function(modId) { var map = {"./node":1607654390936}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390966, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992253, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -4566,165 +4180,129 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var node_1 = __importDefault(require("./node"));
 var variable_1 = __importDefault(require("./variable"));
 var property_1 = __importDefault(require("./property"));
-var Quoted = /** @class */ (function (_super) {
-    __extends(Quoted, _super);
-    function Quoted(str, content, escaped, index, currentFileInfo) {
-        var _this = _super.call(this) || this;
-        _this.escaped = (escaped == null) ? true : escaped;
-        _this.value = content || '';
-        _this.quote = str.charAt(0);
-        _this._index = index;
-        _this._fileInfo = currentFileInfo;
-        _this.variableRegex = /@\{([\w-]+)\}/g;
-        _this.propRegex = /\$\{([\w-]+)\}/g;
-        _this.allowRoot = escaped;
-        return _this;
+var Quoted = function (str, content, escaped, index, currentFileInfo) {
+    this.escaped = (escaped == null) ? true : escaped;
+    this.value = content || '';
+    this.quote = str.charAt(0);
+    this._index = index;
+    this._fileInfo = currentFileInfo;
+    this.variableRegex = /@\{([\w-]+)\}/g;
+    this.propRegex = /\$\{([\w-]+)\}/g;
+    this.allowRoot = escaped;
+};
+Quoted.prototype = new node_1.default();
+Quoted.prototype.genCSS = function (context, output) {
+    if (!this.escaped) {
+        output.add(this.quote, this.fileInfo(), this.getIndex());
     }
-    Quoted.prototype.genCSS = function (context, output) {
-        if (!this.escaped) {
-            output.add(this.quote, this.fileInfo(), this.getIndex());
-        }
-        output.add(this.value);
-        if (!this.escaped) {
-            output.add(this.quote);
-        }
+    output.add(this.value);
+    if (!this.escaped) {
+        output.add(this.quote);
+    }
+};
+Quoted.prototype.containsVariables = function () {
+    return this.value.match(this.variableRegex);
+};
+Quoted.prototype.eval = function (context) {
+    var that = this;
+    var value = this.value;
+    var variableReplacement = function (_, name) {
+        var v = new variable_1.default("@" + name, that.getIndex(), that.fileInfo()).eval(context, true);
+        return (v instanceof Quoted) ? v.value : v.toCSS();
     };
-    Quoted.prototype.containsVariables = function () {
-        return this.value.match(this.variableRegex);
+    var propertyReplacement = function (_, name) {
+        var v = new property_1.default("$" + name, that.getIndex(), that.fileInfo()).eval(context, true);
+        return (v instanceof Quoted) ? v.value : v.toCSS();
     };
-    Quoted.prototype.eval = function (context) {
-        var that = this;
-        var value = this.value;
-        var variableReplacement = function (_, name) {
-            var v = new variable_1.default("@" + name, that.getIndex(), that.fileInfo()).eval(context, true);
-            return (v instanceof Quoted) ? v.value : v.toCSS();
-        };
-        var propertyReplacement = function (_, name) {
-            var v = new property_1.default("$" + name, that.getIndex(), that.fileInfo()).eval(context, true);
-            return (v instanceof Quoted) ? v.value : v.toCSS();
-        };
-        function iterativeReplace(value, regexp, replacementFnc) {
-            var evaluatedValue = value;
-            do {
-                value = evaluatedValue.toString();
-                evaluatedValue = value.replace(regexp, replacementFnc);
-            } while (value !== evaluatedValue);
-            return evaluatedValue;
-        }
-        value = iterativeReplace(value, this.variableRegex, variableReplacement);
-        value = iterativeReplace(value, this.propRegex, propertyReplacement);
-        return new Quoted(this.quote + value + this.quote, value, this.escaped, this.getIndex(), this.fileInfo());
-    };
-    Quoted.prototype.compare = function (other) {
-        // when comparing quoted strings allow the quote to differ
-        if (other.type === 'Quoted' && !this.escaped && !other.escaped) {
-            return node_1.default.numericCompare(this.value, other.value);
-        }
-        else {
-            return other.toCSS && this.toCSS() === other.toCSS() ? 0 : undefined;
-        }
-    };
-    return Quoted;
-}(node_1.default));
+    function iterativeReplace(value, regexp, replacementFnc) {
+        var evaluatedValue = value;
+        do {
+            value = evaluatedValue.toString();
+            evaluatedValue = value.replace(regexp, replacementFnc);
+        } while (value !== evaluatedValue);
+        return evaluatedValue;
+    }
+    value = iterativeReplace(value, this.variableRegex, variableReplacement);
+    value = iterativeReplace(value, this.propRegex, propertyReplacement);
+    return new Quoted(this.quote + value + this.quote, value, this.escaped, this.getIndex(), this.fileInfo());
+};
+Quoted.prototype.compare = function (other) {
+    // when comparing quoted strings allow the quote to differ
+    if (other.type === 'Quoted' && !this.escaped && !other.escaped) {
+        return node_1.default.numericCompare(this.value, other.value);
+    }
+    else {
+        return other.toCSS && this.toCSS() === other.toCSS() ? 0 : undefined;
+    }
+};
 Quoted.prototype.type = 'Quoted';
 exports.default = Quoted;
 //# sourceMappingURL=quoted.js.map
-}, function(modId) { var map = {"./node":1607654390936,"./variable":1607654390960,"./property":1607654390964}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390967, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223,"./variable":1607851992247,"./property":1607851992251}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992254, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var node_1 = __importDefault(require("./node"));
-var URL = /** @class */ (function (_super) {
-    __extends(URL, _super);
-    function URL(val, index, currentFileInfo, isEvald) {
-        var _this = _super.call(this) || this;
-        _this.value = val;
-        _this._index = index;
-        _this._fileInfo = currentFileInfo;
-        _this.isEvald = isEvald;
-        return _this;
-    }
-    URL.prototype.accept = function (visitor) {
-        this.value = visitor.visit(this.value);
-    };
-    URL.prototype.genCSS = function (context, output) {
-        output.add('url(');
-        this.value.genCSS(context, output);
-        output.add(')');
-    };
-    URL.prototype.eval = function (context) {
-        var val = this.value.eval(context);
-        var rootpath;
-        if (!this.isEvald) {
-            // Add the rootpath if the URL requires a rewrite
-            rootpath = this.fileInfo() && this.fileInfo().rootpath;
-            if (typeof rootpath === 'string' &&
-                typeof val.value === 'string' &&
-                context.pathRequiresRewrite(val.value)) {
-                if (!val.quote) {
-                    rootpath = escapePath(rootpath);
+var URL = function (val, index, currentFileInfo, isEvald) {
+    this.value = val;
+    this._index = index;
+    this._fileInfo = currentFileInfo;
+    this.isEvald = isEvald;
+};
+URL.prototype = new node_1.default();
+URL.prototype.accept = function (visitor) {
+    this.value = visitor.visit(this.value);
+};
+URL.prototype.genCSS = function (context, output) {
+    output.add('url(');
+    this.value.genCSS(context, output);
+    output.add(')');
+};
+URL.prototype.eval = function (context) {
+    var val = this.value.eval(context);
+    var rootpath;
+    if (!this.isEvald) {
+        // Add the rootpath if the URL requires a rewrite
+        rootpath = this.fileInfo() && this.fileInfo().rootpath;
+        if (typeof rootpath === 'string' &&
+            typeof val.value === 'string' &&
+            context.pathRequiresRewrite(val.value)) {
+            if (!val.quote) {
+                rootpath = escapePath(rootpath);
+            }
+            val.value = context.rewritePath(val.value, rootpath);
+        }
+        else {
+            val.value = context.normalizePath(val.value);
+        }
+        // Add url args if enabled
+        if (context.urlArgs) {
+            if (!val.value.match(/^\s*data:/)) {
+                var delimiter = val.value.indexOf('?') === -1 ? '?' : '&';
+                var urlArgs = delimiter + context.urlArgs;
+                if (val.value.indexOf('#') !== -1) {
+                    val.value = val.value.replace('#', urlArgs + "#");
                 }
-                val.value = context.rewritePath(val.value, rootpath);
-            }
-            else {
-                val.value = context.normalizePath(val.value);
-            }
-            // Add url args if enabled
-            if (context.urlArgs) {
-                if (!val.value.match(/^\s*data:/)) {
-                    var delimiter = val.value.indexOf('?') === -1 ? '?' : '&';
-                    var urlArgs = delimiter + context.urlArgs;
-                    if (val.value.indexOf('#') !== -1) {
-                        val.value = val.value.replace('#', urlArgs + "#");
-                    }
-                    else {
-                        val.value += urlArgs;
-                    }
+                else {
+                    val.value += urlArgs;
                 }
             }
         }
-        return new URL(val, this.getIndex(), this.fileInfo(), true);
-    };
-    return URL;
-}(node_1.default));
+    }
+    return new URL(val, this.getIndex(), this.fileInfo(), true);
+};
 URL.prototype.type = 'Url';
 function escapePath(path) {
     return path.replace(/[\(\)'"\s]/g, function (match) { return "\\" + match; });
 }
 exports.default = URL;
 //# sourceMappingURL=url.js.map
-}, function(modId) { var map = {"./node":1607654390936}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390968, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992255, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
@@ -4768,174 +4346,156 @@ var less_error_1 = __importDefault(require("../less-error"));
 // `import,push`, we also pass it a callback, which it'll call once
 // the file has been fetched, and parsed.
 //
-var Import = /** @class */ (function (_super) {
-    __extends(Import, _super);
-    function Import(path, features, options, index, currentFileInfo, visibilityInfo) {
-        var _this = _super.call(this) || this;
-        _this.options = options;
-        _this._index = index;
-        _this._fileInfo = currentFileInfo;
-        _this.path = path;
-        _this.features = features;
-        _this.allowRoot = true;
-        if (_this.options.less !== undefined || _this.options.inline) {
-            _this.css = !_this.options.less || _this.options.inline;
+var Import = function (path, features, options, index, currentFileInfo, visibilityInfo) {
+    this.options = options;
+    this._index = index;
+    this._fileInfo = currentFileInfo;
+    this.path = path;
+    this.features = features;
+    this.allowRoot = true;
+    if (this.options.less !== undefined || this.options.inline) {
+        this.css = !this.options.less || this.options.inline;
+    }
+    else {
+        var pathValue = this.getPath();
+        if (pathValue && /[#\.\&\?]css([\?;].*)?$/.test(pathValue)) {
+            this.css = true;
+        }
+    }
+    this.copyVisibilityInfo(visibilityInfo);
+    this.setParent(this.features, this);
+    this.setParent(this.path, this);
+};
+Import.prototype = new node_1.default();
+Import.prototype.accept = function (visitor) {
+    if (this.features) {
+        this.features = visitor.visit(this.features);
+    }
+    this.path = visitor.visit(this.path);
+    if (!this.options.isPlugin && !this.options.inline && this.root) {
+        this.root = visitor.visit(this.root);
+    }
+};
+Import.prototype.genCSS = function (context, output) {
+    if (this.css && this.path._fileInfo.reference === undefined) {
+        output.add('@import ', this._fileInfo, this._index);
+        this.path.genCSS(context, output);
+        if (this.features) {
+            output.add(' ');
+            this.features.genCSS(context, output);
+        }
+        output.add(';');
+    }
+};
+Import.prototype.getPath = function () {
+    return (this.path instanceof url_1.default) ?
+        this.path.value.value : this.path.value;
+};
+Import.prototype.isVariableImport = function () {
+    var path = this.path;
+    if (path instanceof url_1.default) {
+        path = path.value;
+    }
+    if (path instanceof quoted_1.default) {
+        return path.containsVariables();
+    }
+    return true;
+};
+Import.prototype.evalForImport = function (context) {
+    var path = this.path;
+    if (path instanceof url_1.default) {
+        path = path.value;
+    }
+    return new Import(path.eval(context), this.features, this.options, this._index, this._fileInfo, this.visibilityInfo());
+};
+Import.prototype.evalPath = function (context) {
+    var path = this.path.eval(context);
+    var fileInfo = this._fileInfo;
+    if (!(path instanceof url_1.default)) {
+        // Add the rootpath if the URL requires a rewrite
+        var pathValue = path.value;
+        if (fileInfo &&
+            pathValue &&
+            context.pathRequiresRewrite(pathValue)) {
+            path.value = context.rewritePath(pathValue, fileInfo.rootpath);
         }
         else {
-            var pathValue = _this.getPath();
-            if (pathValue && /[#\.\&\?]css([\?;].*)?$/.test(pathValue)) {
-                _this.css = true;
-            }
+            path.value = context.normalizePath(path.value);
         }
-        _this.copyVisibilityInfo(visibilityInfo);
-        _this.setParent(_this.features, _this);
-        _this.setParent(_this.path, _this);
-        return _this;
     }
-    Import.prototype.accept = function (visitor) {
-        if (this.features) {
-            this.features = visitor.visit(this.features);
+    return path;
+};
+Import.prototype.eval = function (context) {
+    var result = this.doEval(context);
+    if (this.options.reference || this.blocksVisibility()) {
+        if (result.length || result.length === 0) {
+            result.forEach(function (node) {
+                node.addVisibilityBlock();
+            });
         }
-        this.path = visitor.visit(this.path);
-        if (!this.options.isPlugin && !this.options.inline && this.root) {
-            this.root = visitor.visit(this.root);
+        else {
+            result.addVisibilityBlock();
         }
-    };
-    Import.prototype.genCSS = function (context, output) {
-        if (this.css && this.path._fileInfo.reference === undefined) {
-            output.add('@import ', this._fileInfo, this._index);
-            this.path.genCSS(context, output);
-            if (this.features) {
-                output.add(' ');
-                this.features.genCSS(context, output);
+    }
+    return result;
+};
+Import.prototype.doEval = function (context) {
+    var ruleset;
+    var registry;
+    var features = this.features && this.features.eval(context);
+    if (this.options.isPlugin) {
+        if (this.root && this.root.eval) {
+            try {
+                this.root.eval(context);
             }
-            output.add(';');
-        }
-    };
-    Import.prototype.getPath = function () {
-        return (this.path instanceof url_1.default) ?
-            this.path.value.value : this.path.value;
-    };
-    Import.prototype.isVariableImport = function () {
-        var path = this.path;
-        if (path instanceof url_1.default) {
-            path = path.value;
-        }
-        if (path instanceof quoted_1.default) {
-            return path.containsVariables();
-        }
-        return true;
-    };
-    Import.prototype.evalForImport = function (context) {
-        var path = this.path;
-        if (path instanceof url_1.default) {
-            path = path.value;
-        }
-        return new Import(path.eval(context), this.features, this.options, this._index, this._fileInfo, this.visibilityInfo());
-    };
-    Import.prototype.evalPath = function (context) {
-        var path = this.path.eval(context);
-        var fileInfo = this._fileInfo;
-        if (!(path instanceof url_1.default)) {
-            // Add the rootpath if the URL requires a rewrite
-            var pathValue = path.value;
-            if (fileInfo &&
-                pathValue &&
-                context.pathRequiresRewrite(pathValue)) {
-                path.value = context.rewritePath(pathValue, fileInfo.rootpath);
-            }
-            else {
-                path.value = context.normalizePath(path.value);
+            catch (e) {
+                e.message = 'Plugin error during evaluation';
+                throw new less_error_1.default(e, this.root.imports, this.root.filename);
             }
         }
-        return path;
-    };
-    Import.prototype.eval = function (context) {
-        var result = this.doEval(context);
-        if (this.options.reference || this.blocksVisibility()) {
-            if (result.length || result.length === 0) {
-                result.forEach(function (node) {
-                    node.addVisibilityBlock();
-                });
-            }
-            else {
-                result.addVisibilityBlock();
-            }
+        registry = context.frames[0] && context.frames[0].functionRegistry;
+        if (registry && this.root && this.root.functions) {
+            registry.addMultiple(this.root.functions);
         }
-        return result;
-    };
-    Import.prototype.doEval = function (context) {
-        var ruleset;
-        var registry;
-        var features = this.features && this.features.eval(context);
-        if (this.options.isPlugin) {
-            if (this.root && this.root.eval) {
-                try {
-                    this.root.eval(context);
-                }
-                catch (e) {
-                    e.message = 'Plugin error during evaluation';
-                    throw new less_error_1.default(e, this.root.imports, this.root.filename);
-                }
-            }
-            registry = context.frames[0] && context.frames[0].functionRegistry;
-            if (registry && this.root && this.root.functions) {
-                registry.addMultiple(this.root.functions);
-            }
-            return [];
+        return [];
+    }
+    if (this.skip) {
+        if (typeof this.skip === 'function') {
+            this.skip = this.skip();
         }
         if (this.skip) {
-            if (typeof this.skip === 'function') {
-                this.skip = this.skip();
-            }
-            if (this.skip) {
-                return [];
-            }
-        }
-        if (this.options.inline) {
-            var contents = new anonymous_1.default(this.root, 0, {
-                filename: this.importedFilename,
-                reference: this.path._fileInfo && this.path._fileInfo.reference
-            }, true, true);
-            return this.features ? new media_1.default([contents], this.features.value) : [contents];
-        }
-        else if (this.css) {
-            var newImport = new Import(this.evalPath(context), features, this.options, this._index);
-            if (!newImport.css && this.error) {
-                throw this.error;
-            }
-            return newImport;
-        }
-        else if (this.root) {
-            ruleset = new ruleset_1.default(null, utils.copyArray(this.root.rules));
-            ruleset.evalImports(context);
-            return this.features ? new media_1.default(ruleset.rules, this.features.value) : ruleset.rules;
-        }
-        else {
             return [];
         }
-    };
-    return Import;
-}(node_1.default));
+    }
+    if (this.options.inline) {
+        var contents = new anonymous_1.default(this.root, 0, {
+            filename: this.importedFilename,
+            reference: this.path._fileInfo && this.path._fileInfo.reference
+        }, true, true);
+        return this.features ? new media_1.default([contents], this.features.value) : [contents];
+    }
+    else if (this.css) {
+        var newImport = new Import(this.evalPath(context), features, this.options, this._index);
+        if (!newImport.css && this.error) {
+            throw this.error;
+        }
+        return newImport;
+    }
+    else if (this.root) {
+        ruleset = new ruleset_1.default(null, utils.copyArray(this.root.rules));
+        ruleset.evalImports(context);
+        return this.features ? new media_1.default(ruleset.rules, this.features.value) : ruleset.rules;
+    }
+    else {
+        return [];
+    }
+};
 Import.prototype.type = 'Import';
 exports.default = Import;
 //# sourceMappingURL=import.js.map
-}, function(modId) { var map = {"./node":1607654390936,"./media":1607654390969,"./url":1607654390967,"./quoted":1607654390966,"./ruleset":1607654390946,"./anonymous":1607654390950,"../utils":1607654390944,"../less-error":1607654390943}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390969, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223,"./media":1607851992256,"./url":1607851992254,"./quoted":1607851992253,"./ruleset":1607851992233,"./anonymous":1607851992237,"../utils":1607851992231,"../less-error":1607851992230}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992256, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
@@ -4966,148 +4526,130 @@ var anonymous_1 = __importDefault(require("./anonymous"));
 var expression_1 = __importDefault(require("./expression"));
 var atrule_1 = __importDefault(require("./atrule"));
 var utils = __importStar(require("../utils"));
-var Media = /** @class */ (function (_super) {
-    __extends(Media, _super);
-    function Media(value, features, index, currentFileInfo, visibilityInfo) {
-        var _this = _super.call(this) || this;
-        _this._index = index;
-        _this._fileInfo = currentFileInfo;
-        var selectors = (new selector_1.default([], null, null, _this._index, _this._fileInfo)).createEmptySelectors();
-        _this.features = new value_1.default(features);
-        _this.rules = [new ruleset_1.default(selectors, value)];
-        _this.rules[0].allowImports = true;
-        _this.copyVisibilityInfo(visibilityInfo);
-        _this.allowRoot = true;
-        _this.setParent(selectors, _this);
-        _this.setParent(_this.features, _this);
-        _this.setParent(_this.rules, _this);
-        return _this;
+var Media = function (value, features, index, currentFileInfo, visibilityInfo) {
+    this._index = index;
+    this._fileInfo = currentFileInfo;
+    var selectors = (new selector_1.default([], null, null, this._index, this._fileInfo)).createEmptySelectors();
+    this.features = new value_1.default(features);
+    this.rules = [new ruleset_1.default(selectors, value)];
+    this.rules[0].allowImports = true;
+    this.copyVisibilityInfo(visibilityInfo);
+    this.allowRoot = true;
+    this.setParent(selectors, this);
+    this.setParent(this.features, this);
+    this.setParent(this.rules, this);
+};
+Media.prototype = new atrule_1.default();
+Media.prototype.isRulesetLike = function () {
+    return true;
+};
+Media.prototype.accept = function (visitor) {
+    if (this.features) {
+        this.features = visitor.visit(this.features);
     }
-    Media.prototype.isRulesetLike = function () {
-        return true;
-    };
-    Media.prototype.accept = function (visitor) {
-        if (this.features) {
-            this.features = visitor.visit(this.features);
+    if (this.rules) {
+        this.rules = visitor.visitArray(this.rules);
+    }
+};
+Media.prototype.genCSS = function (context, output) {
+    output.add('@media ', this._fileInfo, this._index);
+    this.features.genCSS(context, output);
+    this.outputRuleset(context, output, this.rules);
+};
+Media.prototype.eval = function (context) {
+    if (!context.mediaBlocks) {
+        context.mediaBlocks = [];
+        context.mediaPath = [];
+    }
+    var media = new Media(null, [], this._index, this._fileInfo, this.visibilityInfo());
+    if (this.debugInfo) {
+        this.rules[0].debugInfo = this.debugInfo;
+        media.debugInfo = this.debugInfo;
+    }
+    media.features = this.features.eval(context);
+    context.mediaPath.push(media);
+    context.mediaBlocks.push(media);
+    this.rules[0].functionRegistry = context.frames[0].functionRegistry.inherit();
+    context.frames.unshift(this.rules[0]);
+    media.rules = [this.rules[0].eval(context)];
+    context.frames.shift();
+    context.mediaPath.pop();
+    return context.mediaPath.length === 0 ? media.evalTop(context) :
+        media.evalNested(context);
+};
+Media.prototype.evalTop = function (context) {
+    var result = this;
+    // Render all dependent Media blocks.
+    if (context.mediaBlocks.length > 1) {
+        var selectors = (new selector_1.default([], null, null, this.getIndex(), this.fileInfo())).createEmptySelectors();
+        result = new ruleset_1.default(selectors, context.mediaBlocks);
+        result.multiMedia = true;
+        result.copyVisibilityInfo(this.visibilityInfo());
+        this.setParent(result, this);
+    }
+    delete context.mediaBlocks;
+    delete context.mediaPath;
+    return result;
+};
+Media.prototype.evalNested = function (context) {
+    var i;
+    var value;
+    var path = context.mediaPath.concat([this]);
+    // Extract the media-query conditions separated with `,` (OR).
+    for (i = 0; i < path.length; i++) {
+        value = path[i].features instanceof value_1.default ?
+            path[i].features.value : path[i].features;
+        path[i] = Array.isArray(value) ? value : [value];
+    }
+    // Trace all permutations to generate the resulting media-query.
+    //
+    // (a, b and c) with nested (d, e) ->
+    //    a and d
+    //    a and e
+    //    b and c and d
+    //    b and c and e
+    this.features = new value_1.default(this.permute(path).map(function (path) {
+        path = path.map(function (fragment) { return fragment.toCSS ? fragment : new anonymous_1.default(fragment); });
+        for (i = path.length - 1; i > 0; i--) {
+            path.splice(i, 0, new anonymous_1.default('and'));
         }
-        if (this.rules) {
-            this.rules = visitor.visitArray(this.rules);
+        return new expression_1.default(path);
+    }));
+    this.setParent(this.features, this);
+    // Fake a tree-node that doesn't output anything.
+    return new ruleset_1.default([], []);
+};
+Media.prototype.permute = function (arr) {
+    if (arr.length === 0) {
+        return [];
+    }
+    else if (arr.length === 1) {
+        return arr[0];
+    }
+    else {
+        var result = [];
+        var rest = this.permute(arr.slice(1));
+        for (var i = 0; i < rest.length; i++) {
+            for (var j = 0; j < arr[0].length; j++) {
+                result.push([arr[0][j]].concat(rest[i]));
+            }
         }
-    };
-    Media.prototype.genCSS = function (context, output) {
-        output.add('@media ', this._fileInfo, this._index);
-        this.features.genCSS(context, output);
-        this.outputRuleset(context, output, this.rules);
-    };
-    Media.prototype.eval = function (context) {
-        if (!context.mediaBlocks) {
-            context.mediaBlocks = [];
-            context.mediaPath = [];
-        }
-        var media = new Media(null, [], this._index, this._fileInfo, this.visibilityInfo());
-        if (this.debugInfo) {
-            this.rules[0].debugInfo = this.debugInfo;
-            media.debugInfo = this.debugInfo;
-        }
-        media.features = this.features.eval(context);
-        context.mediaPath.push(media);
-        context.mediaBlocks.push(media);
-        this.rules[0].functionRegistry = context.frames[0].functionRegistry.inherit();
-        context.frames.unshift(this.rules[0]);
-        media.rules = [this.rules[0].eval(context)];
-        context.frames.shift();
-        context.mediaPath.pop();
-        return context.mediaPath.length === 0 ? media.evalTop(context) :
-            media.evalNested(context);
-    };
-    Media.prototype.evalTop = function (context) {
-        var result = this;
-        // Render all dependent Media blocks.
-        if (context.mediaBlocks.length > 1) {
-            var selectors = (new selector_1.default([], null, null, this.getIndex(), this.fileInfo())).createEmptySelectors();
-            result = new ruleset_1.default(selectors, context.mediaBlocks);
-            result.multiMedia = true;
-            result.copyVisibilityInfo(this.visibilityInfo());
-            this.setParent(result, this);
-        }
-        delete context.mediaBlocks;
-        delete context.mediaPath;
         return result;
-    };
-    Media.prototype.evalNested = function (context) {
-        var i;
-        var value;
-        var path = context.mediaPath.concat([this]);
-        // Extract the media-query conditions separated with `,` (OR).
-        for (i = 0; i < path.length; i++) {
-            value = path[i].features instanceof value_1.default ?
-                path[i].features.value : path[i].features;
-            path[i] = Array.isArray(value) ? value : [value];
-        }
-        // Trace all permutations to generate the resulting media-query.
-        //
-        // (a, b and c) with nested (d, e) ->
-        //    a and d
-        //    a and e
-        //    b and c and d
-        //    b and c and e
-        this.features = new value_1.default(this.permute(path).map(function (path) {
-            path = path.map(function (fragment) { return fragment.toCSS ? fragment : new anonymous_1.default(fragment); });
-            for (i = path.length - 1; i > 0; i--) {
-                path.splice(i, 0, new anonymous_1.default('and'));
-            }
-            return new expression_1.default(path);
-        }));
-        this.setParent(this.features, this);
-        // Fake a tree-node that doesn't output anything.
-        return new ruleset_1.default([], []);
-    };
-    Media.prototype.permute = function (arr) {
-        if (arr.length === 0) {
-            return [];
-        }
-        else if (arr.length === 1) {
-            return arr[0];
-        }
-        else {
-            var result = [];
-            var rest = this.permute(arr.slice(1));
-            for (var i = 0; i < rest.length; i++) {
-                for (var j = 0; j < arr[0].length; j++) {
-                    result.push([arr[0][j]].concat(rest[i]));
-                }
-            }
-            return result;
-        }
-    };
-    Media.prototype.bubbleSelectors = function (selectors) {
-        if (!selectors) {
-            return;
-        }
-        this.rules = [new ruleset_1.default(utils.copyArray(selectors), [this.rules[0]])];
-        this.setParent(this.rules, this);
-    };
-    return Media;
-}(atrule_1.default));
+    }
+};
+Media.prototype.bubbleSelectors = function (selectors) {
+    if (!selectors) {
+        return;
+    }
+    this.rules = [new ruleset_1.default(utils.copyArray(selectors), [this.rules[0]])];
+    this.setParent(this.rules, this);
+};
 Media.prototype.type = 'Media';
 exports.default = Media;
 //# sourceMappingURL=media.js.map
-}, function(modId) { var map = {"./ruleset":1607654390946,"./value":1607654390948,"./selector":1607654390939,"./anonymous":1607654390950,"./expression":1607654390963,"./atrule":1607654390938,"../utils":1607654390944}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390970, function(require, module, exports) {
+}, function(modId) { var map = {"./ruleset":1607851992233,"./value":1607851992235,"./selector":1607851992226,"./anonymous":1607851992237,"./expression":1607851992250,"./atrule":1607851992225,"../utils":1607851992231}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992257, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -5116,276 +4658,186 @@ var js_eval_node_1 = __importDefault(require("./js-eval-node"));
 var dimension_1 = __importDefault(require("./dimension"));
 var quoted_1 = __importDefault(require("./quoted"));
 var anonymous_1 = __importDefault(require("./anonymous"));
-var JavaScript = /** @class */ (function (_super) {
-    __extends(JavaScript, _super);
-    function JavaScript(string, escaped, index, currentFileInfo) {
-        var _this = _super.call(this) || this;
-        _this.escaped = escaped;
-        _this.expression = string;
-        _this._index = index;
-        _this._fileInfo = currentFileInfo;
-        return _this;
+var JavaScript = function (string, escaped, index, currentFileInfo) {
+    this.escaped = escaped;
+    this.expression = string;
+    this._index = index;
+    this._fileInfo = currentFileInfo;
+};
+JavaScript.prototype = new js_eval_node_1.default();
+JavaScript.prototype.eval = function (context) {
+    var result = this.evaluateJavaScript(this.expression, context);
+    var type = typeof result;
+    if (type === 'number' && !isNaN(result)) {
+        return new dimension_1.default(result);
     }
-    JavaScript.prototype.eval = function (context) {
-        var result = this.evaluateJavaScript(this.expression, context);
-        var type = typeof result;
-        if (type === 'number' && !isNaN(result)) {
-            return new dimension_1.default(result);
-        }
-        else if (type === 'string') {
-            return new quoted_1.default("\"" + result + "\"", result, this.escaped, this._index);
-        }
-        else if (Array.isArray(result)) {
-            return new anonymous_1.default(result.join(', '));
-        }
-        else {
-            return new anonymous_1.default(result);
-        }
-    };
-    return JavaScript;
-}(js_eval_node_1.default));
+    else if (type === 'string') {
+        return new quoted_1.default("\"" + result + "\"", result, this.escaped, this._index);
+    }
+    else if (Array.isArray(result)) {
+        return new anonymous_1.default(result.join(', '));
+    }
+    else {
+        return new anonymous_1.default(result);
+    }
+};
 JavaScript.prototype.type = 'JavaScript';
 exports.default = JavaScript;
 //# sourceMappingURL=javascript.js.map
-}, function(modId) { var map = {"./js-eval-node":1607654390971,"./dimension":1607654390958,"./quoted":1607654390966,"./anonymous":1607654390950}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390971, function(require, module, exports) {
+}, function(modId) { var map = {"./js-eval-node":1607851992258,"./dimension":1607851992245,"./quoted":1607851992253,"./anonymous":1607851992237}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992258, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var node_1 = __importDefault(require("./node"));
 var variable_1 = __importDefault(require("./variable"));
-var JsEvalNode = /** @class */ (function (_super) {
-    __extends(JsEvalNode, _super);
-    function JsEvalNode() {
-        return _super !== null && _super.apply(this, arguments) || this;
+var JsEvalNode = function () { };
+JsEvalNode.prototype = new node_1.default();
+JsEvalNode.prototype.evaluateJavaScript = function (expression, context) {
+    var result;
+    var that = this;
+    var evalContext = {};
+    if (!context.javascriptEnabled) {
+        throw { message: 'Inline JavaScript is not enabled. Is it set in your options?',
+            filename: this.fileInfo().filename,
+            index: this.getIndex() };
     }
-    JsEvalNode.prototype.evaluateJavaScript = function (expression, context) {
-        var result;
-        var that = this;
-        var evalContext = {};
-        if (!context.javascriptEnabled) {
-            throw { message: 'Inline JavaScript is not enabled. Is it set in your options?',
-                filename: this.fileInfo().filename,
-                index: this.getIndex() };
+    expression = expression.replace(/@\{([\w-]+)\}/g, function (_, name) { return that.jsify(new variable_1.default("@" + name, that.getIndex(), that.fileInfo()).eval(context)); });
+    try {
+        expression = new Function("return (" + expression + ")");
+    }
+    catch (e) {
+        throw { message: "JavaScript evaluation error: " + e.message + " from `" + expression + "`", filename: this.fileInfo().filename,
+            index: this.getIndex() };
+    }
+    var variables = context.frames[0].variables();
+    for (var k in variables) {
+        if (variables.hasOwnProperty(k)) {
+            /* jshint loopfunc:true */
+            evalContext[k.slice(1)] = {
+                value: variables[k].value,
+                toJS: function () {
+                    return this.value.eval(context).toCSS();
+                }
+            };
         }
-        expression = expression.replace(/@\{([\w-]+)\}/g, function (_, name) { return that.jsify(new variable_1.default("@" + name, that.getIndex(), that.fileInfo()).eval(context)); });
-        try {
-            expression = new Function("return (" + expression + ")");
-        }
-        catch (e) {
-            throw { message: "JavaScript evaluation error: " + e.message + " from `" + expression + "`", filename: this.fileInfo().filename,
-                index: this.getIndex() };
-        }
-        var variables = context.frames[0].variables();
-        for (var k in variables) {
-            if (variables.hasOwnProperty(k)) {
-                /* jshint loopfunc:true */
-                evalContext[k.slice(1)] = {
-                    value: variables[k].value,
-                    toJS: function () {
-                        return this.value.eval(context).toCSS();
-                    }
-                };
-            }
-        }
-        try {
-            result = expression.call(evalContext);
-        }
-        catch (e) {
-            throw { message: "JavaScript evaluation error: '" + e.name + ": " + e.message.replace(/["]/g, '\'') + "'", filename: this.fileInfo().filename,
-                index: this.getIndex() };
-        }
-        return result;
-    };
-    JsEvalNode.prototype.jsify = function (obj) {
-        if (Array.isArray(obj.value) && (obj.value.length > 1)) {
-            return "[" + obj.value.map(function (v) { return v.toCSS(); }).join(', ') + "]";
-        }
-        else {
-            return obj.toCSS();
-        }
-    };
-    return JsEvalNode;
-}(node_1.default));
+    }
+    try {
+        result = expression.call(evalContext);
+    }
+    catch (e) {
+        throw { message: "JavaScript evaluation error: '" + e.name + ": " + e.message.replace(/["]/g, '\'') + "'", filename: this.fileInfo().filename,
+            index: this.getIndex() };
+    }
+    return result;
+};
+JsEvalNode.prototype.jsify = function (obj) {
+    if (Array.isArray(obj.value) && (obj.value.length > 1)) {
+        return "[" + obj.value.map(function (v) { return v.toCSS(); }).join(', ') + "]";
+    }
+    else {
+        return obj.toCSS();
+    }
+};
 exports.default = JsEvalNode;
 //# sourceMappingURL=js-eval-node.js.map
-}, function(modId) { var map = {"./node":1607654390936,"./variable":1607654390960}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390972, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223,"./variable":1607851992247}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992259, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var node_1 = __importDefault(require("./node"));
-var Assignment = /** @class */ (function (_super) {
-    __extends(Assignment, _super);
-    function Assignment(key, val) {
-        var _this = _super.call(this) || this;
-        _this.key = key;
-        _this.value = val;
-        return _this;
+var Assignment = function (key, val) {
+    this.key = key;
+    this.value = val;
+};
+Assignment.prototype = new node_1.default();
+Assignment.prototype.accept = function (visitor) {
+    this.value = visitor.visit(this.value);
+};
+Assignment.prototype.eval = function (context) {
+    if (this.value.eval) {
+        return new Assignment(this.key, this.value.eval(context));
     }
-    Assignment.prototype.accept = function (visitor) {
-        this.value = visitor.visit(this.value);
-    };
-    Assignment.prototype.eval = function (context) {
-        if (this.value.eval) {
-            return new Assignment(this.key, this.value.eval(context));
-        }
-        return this;
-    };
-    Assignment.prototype.genCSS = function (context, output) {
-        output.add(this.key + "=");
-        if (this.value.genCSS) {
-            this.value.genCSS(context, output);
-        }
-        else {
-            output.add(this.value);
-        }
-    };
-    return Assignment;
-}(node_1.default));
+    return this;
+};
+Assignment.prototype.genCSS = function (context, output) {
+    output.add(this.key + "=");
+    if (this.value.genCSS) {
+        this.value.genCSS(context, output);
+    }
+    else {
+        output.add(this.value);
+    }
+};
 Assignment.prototype.type = 'Assignment';
 exports.default = Assignment;
 //# sourceMappingURL=assignment.js.map
-}, function(modId) { var map = {"./node":1607654390936}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390973, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992260, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var node_1 = __importDefault(require("./node"));
-var Condition = /** @class */ (function (_super) {
-    __extends(Condition, _super);
-    function Condition(op, l, r, i, negate) {
-        var _this = _super.call(this) || this;
-        _this.op = op.trim();
-        _this.lvalue = l;
-        _this.rvalue = r;
-        _this._index = i;
-        _this.negate = negate;
-        return _this;
-    }
-    Condition.prototype.accept = function (visitor) {
-        this.lvalue = visitor.visit(this.lvalue);
-        this.rvalue = visitor.visit(this.rvalue);
-    };
-    Condition.prototype.eval = function (context) {
-        var result = (function (op, a, b) {
-            switch (op) {
-                case 'and': return a && b;
-                case 'or': return a || b;
-                default:
-                    switch (node_1.default.compare(a, b)) {
-                        case -1:
-                            return op === '<' || op === '=<' || op === '<=';
-                        case 0:
-                            return op === '=' || op === '>=' || op === '=<' || op === '<=';
-                        case 1:
-                            return op === '>' || op === '>=';
-                        default:
-                            return false;
-                    }
-            }
-        })(this.op, this.lvalue.eval(context), this.rvalue.eval(context));
-        return this.negate ? !result : result;
-    };
-    return Condition;
-}(node_1.default));
+var Condition = function (op, l, r, i, negate) {
+    this.op = op.trim();
+    this.lvalue = l;
+    this.rvalue = r;
+    this._index = i;
+    this.negate = negate;
+};
+Condition.prototype = new node_1.default();
+Condition.prototype.accept = function (visitor) {
+    this.lvalue = visitor.visit(this.lvalue);
+    this.rvalue = visitor.visit(this.rvalue);
+};
+Condition.prototype.eval = function (context) {
+    var result = (function (op, a, b) {
+        switch (op) {
+            case 'and': return a && b;
+            case 'or': return a || b;
+            default:
+                switch (node_1.default.compare(a, b)) {
+                    case -1:
+                        return op === '<' || op === '=<' || op === '<=';
+                    case 0:
+                        return op === '=' || op === '>=' || op === '=<' || op === '<=';
+                    case 1:
+                        return op === '>' || op === '>=';
+                    default:
+                        return false;
+                }
+        }
+    })(this.op, this.lvalue.eval(context), this.rvalue.eval(context));
+    return this.negate ? !result : result;
+};
 Condition.prototype.type = 'Condition';
 exports.default = Condition;
 //# sourceMappingURL=condition.js.map
-}, function(modId) { var map = {"./node":1607654390936}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390974, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992261, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var node_1 = __importDefault(require("./node"));
-var UnicodeDescriptor = /** @class */ (function (_super) {
-    __extends(UnicodeDescriptor, _super);
-    function UnicodeDescriptor(value) {
-        var _this = _super.call(this) || this;
-        _this.value = value;
-        return _this;
-    }
-    return UnicodeDescriptor;
-}(node_1.default));
+var UnicodeDescriptor = function (value) {
+    this.value = value;
+};
+UnicodeDescriptor.prototype = new node_1.default();
 UnicodeDescriptor.prototype.type = 'UnicodeDescriptor';
 exports.default = UnicodeDescriptor;
 //# sourceMappingURL=unicode-descriptor.js.map
-}, function(modId) { var map = {"./node":1607654390936}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390975, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992262, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -5393,123 +4845,90 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var node_1 = __importDefault(require("./node"));
 var operation_1 = __importDefault(require("./operation"));
 var dimension_1 = __importDefault(require("./dimension"));
-var Negative = /** @class */ (function (_super) {
-    __extends(Negative, _super);
-    function Negative(node) {
-        var _this = _super.call(this) || this;
-        _this.value = node;
-        return _this;
+var Negative = function (node) {
+    this.value = node;
+};
+Negative.prototype = new node_1.default();
+Negative.prototype.genCSS = function (context, output) {
+    output.add('-');
+    this.value.genCSS(context, output);
+};
+Negative.prototype.eval = function (context) {
+    if (context.isMathOn()) {
+        return (new operation_1.default('*', [new dimension_1.default(-1), this.value])).eval(context);
     }
-    Negative.prototype.genCSS = function (context, output) {
-        output.add('-');
-        this.value.genCSS(context, output);
-    };
-    Negative.prototype.eval = function (context) {
-        if (context.isMathOn()) {
-            return (new operation_1.default('*', [new dimension_1.default(-1), this.value])).eval(context);
-        }
-        return new Negative(this.value.eval(context));
-    };
-    return Negative;
-}(node_1.default));
+    return new Negative(this.value.eval(context));
+};
 Negative.prototype.type = 'Negative';
 exports.default = Negative;
 //# sourceMappingURL=negative.js.map
-}, function(modId) { var map = {"./node":1607654390936,"./operation":1607654390957,"./dimension":1607654390958}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390976, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223,"./operation":1607851992244,"./dimension":1607851992245}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992263, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var node_1 = __importDefault(require("./node"));
 var selector_1 = __importDefault(require("./selector"));
-var Extend = /** @class */ (function (_super) {
-    __extends(Extend, _super);
-    function Extend(selector, option, index, currentFileInfo, visibilityInfo) {
-        var _this = _super.call(this) || this;
-        _this.selector = selector;
-        _this.option = option;
-        _this.object_id = Extend.next_id++;
-        _this.parent_ids = [_this.object_id];
-        _this._index = index;
-        _this._fileInfo = currentFileInfo;
-        _this.copyVisibilityInfo(visibilityInfo);
-        _this.allowRoot = true;
-        switch (option) {
-            case 'all':
-                _this.allowBefore = true;
-                _this.allowAfter = true;
-                break;
-            default:
-                _this.allowBefore = false;
-                _this.allowAfter = false;
-                break;
-        }
-        _this.setParent(_this.selector, _this);
-        return _this;
+var Extend = function (selector, option, index, currentFileInfo, visibilityInfo) {
+    this.selector = selector;
+    this.option = option;
+    this.object_id = Extend.next_id++;
+    this.parent_ids = [this.object_id];
+    this._index = index;
+    this._fileInfo = currentFileInfo;
+    this.copyVisibilityInfo(visibilityInfo);
+    this.allowRoot = true;
+    switch (option) {
+        case 'all':
+            this.allowBefore = true;
+            this.allowAfter = true;
+            break;
+        default:
+            this.allowBefore = false;
+            this.allowAfter = false;
+            break;
     }
-    Extend.prototype.accept = function (visitor) {
-        this.selector = visitor.visit(this.selector);
-    };
-    Extend.prototype.eval = function (context) {
-        return new Extend(this.selector.eval(context), this.option, this.getIndex(), this.fileInfo(), this.visibilityInfo());
-    };
-    Extend.prototype.clone = function (context) {
-        return new Extend(this.selector, this.option, this.getIndex(), this.fileInfo(), this.visibilityInfo());
-    };
-    // it concatenates (joins) all selectors in selector array
-    Extend.prototype.findSelfSelectors = function (selectors) {
-        var selfElements = [];
-        var i;
-        var selectorElements;
-        for (i = 0; i < selectors.length; i++) {
-            selectorElements = selectors[i].elements;
-            // duplicate the logic in genCSS function inside the selector node.
-            // future TODO - move both logics into the selector joiner visitor
-            if (i > 0 && selectorElements.length && selectorElements[0].combinator.value === '') {
-                selectorElements[0].combinator.value = ' ';
-            }
-            selfElements = selfElements.concat(selectors[i].elements);
+    this.setParent(this.selector, this);
+};
+Extend.prototype = new node_1.default();
+Extend.prototype.accept = function (visitor) {
+    this.selector = visitor.visit(this.selector);
+};
+Extend.prototype.eval = function (context) {
+    return new Extend(this.selector.eval(context), this.option, this.getIndex(), this.fileInfo(), this.visibilityInfo());
+};
+Extend.prototype.clone = function (context) {
+    return new Extend(this.selector, this.option, this.getIndex(), this.fileInfo(), this.visibilityInfo());
+};
+// it concatenates (joins) all selectors in selector array
+Extend.prototype.findSelfSelectors = function (selectors) {
+    var selfElements = [];
+    var i;
+    var selectorElements;
+    for (i = 0; i < selectors.length; i++) {
+        selectorElements = selectors[i].elements;
+        // duplicate the logic in genCSS function inside the selector node.
+        // future TODO - move both logics into the selector joiner visitor
+        if (i > 0 && selectorElements.length && selectorElements[0].combinator.value === '') {
+            selectorElements[0].combinator.value = ' ';
         }
-        this.selfSelectors = [new selector_1.default(selfElements)];
-        this.selfSelectors[0].copyVisibilityInfo(this.visibilityInfo());
-    };
-    return Extend;
-}(node_1.default));
+        selfElements = selfElements.concat(selectors[i].elements);
+    }
+    this.selfSelectors = [new selector_1.default(selfElements)];
+    this.selfSelectors[0].copyVisibilityInfo(this.visibilityInfo());
+};
+/**
+ * Used with the extend visitor
+ */
 Extend.next_id = 0;
 Extend.prototype.type = 'Extend';
 exports.default = Extend;
 //# sourceMappingURL=extend.js.map
-}, function(modId) { var map = {"./node":1607654390936,"./selector":1607654390939}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390977, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223,"./selector":1607851992226}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992264, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -5519,61 +4938,43 @@ var variable_1 = __importDefault(require("./variable"));
 var ruleset_1 = __importDefault(require("./ruleset"));
 var detached_ruleset_1 = __importDefault(require("./detached-ruleset"));
 var less_error_1 = __importDefault(require("../less-error"));
-var VariableCall = /** @class */ (function (_super) {
-    __extends(VariableCall, _super);
-    function VariableCall(variable, index, currentFileInfo) {
-        var _this = _super.call(this) || this;
-        _this.variable = variable;
-        _this._index = index;
-        _this._fileInfo = currentFileInfo;
-        _this.allowRoot = true;
-        return _this;
+var VariableCall = function (variable, index, currentFileInfo) {
+    this.variable = variable;
+    this._index = index;
+    this._fileInfo = currentFileInfo;
+    this.allowRoot = true;
+};
+VariableCall.prototype = new node_1.default();
+VariableCall.prototype.eval = function (context) {
+    var rules;
+    var detachedRuleset = new variable_1.default(this.variable, this.getIndex(), this.fileInfo()).eval(context);
+    var error = new less_error_1.default({ message: "Could not evaluate variable call " + this.variable });
+    if (!detachedRuleset.ruleset) {
+        if (detachedRuleset.rules) {
+            rules = detachedRuleset;
+        }
+        else if (Array.isArray(detachedRuleset)) {
+            rules = new ruleset_1.default('', detachedRuleset);
+        }
+        else if (Array.isArray(detachedRuleset.value)) {
+            rules = new ruleset_1.default('', detachedRuleset.value);
+        }
+        else {
+            throw error;
+        }
+        detachedRuleset = new detached_ruleset_1.default(rules);
     }
-    VariableCall.prototype.eval = function (context) {
-        var rules;
-        var detachedRuleset = new variable_1.default(this.variable, this.getIndex(), this.fileInfo()).eval(context);
-        var error = new less_error_1.default({ message: "Could not evaluate variable call " + this.variable });
-        if (!detachedRuleset.ruleset) {
-            if (detachedRuleset.rules) {
-                rules = detachedRuleset;
-            }
-            else if (Array.isArray(detachedRuleset)) {
-                rules = new ruleset_1.default('', detachedRuleset);
-            }
-            else if (Array.isArray(detachedRuleset.value)) {
-                rules = new ruleset_1.default('', detachedRuleset.value);
-            }
-            else {
-                throw error;
-            }
-            detachedRuleset = new detached_ruleset_1.default(rules);
-        }
-        if (detachedRuleset.ruleset) {
-            return detachedRuleset.callEval(context);
-        }
-        throw error;
-    };
-    return VariableCall;
-}(node_1.default));
+    if (detachedRuleset.ruleset) {
+        return detachedRuleset.callEval(context);
+    }
+    throw error;
+};
 VariableCall.prototype.type = 'VariableCall';
 exports.default = VariableCall;
 //# sourceMappingURL=variable-call.js.map
-}, function(modId) { var map = {"./node":1607654390936,"./variable":1607654390960,"./ruleset":1607654390946,"./detached-ruleset":1607654390956,"../less-error":1607654390943}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390978, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223,"./variable":1607851992247,"./ruleset":1607851992233,"./detached-ruleset":1607851992243,"../less-error":1607851992230}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992265, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -5582,94 +4983,76 @@ var node_1 = __importDefault(require("./node"));
 var variable_1 = __importDefault(require("./variable"));
 var ruleset_1 = __importDefault(require("./ruleset"));
 var selector_1 = __importDefault(require("./selector"));
-var NamespaceValue = /** @class */ (function (_super) {
-    __extends(NamespaceValue, _super);
-    function NamespaceValue(ruleCall, lookups, index, fileInfo) {
-        var _this = _super.call(this) || this;
-        _this.value = ruleCall;
-        _this.lookups = lookups;
-        _this._index = index;
-        _this._fileInfo = fileInfo;
-        return _this;
-    }
-    NamespaceValue.prototype.eval = function (context) {
-        var i;
-        var j;
-        var name;
-        var rules = this.value.eval(context);
-        for (i = 0; i < this.lookups.length; i++) {
-            name = this.lookups[i];
-            /**
-             * Eval'd DRs return rulesets.
-             * Eval'd mixins return rules, so let's make a ruleset if we need it.
-             * We need to do this because of late parsing of values
-             */
-            if (Array.isArray(rules)) {
-                rules = new ruleset_1.default([new selector_1.default()], rules);
+var NamespaceValue = function (ruleCall, lookups, index, fileInfo) {
+    this.value = ruleCall;
+    this.lookups = lookups;
+    this._index = index;
+    this._fileInfo = fileInfo;
+};
+NamespaceValue.prototype = new node_1.default();
+NamespaceValue.prototype.eval = function (context) {
+    var i;
+    var j;
+    var name;
+    var rules = this.value.eval(context);
+    for (i = 0; i < this.lookups.length; i++) {
+        name = this.lookups[i];
+        /**
+         * Eval'd DRs return rulesets.
+         * Eval'd mixins return rules, so let's make a ruleset if we need it.
+         * We need to do this because of late parsing of values
+         */
+        if (Array.isArray(rules)) {
+            rules = new ruleset_1.default([new selector_1.default()], rules);
+        }
+        if (name === '') {
+            rules = rules.lastDeclaration();
+        }
+        else if (name.charAt(0) === '@') {
+            if (name.charAt(1) === '@') {
+                name = "@" + new variable_1.default(name.substr(1)).eval(context).value;
             }
-            if (name === '') {
-                rules = rules.lastDeclaration();
+            if (rules.variables) {
+                rules = rules.variable(name);
             }
-            else if (name.charAt(0) === '@') {
-                if (name.charAt(1) === '@') {
-                    name = "@" + new variable_1.default(name.substr(1)).eval(context).value;
-                }
-                if (rules.variables) {
-                    rules = rules.variable(name);
-                }
-                if (!rules) {
-                    throw { type: 'Name', message: "variable " + name + " not found", filename: this.fileInfo().filename,
-                        index: this.getIndex() };
-                }
-            }
-            else {
-                if (name.substring(0, 2) === '$@') {
-                    name = "$" + new variable_1.default(name.substr(1)).eval(context).value;
-                }
-                else {
-                    name = name.charAt(0) === '$' ? name : "$" + name;
-                }
-                if (rules.properties) {
-                    rules = rules.property(name);
-                }
-                if (!rules) {
-                    throw { type: 'Name', message: "property \"" + name.substr(1) + "\" not found", filename: this.fileInfo().filename,
-                        index: this.getIndex() };
-                }
-                // Properties are an array of values, since a ruleset can have multiple props.
-                // We pick the last one (the "cascaded" value)
-                rules = rules[rules.length - 1];
-            }
-            if (rules.value) {
-                rules = rules.eval(context).value;
-            }
-            if (rules.ruleset) {
-                rules = rules.ruleset.eval(context);
+            if (!rules) {
+                throw { type: 'Name', message: "variable " + name + " not found", filename: this.fileInfo().filename,
+                    index: this.getIndex() };
             }
         }
-        return rules;
-    };
-    return NamespaceValue;
-}(node_1.default));
+        else {
+            if (name.substring(0, 2) === '$@') {
+                name = "$" + new variable_1.default(name.substr(1)).eval(context).value;
+            }
+            else {
+                name = name.charAt(0) === '$' ? name : "$" + name;
+            }
+            if (rules.properties) {
+                rules = rules.property(name);
+            }
+            if (!rules) {
+                throw { type: 'Name', message: "property \"" + name.substr(1) + "\" not found", filename: this.fileInfo().filename,
+                    index: this.getIndex() };
+            }
+            // Properties are an array of values, since a ruleset can have multiple props.
+            // We pick the last one (the "cascaded" value)
+            rules = rules[rules.length - 1];
+        }
+        if (rules.value) {
+            rules = rules.eval(context).value;
+        }
+        if (rules.ruleset) {
+            rules = rules.ruleset.eval(context);
+        }
+    }
+    return rules;
+};
 NamespaceValue.prototype.type = 'NamespaceValue';
 exports.default = NamespaceValue;
 //# sourceMappingURL=namespace-value.js.map
-}, function(modId) { var map = {"./node":1607654390936,"./variable":1607654390960,"./ruleset":1607654390946,"./selector":1607654390939}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390979, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223,"./variable":1607851992247,"./ruleset":1607851992233,"./selector":1607851992226}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992266, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -5678,212 +5061,194 @@ var node_1 = __importDefault(require("./node"));
 var selector_1 = __importDefault(require("./selector"));
 var mixin_definition_1 = __importDefault(require("./mixin-definition"));
 var default_1 = __importDefault(require("../functions/default"));
-var MixinCall = /** @class */ (function (_super) {
-    __extends(MixinCall, _super);
-    function MixinCall(elements, args, index, currentFileInfo, important) {
-        var _this = _super.call(this) || this;
-        _this.selector = new selector_1.default(elements);
-        _this.arguments = args || [];
-        _this._index = index;
-        _this._fileInfo = currentFileInfo;
-        _this.important = important;
-        _this.allowRoot = true;
-        _this.setParent(_this.selector, _this);
-        return _this;
+var MixinCall = function (elements, args, index, currentFileInfo, important) {
+    this.selector = new selector_1.default(elements);
+    this.arguments = args || [];
+    this._index = index;
+    this._fileInfo = currentFileInfo;
+    this.important = important;
+    this.allowRoot = true;
+    this.setParent(this.selector, this);
+};
+MixinCall.prototype = new node_1.default();
+MixinCall.prototype.accept = function (visitor) {
+    if (this.selector) {
+        this.selector = visitor.visit(this.selector);
     }
-    MixinCall.prototype.accept = function (visitor) {
-        if (this.selector) {
-            this.selector = visitor.visit(this.selector);
-        }
-        if (this.arguments.length) {
-            this.arguments = visitor.visitArray(this.arguments);
-        }
-    };
-    MixinCall.prototype.eval = function (context) {
-        var mixins;
-        var mixin;
-        var mixinPath;
-        var args = [];
-        var arg;
-        var argValue;
-        var rules = [];
-        var match = false;
-        var i;
-        var m;
+    if (this.arguments.length) {
+        this.arguments = visitor.visitArray(this.arguments);
+    }
+};
+MixinCall.prototype.eval = function (context) {
+    var mixins;
+    var mixin;
+    var mixinPath;
+    var args = [];
+    var arg;
+    var argValue;
+    var rules = [];
+    var match = false;
+    var i;
+    var m;
+    var f;
+    var isRecursive;
+    var isOneFound;
+    var candidates = [];
+    var candidate;
+    var conditionResult = [];
+    var defaultResult;
+    var defFalseEitherCase = -1;
+    var defNone = 0;
+    var defTrue = 1;
+    var defFalse = 2;
+    var count;
+    var originalRuleset;
+    var noArgumentsFilter;
+    this.selector = this.selector.eval(context);
+    function calcDefGroup(mixin, mixinPath) {
         var f;
-        var isRecursive;
-        var isOneFound;
-        var candidates = [];
-        var candidate;
-        var conditionResult = [];
-        var defaultResult;
-        var defFalseEitherCase = -1;
-        var defNone = 0;
-        var defTrue = 1;
-        var defFalse = 2;
-        var count;
-        var originalRuleset;
-        var noArgumentsFilter;
-        this.selector = this.selector.eval(context);
-        function calcDefGroup(mixin, mixinPath) {
-            var f;
-            var p;
-            var namespace;
-            for (f = 0; f < 2; f++) {
-                conditionResult[f] = true;
-                default_1.default.value(f);
-                for (p = 0; p < mixinPath.length && conditionResult[f]; p++) {
-                    namespace = mixinPath[p];
-                    if (namespace.matchCondition) {
-                        conditionResult[f] = conditionResult[f] && namespace.matchCondition(null, context);
-                    }
-                }
-                if (mixin.matchCondition) {
-                    conditionResult[f] = conditionResult[f] && mixin.matchCondition(args, context);
+        var p;
+        var namespace;
+        for (f = 0; f < 2; f++) {
+            conditionResult[f] = true;
+            default_1.default.value(f);
+            for (p = 0; p < mixinPath.length && conditionResult[f]; p++) {
+                namespace = mixinPath[p];
+                if (namespace.matchCondition) {
+                    conditionResult[f] = conditionResult[f] && namespace.matchCondition(null, context);
                 }
             }
-            if (conditionResult[0] || conditionResult[1]) {
-                if (conditionResult[0] != conditionResult[1]) {
-                    return conditionResult[1] ?
-                        defTrue : defFalse;
-                }
-                return defNone;
-            }
-            return defFalseEitherCase;
-        }
-        for (i = 0; i < this.arguments.length; i++) {
-            arg = this.arguments[i];
-            argValue = arg.value.eval(context);
-            if (arg.expand && Array.isArray(argValue.value)) {
-                argValue = argValue.value;
-                for (m = 0; m < argValue.length; m++) {
-                    args.push({ value: argValue[m] });
-                }
-            }
-            else {
-                args.push({ name: arg.name, value: argValue });
+            if (mixin.matchCondition) {
+                conditionResult[f] = conditionResult[f] && mixin.matchCondition(args, context);
             }
         }
-        noArgumentsFilter = function (rule) { return rule.matchArgs(null, context); };
-        for (i = 0; i < context.frames.length; i++) {
-            if ((mixins = context.frames[i].find(this.selector, null, noArgumentsFilter)).length > 0) {
-                isOneFound = true;
-                // To make `default()` function independent of definition order we have two "subpasses" here.
-                // At first we evaluate each guard *twice* (with `default() == true` and `default() == false`),
-                // and build candidate list with corresponding flags. Then, when we know all possible matches,
-                // we make a final decision.
-                for (m = 0; m < mixins.length; m++) {
-                    mixin = mixins[m].rule;
-                    mixinPath = mixins[m].path;
-                    isRecursive = false;
-                    for (f = 0; f < context.frames.length; f++) {
-                        if ((!(mixin instanceof mixin_definition_1.default)) && mixin === (context.frames[f].originalRuleset || context.frames[f])) {
-                            isRecursive = true;
-                            break;
-                        }
-                    }
-                    if (isRecursive) {
-                        continue;
-                    }
-                    if (mixin.matchArgs(args, context)) {
-                        candidate = { mixin: mixin, group: calcDefGroup(mixin, mixinPath) };
-                        if (candidate.group !== defFalseEitherCase) {
-                            candidates.push(candidate);
-                        }
-                        match = true;
-                    }
-                }
-                default_1.default.reset();
-                count = [0, 0, 0];
-                for (m = 0; m < candidates.length; m++) {
-                    count[candidates[m].group]++;
-                }
-                if (count[defNone] > 0) {
-                    defaultResult = defFalse;
-                }
-                else {
-                    defaultResult = defTrue;
-                    if ((count[defTrue] + count[defFalse]) > 1) {
-                        throw { type: 'Runtime', message: "Ambiguous use of `default()` found when matching for `" + this.format(args) + "`", index: this.getIndex(), filename: this.fileInfo().filename };
-                    }
-                }
-                for (m = 0; m < candidates.length; m++) {
-                    candidate = candidates[m].group;
-                    if ((candidate === defNone) || (candidate === defaultResult)) {
-                        try {
-                            mixin = candidates[m].mixin;
-                            if (!(mixin instanceof mixin_definition_1.default)) {
-                                originalRuleset = mixin.originalRuleset || mixin;
-                                mixin = new mixin_definition_1.default('', [], mixin.rules, null, false, null, originalRuleset.visibilityInfo());
-                                mixin.originalRuleset = originalRuleset;
-                            }
-                            var newRules = mixin.evalCall(context, args, this.important).rules;
-                            this._setVisibilityToReplacement(newRules);
-                            Array.prototype.push.apply(rules, newRules);
-                        }
-                        catch (e) {
-                            throw { message: e.message, index: this.getIndex(), filename: this.fileInfo().filename, stack: e.stack };
-                        }
-                    }
-                }
-                if (match) {
-                    return rules;
-                }
+        if (conditionResult[0] || conditionResult[1]) {
+            if (conditionResult[0] != conditionResult[1]) {
+                return conditionResult[1] ?
+                    defTrue : defFalse;
             }
+            return defNone;
         }
-        if (isOneFound) {
-            throw { type: 'Runtime', message: "No matching definition was found for `" + this.format(args) + "`", index: this.getIndex(), filename: this.fileInfo().filename };
+        return defFalseEitherCase;
+    }
+    for (i = 0; i < this.arguments.length; i++) {
+        arg = this.arguments[i];
+        argValue = arg.value.eval(context);
+        if (arg.expand && Array.isArray(argValue.value)) {
+            argValue = argValue.value;
+            for (m = 0; m < argValue.length; m++) {
+                args.push({ value: argValue[m] });
+            }
         }
         else {
-            throw { type: 'Name', message: this.selector.toCSS().trim() + " is undefined", index: this.getIndex(), filename: this.fileInfo().filename };
+            args.push({ name: arg.name, value: argValue });
         }
-    };
-    MixinCall.prototype._setVisibilityToReplacement = function (replacement) {
-        var i;
-        var rule;
-        if (this.blocksVisibility()) {
-            for (i = 0; i < replacement.length; i++) {
-                rule = replacement[i];
-                rule.addVisibilityBlock();
+    }
+    noArgumentsFilter = function (rule) { return rule.matchArgs(null, context); };
+    for (i = 0; i < context.frames.length; i++) {
+        if ((mixins = context.frames[i].find(this.selector, null, noArgumentsFilter)).length > 0) {
+            isOneFound = true;
+            // To make `default()` function independent of definition order we have two "subpasses" here.
+            // At first we evaluate each guard *twice* (with `default() == true` and `default() == false`),
+            // and build candidate list with corresponding flags. Then, when we know all possible matches,
+            // we make a final decision.
+            for (m = 0; m < mixins.length; m++) {
+                mixin = mixins[m].rule;
+                mixinPath = mixins[m].path;
+                isRecursive = false;
+                for (f = 0; f < context.frames.length; f++) {
+                    if ((!(mixin instanceof mixin_definition_1.default)) && mixin === (context.frames[f].originalRuleset || context.frames[f])) {
+                        isRecursive = true;
+                        break;
+                    }
+                }
+                if (isRecursive) {
+                    continue;
+                }
+                if (mixin.matchArgs(args, context)) {
+                    candidate = { mixin: mixin, group: calcDefGroup(mixin, mixinPath) };
+                    if (candidate.group !== defFalseEitherCase) {
+                        candidates.push(candidate);
+                    }
+                    match = true;
+                }
             }
-        }
-    };
-    MixinCall.prototype.format = function (args) {
-        return this.selector.toCSS().trim() + "(" + (args ? args.map(function (a) {
-            var argValue = '';
-            if (a.name) {
-                argValue += a.name + ":";
+            default_1.default.reset();
+            count = [0, 0, 0];
+            for (m = 0; m < candidates.length; m++) {
+                count[candidates[m].group]++;
             }
-            if (a.value.toCSS) {
-                argValue += a.value.toCSS();
+            if (count[defNone] > 0) {
+                defaultResult = defFalse;
             }
             else {
-                argValue += '???';
+                defaultResult = defTrue;
+                if ((count[defTrue] + count[defFalse]) > 1) {
+                    throw { type: 'Runtime', message: "Ambiguous use of `default()` found when matching for `" + this.format(args) + "`", index: this.getIndex(), filename: this.fileInfo().filename };
+                }
             }
-            return argValue;
-        }).join(', ') : '') + ")";
-    };
-    return MixinCall;
-}(node_1.default));
+            for (m = 0; m < candidates.length; m++) {
+                candidate = candidates[m].group;
+                if ((candidate === defNone) || (candidate === defaultResult)) {
+                    try {
+                        mixin = candidates[m].mixin;
+                        if (!(mixin instanceof mixin_definition_1.default)) {
+                            originalRuleset = mixin.originalRuleset || mixin;
+                            mixin = new mixin_definition_1.default('', [], mixin.rules, null, false, null, originalRuleset.visibilityInfo());
+                            mixin.originalRuleset = originalRuleset;
+                        }
+                        var newRules = mixin.evalCall(context, args, this.important).rules;
+                        this._setVisibilityToReplacement(newRules);
+                        Array.prototype.push.apply(rules, newRules);
+                    }
+                    catch (e) {
+                        throw { message: e.message, index: this.getIndex(), filename: this.fileInfo().filename, stack: e.stack };
+                    }
+                }
+            }
+            if (match) {
+                return rules;
+            }
+        }
+    }
+    if (isOneFound) {
+        throw { type: 'Runtime', message: "No matching definition was found for `" + this.format(args) + "`", index: this.getIndex(), filename: this.fileInfo().filename };
+    }
+    else {
+        throw { type: 'Name', message: this.selector.toCSS().trim() + " is undefined", index: this.getIndex(), filename: this.fileInfo().filename };
+    }
+};
+MixinCall.prototype._setVisibilityToReplacement = function (replacement) {
+    var i;
+    var rule;
+    if (this.blocksVisibility()) {
+        for (i = 0; i < replacement.length; i++) {
+            rule = replacement[i];
+            rule.addVisibilityBlock();
+        }
+    }
+};
+MixinCall.prototype.format = function (args) {
+    return this.selector.toCSS().trim() + "(" + (args ? args.map(function (a) {
+        var argValue = '';
+        if (a.name) {
+            argValue += a.name + ":";
+        }
+        if (a.value.toCSS) {
+            argValue += a.value.toCSS();
+        }
+        else {
+            argValue += '???';
+        }
+        return argValue;
+    }).join(', ') : '') + ")";
+};
 MixinCall.prototype.type = 'MixinCall';
 exports.default = MixinCall;
 //# sourceMappingURL=mixin-call.js.map
-}, function(modId) { var map = {"./node":1607654390936,"./selector":1607654390939,"./mixin-definition":1607654390980,"../functions/default":1607654390955}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390980, function(require, module, exports) {
+}, function(modId) { var map = {"./node":1607851992223,"./selector":1607851992226,"./mixin-definition":1607851992267,"../functions/default":1607851992242}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992267, function(require, module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
@@ -5915,214 +5280,209 @@ var detached_ruleset_1 = __importDefault(require("./detached-ruleset"));
 var expression_1 = __importDefault(require("./expression"));
 var contexts_1 = __importDefault(require("../contexts"));
 var utils = __importStar(require("../utils"));
-var Definition = /** @class */ (function (_super) {
-    __extends(Definition, _super);
-    function Definition(name, params, rules, condition, variadic, frames, visibilityInfo) {
-        var _this = _super.call(this) || this;
-        _this.name = name || 'anonymous mixin';
-        _this.selectors = [new selector_1.default([new element_1.default(null, name, false, _this._index, _this._fileInfo)])];
-        _this.params = params;
-        _this.condition = condition;
-        _this.variadic = variadic;
-        _this.arity = params.length;
-        _this.rules = rules;
-        _this._lookups = {};
-        var optionalParameters = [];
-        _this.required = params.reduce(function (count, p) {
-            if (!p.name || (p.name && !p.value)) {
-                return count + 1;
-            }
-            else {
-                optionalParameters.push(p.name);
-                return count;
-            }
-        }, 0);
-        _this.optionalParameters = optionalParameters;
-        _this.frames = frames;
-        _this.copyVisibilityInfo(visibilityInfo);
-        _this.allowRoot = true;
-        return _this;
-    }
-    Definition.prototype.accept = function (visitor) {
-        if (this.params && this.params.length) {
-            this.params = visitor.visitArray(this.params);
-        }
-        this.rules = visitor.visitArray(this.rules);
-        if (this.condition) {
-            this.condition = visitor.visit(this.condition);
-        }
-    };
-    Definition.prototype.evalParams = function (context, mixinEnv, args, evaldArguments) {
-        /* jshint boss:true */
-        var frame = new ruleset_1.default(null, null);
-        var varargs;
-        var arg;
-        var params = utils.copyArray(this.params);
-        var i;
-        var j;
-        var val;
-        var name;
-        var isNamedFound;
-        var argIndex;
-        var argsLength = 0;
-        if (mixinEnv.frames && mixinEnv.frames[0] && mixinEnv.frames[0].functionRegistry) {
-            frame.functionRegistry = mixinEnv.frames[0].functionRegistry.inherit();
-        }
-        mixinEnv = new contexts_1.default.Eval(mixinEnv, [frame].concat(mixinEnv.frames));
-        if (args) {
-            args = utils.copyArray(args);
-            argsLength = args.length;
-            for (i = 0; i < argsLength; i++) {
-                arg = args[i];
-                if (name = (arg && arg.name)) {
-                    isNamedFound = false;
-                    for (j = 0; j < params.length; j++) {
-                        if (!evaldArguments[j] && name === params[j].name) {
-                            evaldArguments[j] = arg.value.eval(context);
-                            frame.prependRule(new declaration_1.default(name, arg.value.eval(context)));
-                            isNamedFound = true;
-                            break;
-                        }
-                    }
-                    if (isNamedFound) {
-                        args.splice(i, 1);
-                        i--;
-                        continue;
-                    }
-                    else {
-                        throw { type: 'Runtime', message: "Named argument for " + this.name + " " + args[i].name + " not found" };
-                    }
-                }
-            }
-        }
-        argIndex = 0;
-        for (i = 0; i < params.length; i++) {
-            if (evaldArguments[i]) {
-                continue;
-            }
-            arg = args && args[argIndex];
-            if (name = params[i].name) {
-                if (params[i].variadic) {
-                    varargs = [];
-                    for (j = argIndex; j < argsLength; j++) {
-                        varargs.push(args[j].value.eval(context));
-                    }
-                    frame.prependRule(new declaration_1.default(name, new expression_1.default(varargs).eval(context)));
-                }
-                else {
-                    val = arg && arg.value;
-                    if (val) {
-                        // This was a mixin call, pass in a detached ruleset of it's eval'd rules
-                        if (Array.isArray(val)) {
-                            val = new detached_ruleset_1.default(new ruleset_1.default('', val));
-                        }
-                        else {
-                            val = val.eval(context);
-                        }
-                    }
-                    else if (params[i].value) {
-                        val = params[i].value.eval(mixinEnv);
-                        frame.resetCache();
-                    }
-                    else {
-                        throw { type: 'Runtime', message: "wrong number of arguments for " + this.name + " (" + argsLength + " for " + this.arity + ")" };
-                    }
-                    frame.prependRule(new declaration_1.default(name, val));
-                    evaldArguments[i] = val;
-                }
-            }
-            if (params[i].variadic && args) {
-                for (j = argIndex; j < argsLength; j++) {
-                    evaldArguments[j] = args[j].value.eval(context);
-                }
-            }
-            argIndex++;
-        }
-        return frame;
-    };
-    Definition.prototype.makeImportant = function () {
-        var rules = !this.rules ? this.rules : this.rules.map(function (r) {
-            if (r.makeImportant) {
-                return r.makeImportant(true);
-            }
-            else {
-                return r;
-            }
-        });
-        var result = new Definition(this.name, this.params, rules, this.condition, this.variadic, this.frames);
-        return result;
-    };
-    Definition.prototype.eval = function (context) {
-        return new Definition(this.name, this.params, this.rules, this.condition, this.variadic, this.frames || utils.copyArray(context.frames));
-    };
-    Definition.prototype.evalCall = function (context, args, important) {
-        var _arguments = [];
-        var mixinFrames = this.frames ? this.frames.concat(context.frames) : context.frames;
-        var frame = this.evalParams(context, new contexts_1.default.Eval(context, mixinFrames), args, _arguments);
-        var rules;
-        var ruleset;
-        frame.prependRule(new declaration_1.default('@arguments', new expression_1.default(_arguments).eval(context)));
-        rules = utils.copyArray(this.rules);
-        ruleset = new ruleset_1.default(null, rules);
-        ruleset.originalRuleset = this;
-        ruleset = ruleset.eval(new contexts_1.default.Eval(context, [this, frame].concat(mixinFrames)));
-        if (important) {
-            ruleset = ruleset.makeImportant();
-        }
-        return ruleset;
-    };
-    Definition.prototype.matchCondition = function (args, context) {
-        if (this.condition && !this.condition.eval(new contexts_1.default.Eval(context, [this.evalParams(context, /* the parameter variables */ new contexts_1.default.Eval(context, this.frames ? this.frames.concat(context.frames) : context.frames), args, [])]
-            .concat(this.frames || []) // the parent namespace/mixin frames
-            .concat(context.frames)))) { // the current environment frames
-            return false;
-        }
-        return true;
-    };
-    Definition.prototype.matchArgs = function (args, context) {
-        var allArgsCnt = (args && args.length) || 0;
-        var len;
-        var optionalParameters = this.optionalParameters;
-        var requiredArgsCnt = !args ? 0 : args.reduce(function (count, p) {
-            if (optionalParameters.indexOf(p.name) < 0) {
-                return count + 1;
-            }
-            else {
-                return count;
-            }
-        }, 0);
-        if (!this.variadic) {
-            if (requiredArgsCnt < this.required) {
-                return false;
-            }
-            if (allArgsCnt > this.params.length) {
-                return false;
-            }
+var Definition = function (name, params, rules, condition, variadic, frames, visibilityInfo) {
+    this.name = name || 'anonymous mixin';
+    this.selectors = [new selector_1.default([new element_1.default(null, name, false, this._index, this._fileInfo)])];
+    this.params = params;
+    this.condition = condition;
+    this.variadic = variadic;
+    this.arity = params.length;
+    this.rules = rules;
+    this._lookups = {};
+    var optionalParameters = [];
+    this.required = params.reduce(function (count, p) {
+        if (!p.name || (p.name && !p.value)) {
+            return count + 1;
         }
         else {
-            if (requiredArgsCnt < (this.required - 1)) {
-                return false;
-            }
+            optionalParameters.push(p.name);
+            return count;
         }
-        // check patterns
-        len = Math.min(requiredArgsCnt, this.arity);
-        for (var i = 0; i < len; i++) {
-            if (!this.params[i].name && !this.params[i].variadic) {
-                if (args[i].value.eval(context).toCSS() != this.params[i].value.eval(context).toCSS()) {
-                    return false;
+    }, 0);
+    this.optionalParameters = optionalParameters;
+    this.frames = frames;
+    this.copyVisibilityInfo(visibilityInfo);
+    this.allowRoot = true;
+};
+Definition.prototype = new ruleset_1.default();
+Definition.prototype.accept = function (visitor) {
+    if (this.params && this.params.length) {
+        this.params = visitor.visitArray(this.params);
+    }
+    this.rules = visitor.visitArray(this.rules);
+    if (this.condition) {
+        this.condition = visitor.visit(this.condition);
+    }
+};
+Definition.prototype.evalParams = function (context, mixinEnv, args, evaldArguments) {
+    /* jshint boss:true */
+    var frame = new ruleset_1.default(null, null);
+    var varargs;
+    var arg;
+    var params = utils.copyArray(this.params);
+    var i;
+    var j;
+    var val;
+    var name;
+    var isNamedFound;
+    var argIndex;
+    var argsLength = 0;
+    if (mixinEnv.frames && mixinEnv.frames[0] && mixinEnv.frames[0].functionRegistry) {
+        frame.functionRegistry = mixinEnv.frames[0].functionRegistry.inherit();
+    }
+    mixinEnv = new contexts_1.default.Eval(mixinEnv, [frame].concat(mixinEnv.frames));
+    if (args) {
+        args = utils.copyArray(args);
+        argsLength = args.length;
+        for (i = 0; i < argsLength; i++) {
+            arg = args[i];
+            if (name = (arg && arg.name)) {
+                isNamedFound = false;
+                for (j = 0; j < params.length; j++) {
+                    if (!evaldArguments[j] && name === params[j].name) {
+                        evaldArguments[j] = arg.value.eval(context);
+                        frame.prependRule(new declaration_1.default(name, arg.value.eval(context)));
+                        isNamedFound = true;
+                        break;
+                    }
+                }
+                if (isNamedFound) {
+                    args.splice(i, 1);
+                    i--;
+                    continue;
+                }
+                else {
+                    throw { type: 'Runtime', message: "Named argument for " + this.name + " " + args[i].name + " not found" };
                 }
             }
         }
-        return true;
-    };
-    return Definition;
-}(ruleset_1.default));
+    }
+    argIndex = 0;
+    for (i = 0; i < params.length; i++) {
+        if (evaldArguments[i]) {
+            continue;
+        }
+        arg = args && args[argIndex];
+        if (name = params[i].name) {
+            if (params[i].variadic) {
+                varargs = [];
+                for (j = argIndex; j < argsLength; j++) {
+                    varargs.push(args[j].value.eval(context));
+                }
+                frame.prependRule(new declaration_1.default(name, new expression_1.default(varargs).eval(context)));
+            }
+            else {
+                val = arg && arg.value;
+                if (val) {
+                    // This was a mixin call, pass in a detached ruleset of it's eval'd rules
+                    if (Array.isArray(val)) {
+                        val = new detached_ruleset_1.default(new ruleset_1.default('', val));
+                    }
+                    else {
+                        val = val.eval(context);
+                    }
+                }
+                else if (params[i].value) {
+                    val = params[i].value.eval(mixinEnv);
+                    frame.resetCache();
+                }
+                else {
+                    throw { type: 'Runtime', message: "wrong number of arguments for " + this.name + " (" + argsLength + " for " + this.arity + ")" };
+                }
+                frame.prependRule(new declaration_1.default(name, val));
+                evaldArguments[i] = val;
+            }
+        }
+        if (params[i].variadic && args) {
+            for (j = argIndex; j < argsLength; j++) {
+                evaldArguments[j] = args[j].value.eval(context);
+            }
+        }
+        argIndex++;
+    }
+    return frame;
+};
+Definition.prototype.makeImportant = function () {
+    var rules = !this.rules ? this.rules : this.rules.map(function (r) {
+        if (r.makeImportant) {
+            return r.makeImportant(true);
+        }
+        else {
+            return r;
+        }
+    });
+    var result = new Definition(this.name, this.params, rules, this.condition, this.variadic, this.frames);
+    return result;
+};
+Definition.prototype.eval = function (context) {
+    return new Definition(this.name, this.params, this.rules, this.condition, this.variadic, this.frames || utils.copyArray(context.frames));
+};
+Definition.prototype.evalCall = function (context, args, important) {
+    var _arguments = [];
+    var mixinFrames = this.frames ? this.frames.concat(context.frames) : context.frames;
+    var frame = this.evalParams(context, new contexts_1.default.Eval(context, mixinFrames), args, _arguments);
+    var rules;
+    var ruleset;
+    frame.prependRule(new declaration_1.default('@arguments', new expression_1.default(_arguments).eval(context)));
+    rules = utils.copyArray(this.rules);
+    ruleset = new ruleset_1.default(null, rules);
+    ruleset.originalRuleset = this;
+    ruleset = ruleset.eval(new contexts_1.default.Eval(context, [this, frame].concat(mixinFrames)));
+    if (important) {
+        ruleset = ruleset.makeImportant();
+    }
+    return ruleset;
+};
+Definition.prototype.matchCondition = function (args, context) {
+    if (this.condition && !this.condition.eval(new contexts_1.default.Eval(context, [this.evalParams(context, /* the parameter variables */ new contexts_1.default.Eval(context, this.frames ? this.frames.concat(context.frames) : context.frames), args, [])]
+        .concat(this.frames || []) // the parent namespace/mixin frames
+        .concat(context.frames)))) { // the current environment frames
+        return false;
+    }
+    return true;
+};
+Definition.prototype.matchArgs = function (args, context) {
+    var allArgsCnt = (args && args.length) || 0;
+    var len;
+    var optionalParameters = this.optionalParameters;
+    var requiredArgsCnt = !args ? 0 : args.reduce(function (count, p) {
+        if (optionalParameters.indexOf(p.name) < 0) {
+            return count + 1;
+        }
+        else {
+            return count;
+        }
+    }, 0);
+    if (!this.variadic) {
+        if (requiredArgsCnt < this.required) {
+            return false;
+        }
+        if (allArgsCnt > this.params.length) {
+            return false;
+        }
+    }
+    else {
+        if (requiredArgsCnt < (this.required - 1)) {
+            return false;
+        }
+    }
+    // check patterns
+    len = Math.min(requiredArgsCnt, this.arity);
+    for (var i = 0; i < len; i++) {
+        if (!this.params[i].name && !this.params[i].variadic) {
+            if (args[i].value.eval(context).toCSS() != this.params[i].value.eval(context).toCSS()) {
+                return false;
+            }
+        }
+    }
+    return true;
+};
 Definition.prototype.type = 'MixinDefinition';
 Definition.prototype.evalFirst = true;
 exports.default = Definition;
 //# sourceMappingURL=mixin-definition.js.map
-}, function(modId) { var map = {"./selector":1607654390939,"./element":1607654390940,"./ruleset":1607654390946,"./declaration":1607654390947,"./detached-ruleset":1607654390956,"./expression":1607654390963,"../contexts":1607654390953,"../utils":1607654390944}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390981, function(require, module, exports) {
+}, function(modId) { var map = {"./selector":1607851992226,"./element":1607851992227,"./ruleset":1607851992233,"./declaration":1607851992234,"./detached-ruleset":1607851992243,"./expression":1607851992250,"../contexts":1607851992240,"../utils":1607851992231}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992268, function(require, module, exports) {
 
 /**
  * @todo Document why this abstraction exists, and the relationship between
@@ -6180,8 +5540,8 @@ var environment = /** @class */ (function () {
 }());
 exports.default = environment;
 //# sourceMappingURL=environment.js.map
-}, function(modId) { var map = {"../logger":1607654390930}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390982, function(require, module, exports) {
+}, function(modId) { var map = {"../logger":1607851992217}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992269, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -6350,8 +5710,8 @@ var AbstractPluginLoader = /** @class */ (function () {
 }());
 exports.default = AbstractPluginLoader;
 //# sourceMappingURL=abstract-plugin-loader.js.map
-}, function(modId) { var map = {"../functions/function-registry":1607654390954,"../less-error":1607654390943}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390983, function(require, module, exports) {
+}, function(modId) { var map = {"../functions/function-registry":1607851992241,"../less-error":1607851992230}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992270, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -6372,8 +5732,8 @@ exports.default = {
     ToCSSVisitor: to_css_visitor_1.default
 };
 //# sourceMappingURL=index.js.map
-}, function(modId) { var map = {"./visitor":1607654390984,"./import-visitor":1607654390985,"./set-tree-visibility-visitor":1607654390987,"./extend-visitor":1607654390988,"./join-selector-visitor":1607654390989,"./to-css-visitor":1607654390990}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390984, function(require, module, exports) {
+}, function(modId) { var map = {"./visitor":1607851992271,"./import-visitor":1607851992272,"./set-tree-visibility-visitor":1607851992274,"./extend-visitor":1607851992275,"./join-selector-visitor":1607851992276,"./to-css-visitor":1607851992277}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992271, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -6532,8 +5892,8 @@ var Visitor = /** @class */ (function () {
 }());
 exports.default = Visitor;
 //# sourceMappingURL=visitor.js.map
-}, function(modId) { var map = {"../tree":1607654390935}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390985, function(require, module, exports) {
+}, function(modId) { var map = {"../tree":1607851992222}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992272, function(require, module, exports) {
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -6736,8 +6096,8 @@ ImportVisitor.prototype = {
 };
 exports.default = ImportVisitor;
 //# sourceMappingURL=import-visitor.js.map
-}, function(modId) { var map = {"../contexts":1607654390953,"./visitor":1607654390984,"./import-sequencer":1607654390986,"../utils":1607654390944}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390986, function(require, module, exports) {
+}, function(modId) { var map = {"../contexts":1607851992240,"./visitor":1607851992271,"./import-sequencer":1607851992273,"../utils":1607851992231}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992273, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var ImportSequencer = /** @class */ (function () {
@@ -6800,7 +6160,7 @@ var ImportSequencer = /** @class */ (function () {
 exports.default = ImportSequencer;
 //# sourceMappingURL=import-sequencer.js.map
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390987, function(require, module, exports) {
+__DEFINE__(1607851992274, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var SetTreeVisibilityVisitor = /** @class */ (function () {
@@ -6845,7 +6205,7 @@ var SetTreeVisibilityVisitor = /** @class */ (function () {
 exports.default = SetTreeVisibilityVisitor;
 //# sourceMappingURL=set-tree-visibility-visitor.js.map
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390988, function(require, module, exports) {
+__DEFINE__(1607851992275, function(require, module, exports) {
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -7308,8 +6668,8 @@ var ProcessExtendsVisitor = /** @class */ (function () {
 }());
 exports.default = ProcessExtendsVisitor;
 //# sourceMappingURL=extend-visitor.js.map
-}, function(modId) { var map = {"../tree":1607654390935,"./visitor":1607654390984,"../logger":1607654390930,"../utils":1607654390944}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390989, function(require, module, exports) {
+}, function(modId) { var map = {"../tree":1607851992222,"./visitor":1607851992271,"../logger":1607851992217,"../utils":1607851992231}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992276, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -7367,8 +6727,8 @@ var JoinSelectorVisitor = /** @class */ (function () {
 }());
 exports.default = JoinSelectorVisitor;
 //# sourceMappingURL=join-selector-visitor.js.map
-}, function(modId) { var map = {"./visitor":1607654390984}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390990, function(require, module, exports) {
+}, function(modId) { var map = {"./visitor":1607851992271}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992277, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -7690,8 +7050,8 @@ ToCSSVisitor.prototype = {
 };
 exports.default = ToCSSVisitor;
 //# sourceMappingURL=to-css-visitor.js.map
-}, function(modId) { var map = {"../tree":1607654390935,"./visitor":1607654390984}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390991, function(require, module, exports) {
+}, function(modId) { var map = {"../tree":1607851992222,"./visitor":1607851992271}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992278, function(require, module, exports) {
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -9954,8 +9314,8 @@ Parser.serializeVars = function (vars) {
 };
 exports.default = Parser;
 //# sourceMappingURL=parser.js.map
-}, function(modId) { var map = {"../less-error":1607654390943,"../tree":1607654390935,"../visitors":1607654390983,"./parser-input":1607654390992,"../utils":1607654390944,"../functions/function-registry":1607654390954}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390992, function(require, module, exports) {
+}, function(modId) { var map = {"../less-error":1607851992230,"../tree":1607851992222,"../visitors":1607851992270,"./parser-input":1607851992279,"../utils":1607851992231,"../functions/function-registry":1607851992241}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992279, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -10311,8 +9671,8 @@ exports.default = (function () {
     return parserInput;
 });
 //# sourceMappingURL=parser-input.js.map
-}, function(modId) { var map = {"./chunker":1607654390993}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390993, function(require, module, exports) {
+}, function(modId) { var map = {"./chunker":1607851992280}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992280, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 // Split the input into chunks.
@@ -10461,7 +9821,7 @@ exports.default = (function (input, fail) {
 });
 //# sourceMappingURL=chunker.js.map
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390994, function(require, module, exports) {
+__DEFINE__(1607851992281, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -10497,8 +9857,8 @@ exports.default = (function (environment) {
     return functions;
 });
 //# sourceMappingURL=index.js.map
-}, function(modId) { var map = {"./function-registry":1607654390954,"./function-caller":1607654390962,"./boolean":1607654390995,"./default":1607654390955,"./color":1607654390996,"./color-blending":1607654390997,"./data-uri":1607654390998,"./list":1607654390999,"./math":1607654391000,"./number":1607654391002,"./string":1607654391003,"./svg":1607654391004,"./types":1607654391005}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390995, function(require, module, exports) {
+}, function(modId) { var map = {"./function-registry":1607851992241,"./function-caller":1607851992249,"./boolean":1607851992282,"./default":1607851992242,"./color":1607851992283,"./color-blending":1607851992284,"./data-uri":1607851992285,"./list":1607851992286,"./math":1607851992287,"./number":1607851992289,"./string":1607851992290,"./svg":1607851992291,"./types":1607851992292}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992282, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -10520,8 +9880,8 @@ function If(context, condition, trueValue, falseValue) {
 If.evalArgs = false;
 exports.default = { boolean: boolean, 'if': If };
 //# sourceMappingURL=boolean.js.map
-}, function(modId) { var map = {"../tree/anonymous":1607654390950,"../tree/keyword":1607654390949}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390996, function(require, module, exports) {
+}, function(modId) { var map = {"../tree/anonymous":1607851992237,"../tree/keyword":1607851992236}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992283, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -10926,8 +10286,8 @@ colorFunctions = {
 };
 exports.default = colorFunctions;
 //# sourceMappingURL=color.js.map
-}, function(modId) { var map = {"../tree/dimension":1607654390958,"../tree/color":1607654390937,"../tree/quoted":1607654390966,"../tree/anonymous":1607654390950}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390997, function(require, module, exports) {
+}, function(modId) { var map = {"../tree/dimension":1607851992245,"../tree/color":1607851992224,"../tree/quoted":1607851992253,"../tree/anonymous":1607851992237}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992284, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -11006,8 +10366,8 @@ for (var f in colorBlendModeFunctions) {
 }
 exports.default = colorBlend;
 //# sourceMappingURL=color-blending.js.map
-}, function(modId) { var map = {"../tree/color":1607654390937}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390998, function(require, module, exports) {
+}, function(modId) { var map = {"../tree/color":1607851992224}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992285, function(require, module, exports) {
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -11094,14 +10454,15 @@ exports.default = (function (environment) {
         } };
 });
 //# sourceMappingURL=data-uri.js.map
-}, function(modId) { var map = {"../tree/quoted":1607654390966,"../tree/url":1607654390967,"../utils":1607654390944,"../logger":1607654390930}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654390999, function(require, module, exports) {
+}, function(modId) { var map = {"../tree/quoted":1607851992253,"../tree/url":1607851992254,"../utils":1607851992231,"../logger":1607851992217}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992286, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var comment_1 = __importDefault(require("../tree/comment"));
+var node_1 = __importDefault(require("../tree/node"));
 var dimension_1 = __importDefault(require("../tree/dimension"));
 var declaration_1 = __importDefault(require("../tree/declaration"));
 var expression_1 = __importDefault(require("../tree/expression"));
@@ -11158,28 +10519,35 @@ exports.default = {
         return new expression_1.default(list);
     },
     each: function (list, rs) {
+        var _this = this;
         var rules = [];
         var newRules;
         var iterator;
+        var tryEval = function (val) {
+            if (val instanceof node_1.default) {
+                return val.eval(_this.context);
+            }
+            return val;
+        };
         if (list.value && !(list instanceof quoted_1.default)) {
             if (Array.isArray(list.value)) {
-                iterator = list.value;
+                iterator = list.value.map(tryEval);
             }
             else {
-                iterator = [list.value];
+                iterator = [tryEval(list.value)];
             }
         }
         else if (list.ruleset) {
-            iterator = list.ruleset.rules;
+            iterator = tryEval(list.ruleset).rules;
         }
         else if (list.rules) {
-            iterator = list.rules;
+            iterator = list.rules.map(tryEval);
         }
         else if (Array.isArray(list)) {
-            iterator = list;
+            iterator = list.map(tryEval);
         }
         else {
-            iterator = [list];
+            iterator = [tryEval(list)];
         }
         var valueName = '@value';
         var keyName = '@key';
@@ -11224,8 +10592,8 @@ exports.default = {
     }
 };
 //# sourceMappingURL=list.js.map
-}, function(modId) { var map = {"../tree/comment":1607654390951,"../tree/dimension":1607654390958,"../tree/declaration":1607654390947,"../tree/expression":1607654390963,"../tree/ruleset":1607654390946,"../tree/selector":1607654390939,"../tree/element":1607654390940,"../tree/quoted":1607654390966}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654391000, function(require, module, exports) {
+}, function(modId) { var map = {"../tree/comment":1607851992238,"../tree/node":1607851992223,"../tree/dimension":1607851992245,"../tree/declaration":1607851992234,"../tree/expression":1607851992250,"../tree/ruleset":1607851992233,"../tree/selector":1607851992226,"../tree/element":1607851992227,"../tree/quoted":1607851992253}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992287, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -11256,8 +10624,8 @@ mathFunctions.round = function (n, f) {
 };
 exports.default = mathFunctions;
 //# sourceMappingURL=math.js.map
-}, function(modId) { var map = {"./math-helper.js":1607654391001}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654391001, function(require, module, exports) {
+}, function(modId) { var map = {"./math-helper.js":1607851992288}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992288, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -11278,8 +10646,8 @@ var MathHelper = function (fn, unit, n) {
 };
 exports.default = MathHelper;
 //# sourceMappingURL=math-helper.js.map
-}, function(modId) { var map = {"../tree/dimension":1607654390958}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654391002, function(require, module, exports) {
+}, function(modId) { var map = {"../tree/dimension":1607851992245}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992289, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -11378,8 +10746,8 @@ exports.default = {
     }
 };
 //# sourceMappingURL=number.js.map
-}, function(modId) { var map = {"../tree/dimension":1607654390958,"../tree/anonymous":1607654390950,"./math-helper.js":1607654391001}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654391003, function(require, module, exports) {
+}, function(modId) { var map = {"../tree/dimension":1607851992245,"../tree/anonymous":1607851992237,"./math-helper.js":1607851992288}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992290, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -11422,8 +10790,8 @@ exports.default = {
     }
 };
 //# sourceMappingURL=string.js.map
-}, function(modId) { var map = {"../tree/quoted":1607654390966,"../tree/anonymous":1607654390950,"../tree/javascript":1607654390970}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654391004, function(require, module, exports) {
+}, function(modId) { var map = {"../tree/quoted":1607851992253,"../tree/anonymous":1607851992237,"../tree/javascript":1607851992257}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992291, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -11512,8 +10880,8 @@ exports.default = (function (environment) {
         } };
 });
 //# sourceMappingURL=svg.js.map
-}, function(modId) { var map = {"../tree/dimension":1607654390958,"../tree/color":1607654390937,"../tree/expression":1607654390963,"../tree/quoted":1607654390966,"../tree/url":1607654390967}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654391005, function(require, module, exports) {
+}, function(modId) { var map = {"../tree/dimension":1607851992245,"../tree/color":1607851992224,"../tree/expression":1607851992250,"../tree/quoted":1607851992253,"../tree/url":1607851992254}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992292, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -11589,8 +10957,8 @@ exports.default = {
     }
 };
 //# sourceMappingURL=types.js.map
-}, function(modId) { var map = {"../tree/keyword":1607654390949,"../tree/detached-ruleset":1607654390956,"../tree/dimension":1607654390958,"../tree/color":1607654390937,"../tree/quoted":1607654390966,"../tree/anonymous":1607654390950,"../tree/url":1607654390967,"../tree/operation":1607654390957}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654391006, function(require, module, exports) {
+}, function(modId) { var map = {"../tree/keyword":1607851992236,"../tree/detached-ruleset":1607851992243,"../tree/dimension":1607851992245,"../tree/color":1607851992224,"../tree/quoted":1607851992253,"../tree/anonymous":1607851992237,"../tree/url":1607851992254,"../tree/operation":1607851992244}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992293, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = (function (environment) {
@@ -11728,7 +11096,7 @@ exports.default = (function (environment) {
 });
 //# sourceMappingURL=source-map-output.js.map
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654391007, function(require, module, exports) {
+__DEFINE__(1607851992294, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = (function (SourceMapOutput, environment) {
@@ -11802,7 +11170,7 @@ exports.default = (function (SourceMapOutput, environment) {
 });
 //# sourceMappingURL=source-map-builder.js.map
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654391008, function(require, module, exports) {
+__DEFINE__(1607851992295, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -11859,8 +11227,12 @@ exports.default = (function (SourceMapBuilder) {
             if (options.sourceMap) {
                 result.map = sourceMapBuilder.getExternalSourceMap();
             }
-            var rootFilename = this.imports.rootFilename;
-            result.imports = this.imports.files.filter(function (file) { return file !== rootFilename; });
+            result.imports = [];
+            for (var file in this.imports.files) {
+                if (this.imports.files.hasOwnProperty(file) && file !== this.imports.rootFilename) {
+                    result.imports.push(file);
+                }
+            }
             return result;
         };
         return ParseTree;
@@ -11868,8 +11240,8 @@ exports.default = (function (SourceMapBuilder) {
     return ParseTree;
 });
 //# sourceMappingURL=parse-tree.js.map
-}, function(modId) { var map = {"./less-error":1607654390943,"./transform-tree":1607654391009,"./logger":1607654390930}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654391009, function(require, module, exports) {
+}, function(modId) { var map = {"./less-error":1607851992230,"./transform-tree":1607851992296,"./logger":1607851992217}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992296, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -11963,8 +11335,8 @@ exports.default = (function (root, options) {
     return evaldRoot;
 });
 //# sourceMappingURL=transform-tree.js.map
-}, function(modId) { var map = {"./contexts":1607654390953,"./visitors":1607654390983,"./tree":1607654390935}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654391010, function(require, module, exports) {
+}, function(modId) { var map = {"./contexts":1607851992240,"./visitors":1607851992270,"./tree":1607851992222}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992297, function(require, module, exports) {
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -11994,7 +11366,7 @@ var parser_1 = __importDefault(require("./parser/parser"));
 var less_error_1 = __importDefault(require("./less-error"));
 var utils = __importStar(require("./utils"));
 var logger_1 = __importDefault(require("./logger"));
-exports.default = (function (environment) {
+function default_1(environment) {
     // FileInfo = {
     //  'rewriteUrls' - option - whether to adjust URL's to be relative
     //  'filename' - full resolved filename of current file
@@ -12015,7 +11387,7 @@ exports.default = (function (environment) {
             this.context = context;
             // Deprecated? Unused outside of here, could be useful.
             this.queue = []; // Files which haven't been imported yet
-            this.files = []; // List of files imported
+            this.files = {}; // Holds the imported parse trees.
         }
         /**
          * Add an import to be imported
@@ -12026,8 +11398,7 @@ exports.default = (function (environment) {
          * @param callback - callback for when it is imported
          */
         ImportManager.prototype.push = function (path, tryAppendExtension, currentFileInfo, importOptions, callback) {
-            var importManager = this;
-            var pluginLoader = this.context.pluginManager.Loader;
+            var importManager = this, pluginLoader = this.context.pluginManager.Loader;
             this.queue.push(path);
             var fileParsedFunc = function (e, root, fullPath) {
                 importManager.queue.splice(importManager.queue.indexOf(path), 1); // Remove the path from the queue
@@ -12037,9 +11408,11 @@ exports.default = (function (environment) {
                     logger_1.default.info("The file " + fullPath + " was skipped because it was not found and the import was marked optional.");
                 }
                 else {
-                    var files = importManager.files;
-                    if (files.indexOf(fullPath) === -1) {
-                        files.push(fullPath);
+                    // Inline imports aren't cached here.
+                    // If we start to cache them, please make sure they won't conflict with non-inline imports of the
+                    // same name as they used to do before this comment and the condition below have been added.
+                    if (!importManager.files[fullPath] && !importOptions.inline) {
+                        importManager.files[fullPath] = { root: root, options: importOptions };
                     }
                     if (e && !importManager.error) {
                         importManager.error = e;
@@ -12097,9 +11470,18 @@ exports.default = (function (environment) {
                     fileParsedFunc(null, contents, resolvedFilename);
                 }
                 else {
-                    new parser_1.default(newEnv, importManager, newFileInfo).parse(contents, function (e, root) {
-                        fileParsedFunc(e, root, resolvedFilename);
-                    });
+                    // import (multiple) parse trees apparently get altered and can't be cached.
+                    // TODO: investigate why this is
+                    if (importManager.files[resolvedFilename]
+                        && !importManager.files[resolvedFilename].options.multiple
+                        && !importOptions.multiple) {
+                        fileParsedFunc(null, importManager.files[resolvedFilename].root, resolvedFilename);
+                    }
+                    else {
+                        new parser_1.default(newEnv, importManager, newFileInfo).parse(contents, function (e, root) {
+                            fileParsedFunc(e, root, resolvedFilename);
+                        });
+                    }
                 }
             };
             var loadedFile;
@@ -12147,10 +11529,12 @@ exports.default = (function (environment) {
         return ImportManager;
     }());
     return ImportManager;
-});
+}
+exports.default = default_1;
+;
 //# sourceMappingURL=import-manager.js.map
-}, function(modId) { var map = {"./contexts":1607654390953,"./parser/parser":1607654390991,"./less-error":1607654390943,"./utils":1607654390944,"./logger":1607654390930}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654391011, function(require, module, exports) {
+}, function(modId) { var map = {"./contexts":1607851992240,"./parser/parser":1607851992278,"./less-error":1607851992230,"./utils":1607851992231,"./logger":1607851992217}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992298, function(require, module, exports) {
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -12216,8 +11600,8 @@ exports.default = (function (environment, ParseTree, ImportManager) {
     return render;
 });
 //# sourceMappingURL=render.js.map
-}, function(modId) { var map = {"./utils":1607654390944}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654391012, function(require, module, exports) {
+}, function(modId) { var map = {"./utils":1607851992231}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992299, function(require, module, exports) {
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -12327,8 +11711,8 @@ exports.default = (function (environment, ParseTree, ImportManager) {
     return parse;
 });
 //# sourceMappingURL=parse.js.map
-}, function(modId) { var map = {"./contexts":1607654390953,"./parser/parser":1607654390991,"./plugin-manager":1607654391013,"./less-error":1607654390943,"./utils":1607654390944}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654391013, function(require, module, exports) {
+}, function(modId) { var map = {"./contexts":1607851992240,"./parser/parser":1607851992278,"./plugin-manager":1607851992300,"./less-error":1607851992230,"./utils":1607851992231}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992300, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -12488,7 +11872,7 @@ function PluginManagerFactory(less, newFactory) {
 exports.default = PluginManagerFactory;
 //# sourceMappingURL=plugin-manager.js.map
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654391014, function(require, module, exports) {
+__DEFINE__(1607851992301, function(require, module, exports) {
 // lessc_helper.js
 //
 //      helper functions for lessc
@@ -12582,7 +11966,7 @@ for (var h in lessc_helper) {
 }
 //# sourceMappingURL=lessc-helper.js.map
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654391015, function(require, module, exports) {
+__DEFINE__(1607851992302, function(require, module, exports) {
 
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -12656,8 +12040,8 @@ var PluginLoader = /** @class */ (function (_super) {
 }(abstract_plugin_loader_js_1.default));
 exports.default = PluginLoader;
 //# sourceMappingURL=plugin-loader.js.map
-}, function(modId) { var map = {"../less/environment/abstract-plugin-loader.js":1607654390982}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654391016, function(require, module, exports) {
+}, function(modId) { var map = {"../less/environment/abstract-plugin-loader.js":1607851992269}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1607851992303, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 // Export a new default each time
@@ -12716,7 +12100,7 @@ exports.default = (function () { return ({
 }); });
 //# sourceMappingURL=default-options.js.map
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1607654391017, function(require, module, exports) {
+__DEFINE__(1607851992304, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -12771,7 +12155,7 @@ exports.default = (function (environment) {
     function_registry_1.default.addMultiple(imageFunctions);
 });
 //# sourceMappingURL=image-size.js.map
-}, function(modId) { var map = {"../less/tree/dimension":1607654390958,"../less/tree/expression":1607654390963,"./../less/functions/function-registry":1607654390954,"image-size":1607654391017}; return __REQUIRE__(map[modId], modId); })
-return __REQUIRE__(1607654390923);
+}, function(modId) { var map = {"../less/tree/dimension":1607851992245,"../less/tree/expression":1607851992250,"./../less/functions/function-registry":1607851992241,"image-size":1607851992304}; return __REQUIRE__(map[modId], modId); })
+return __REQUIRE__(1607851992210);
 })()
 //# sourceMappingURL=index.js.map

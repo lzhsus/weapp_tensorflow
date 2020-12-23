@@ -1,6 +1,15 @@
 .camera-main {
+    position: fixed;left: -9999px;top:0;
     width: 100%;height: 100vh;
     .pose-canvas {
         width: 100%;height: 100vh;
+    }
+}
+.canvas-box{
+    width: 100%;overflow: hidden;
+    position: absolute;top: 0;
+    left: -9999px;
+    &.canvas-box2{
+        left: 0;
     }
 }

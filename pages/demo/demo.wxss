@@ -1,0 +1,9 @@
+.camera-main {
+    width: 100%;
+    height: 100vh;
+  }
+  .camera-main .pose-canvas {
+    width: 100%;
+    height: 100vh;
+  }
+  

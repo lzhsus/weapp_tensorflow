@@ -1,0 +1,4 @@
+
+<camera class="camera-main" device-position="front" frame-size="medium" flash="off" binderror="onCameraError">
+  <canvas class="pose-canvas" canvas-id="pose"></canvas>
+</camera>

@@ -1,5 +1,5 @@
 var fetchWechat = require('fetch-wechat');
-var tf = require('@tensorflow/tfjs-core/index')
+var tf = require('@tensorflow/tfjs-core')
 var webgl = require('@tensorflow/tfjs-backend-webgl/index')
 var plugin = requirePlugin('tfjsPlugin');
 App({
